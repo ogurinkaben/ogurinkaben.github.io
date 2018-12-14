@@ -8,9 +8,14 @@
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
 }
-
+h1,h2,h3,h4,h5,h6 {
+  padding: 5px;
+  color: #222;
+  font-family: "Raleway", sans-serif;
+}
 section {
   padding: 80px;
+  height: 600px;
 
 }
 
@@ -27,6 +32,30 @@ section {
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
 }
+.spin{
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border:2px solid #0CB1C4;
+  animation-name: spin;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  z-index: 1;
+  opacity: 0.2;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
 @media screen and (max-width: 600px) {
   .square {
     width: 100px;
@@ -39,7 +68,7 @@ section {
     left: 2%;
 }
 }
-h1{
+.intro-text {
   position: absolute;
   display: block;
   top: 50%;
@@ -64,8 +93,8 @@ font-weight: 900;
 }
 .sub{
     margin-top: 0px;
-    font-weight: 300;
-    color: #cf3b28;
+    font-weight: 900;
+    color: #0198E1;
     font-size: 16px;
     font-family: "Raleway";
     float: right;
@@ -73,14 +102,14 @@ font-weight: 900;
 }
 
 @media screen and (max-width: 600px) {
-  h1 {
+  .intro-text {
     font-size: 50px;
   }
   .sub{
-    margin-top: 0px;
+    margin-top: 8px;
     font-weight: 300;
     text-align: center;
-    color: #cf3b28;
+    color: #0198E1;
     font-size: 16px;
     font-family: "Raleway";
     float: none;
@@ -101,7 +130,7 @@ font-weight: 900;
 
 .brand {
   display: none;
-  color: #cf3b28;
+  color: #0198E1;
   font-weight: 500;
   font-family: "Raleway";
 }
@@ -124,6 +153,7 @@ font-weight: 900;
 .navbar .navbar-toggler {
   height: 30px;
   width: 30px;
+
   padding: 0;
   transform: rotateY(180deg)
 }
@@ -132,6 +162,7 @@ font-weight: 900;
   margin: 0.25em 0 0;
   border: none;
   height: 2px;
+  border-radius: 30px;
   width: 100%;
   background-color: currentColor;
   transition: width 0.2s, transform 0.2s;
@@ -171,15 +202,28 @@ font-weight: 900;
 .nav-link {
     color: #fff;
 }
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transition: width .3s;
+}
 
 .nav-link:hover {
-    color: #cf3b28;
+      color: #0198E1;
+}
+
+.nav-link:hover::after {
+
+    width: 50%;
 }
 
 .navbar .active .nav-item,
 .navbar .nav-item .active,
 .navbar .nav-item.active {
-  color: #cf3b28;
+  color: #0198E1;
 
 }
 
@@ -208,7 +252,7 @@ font-weight: 900;
     border: 2px solid #fff;
     position: absolute;
     bottom: 20px;
-    left: 48%;
+    left: 49%;
     text-align: center;
 }
 
@@ -312,3 +356,71 @@ font-weight: 900;
     transform: translatey(0px);
   }
 }
+
+.bio{
+    padding:6%;
+    text-align:center;
+    background: linear-gradient(90deg, #e8e8e8 50%, #236B8E 50%);
+    background-attachment: fixed;
+  }
+  .heading{
+    background: #fff;
+    padding: 1%;
+    text-align: left;
+    box-shadow: 0px 0px 4px 0px #545b62;
+  }
+  .heading img{
+    width: 10%;
+  }
+
+
+  .bio-info{
+    padding: 5%;
+    background:#fff;
+    box-shadow: 0px 0px 4px 0px #b0b3b7;
+  }
+  .bio-image{
+    text-align:center;
+  }
+  .bio-image img{
+   width: 100%;
+  }
+  .bio-content{
+    text-align:left;
+  }
+  .bio-content p{
+    font-weight:600;
+    font-size:30px;
+  }
+
+  .bio ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .bio ul li  {
+    display: inline;
+    padding-left: 5px;
+  }
+
+  .bio ul li i {
+    font-size: 30px;
+    letter-spacing: 20px;
+  }
+
+  .fa-css3 {
+    color: #38B0DE;
+  }
+
+  .fa-html5 {
+    color: #A52A2A;
+  }
+
+  .fa-js {
+    color: #FF7F24;
+  }
+  .fa-vuejs {
+    color: #228B22;
+  }
+
