@@ -2,6 +2,72 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,900);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro")
 
+:root {
+  --accent-color: #EF6459;
+  --accent-color-dark: #A50D00;
+  --primary-color: #7677DE;
+  --primary-text-color: #1C191F;
+  --primary-background-color: #4285f4;
+  --secondary-color: #ffdb85;
+  --secondary-text-color: #FFFFFF;
+  --secondary-background-color: #F4F2F2;
+  --divider-color: #DEE2E6;
+  --light-blue: #bdd6fd;
+}
+
+.text-muted {
+  color: #9D9B9B !important;
+}
+
+.rgba-blue {
+  background-color: rgba(38, 128, 255, 0.6)
+}
+
+.bg-light-blue {
+  background-color: var(--light-blue)
+}
+
+.bg-gradient-light-blue {
+  background-image: linear-gradient(transparent, #2680FF);
+}
+
+.bg-gradient-primary {
+  color: #FFF;
+  background-image: linear-gradient(#CFA4FA, #A065DB);
+}
+
+.bg-gradient-accent {
+  color: #FFF;
+  background-image: linear-gradient(#EF6459, #A50D00);
+}
+
+.bg-gradient-silver {
+  background-image: linear-gradient(#EDEDED, #DDEBFF)
+}
+
+.bg-gradient-purple {
+  color: #FFF;
+  background-image: linear-gradient(#DB65B7, #8D256D)
+}
+
+.bg-gradient-dark-purple {
+  color: #FFF;
+  background-image: linear-gradient(#9A2525, #5186DB)
+}
+
+.bg-gradient-indigo {
+  color: #FFF;
+  background-image: linear-gradient(#8859BF, #30CFD0)
+}
+
+.bg-half-white {
+  background-image: linear-gradient(-15deg, #FFFFFF 34%, transparent 34%)
+}
+
+.shadow-raised {
+  box-shadow: var(--raised-shadow)
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -87,7 +153,7 @@ font-weight: 900;
 
   .navbar.top-nav-collapse {
     padding: 0.5em;
-    background-color: #fff;
+    background-color: #222;
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.16);
   }
 }
@@ -135,7 +201,8 @@ font-weight: 900;
 }
 
 .navbar .navbar-nav {
-  font-weight: 400
+  font-weight: 400;
+  color: #222;
 }
 
 .nav-link {
