@@ -262,6 +262,8 @@ line-height: 1px;
 padding: 1em;
 box-shadow: none;
 z-index: 10;
+border-bottom-left-radius: 50% 20%;
+border-bottom-right-radius: 50% 20%;
 }
 
 .navbar-brand a {
@@ -417,9 +419,24 @@ width: 100%;
 .bio-content{
 text-align:left;
 }
+
+.bio-content h1,h5 {
+  font-weight: 500;
+}
+
+@media screen and (max-width: 600px) {
+  .bio-content h1 {
+
+    font-size: 23px;
+
+  }
+    .bio-content h5 {
+      font-size: 19px;
+    }
+}
 .bio-content p{
 font-weight:600;
-font-size:30px;
+font-size:25px;
 }
 
 .bio ul {
