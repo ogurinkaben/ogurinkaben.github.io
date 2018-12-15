@@ -1,5 +1,5 @@
-var Typing = function(el, txtType, period) {
-  this.txtType = txtType;
+var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
   this.period = parseInt(period, 10) || 2000;
@@ -8,9 +8,9 @@ var Typing = function(el, txtType, period) {
   this.isDeleting = false;
 };
 
-Typing.prototype.tick = function() {
-  var i = this.loopNum % this.txtType.length;
-  var fullTxt = this.txtType[i];
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
 
   if (this.isDeleting) {
     this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -42,10 +42,10 @@ Typing.prototype.tick = function() {
 window.onload = function() {
   var elements = document.getElementsByClassName('txt-rotate');
   for (var i=0; i<elements.length; i++) {
-    var txtType = elements[i].getAttribute('data-rotate');
+    var toRotate = elements[i].getAttribute('data-rotate');
     var period = elements[i].getAttribute('data-period');
-    if (txtType) {
-      new Typing(elements[i], JSON.parse(txtType), period);
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
     }
   }
   // INJECT CSS
