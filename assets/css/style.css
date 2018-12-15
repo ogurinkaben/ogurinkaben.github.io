@@ -17,31 +17,109 @@ font-family: "Raleway", sans-serif;
 }
 section {
 padding: 80px;
-height: 300px;
 
 }
+
+.split-bg {
+background-color: #50A6C2;
+background-image: -webkit-linear-gradient(30deg, #50A6C2 50%, #236B8E 50%);
+min-height: 500px;
+}
+
+.center {
+margin: auto;
+width: 60%;
+padding: 15px;
+background:transparent;
+}
+.float {
+transform: translatey(0px);
+animation: float 6s ease-in-out infinite;
+}
+
+@media screen and (max-width: 600px) {
+.center {
+width: 100%;
+}
+}
+
+/* ======== Back to top ==== */
+#top {
+display: inline-block;
+background-color: #222;
+text-align: center;
+position: fixed;
+bottom: 30px;
+right: 30px;
+transition: background-color .3s,
+opacity .5s, visibility .5s;
+opacity: 0;
+padding: 8px 10px;
+visibility: hidden;
+z-index: 1000;
+}
+#top:hover {
+cursor: pointer;
+background-color: #333;
+}
+#top:active {
+background-color: #555;
+}
+#top.show {
+opacity: 1;
+visibility: visible;
+}
+
+@media screen and (max-width: 600px) {
+#top {
+position: fixed;
+bottom: 30px;
+right: 10px;
+
+}
+
+}
+
 /* ======== Scrollbar === */
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+width: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+background: #f1f1f1;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #222; 
+background: #222;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+background: #555;
 }
 
 /* ======= Animations ====== */
+
+.bounce {
+-moz-animation: bounce 2s infinite;
+-webkit-animation: bounce 2s infinite;
+animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+transform: translateY(0);
+}
+40% {
+transform: translateY(-8px);
+}
+60% {
+transform: translateY(-5px);
+}
+}
 
 .square {
 width: 125px;
@@ -192,15 +270,12 @@ box-shadow: 0 0 0 0 rgba(48,48,48,0);
 }
 @keyframes float {
 0% {
-box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
 transform: translatey(0px);
 }
 50% {
-box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
 transform: translatey(-20px);
 }
 100% {
-box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
 transform: translatey(0px);
 }
 }
@@ -246,7 +321,7 @@ font-size: 50px;
 }
 .sub{
 margin-top: 8px;
-font-weight: 300;
+font-weight: 900;
 text-align: center;
 color: #0198E1;
 font-size: 16px;
@@ -267,19 +342,6 @@ border-bottom-right-radius: 50% 20%;
 
 .navbar-brand a {
 color: #fff;
-}
-
-.brand {
-display: none;
-color: #0198E1;
-font-weight: 500;
-font-family: "Raleway";
-}
-
-.navbar-brand a:hover .brand {
-display: inline;
-transition: display .9s;
-
 }
 
 @media (min-width: 768px) {
@@ -390,14 +452,14 @@ margin-right: 0;
 .bio{
 padding:6%;
 text-align:center;
-background: linear-gradient(90deg, #e8e8e8 50%, #236B8E 50%);
-background-attachment: fixed;
+margin-top: -15px;
 }
 
 .bio-info{
 padding: 5%;
-background:#fff;
+background-color:#fff;
 box-shadow: 0px 0px 4px 0px #b0b3b7;
+text-align: left;
 }
 .bio-image{
 text-align:center;
@@ -405,122 +467,26 @@ text-align:center;
 .bio-image img{
 width: 100%;
 }
-.bio-content{
-text-align:left;
-}
-
-.bio-content h1,h5 {
-  font-weight: 500;
-  margin-bottom:5px;
-  padding: 0;
-
-}
 
 .bio-content .first {
-  font-size: 19px;
+font-size: 19px;
+padding-left: 8px;
+margin-bottom: -8px;
 }
 
 @media screen and (max-width: 600px) {
-  .bio-content h1 {
+.bio-info {
+margin-top: 25%;
+}
+.bio-content h1 {
 
-    font-size: 23px;
+font-size: 23px;
 
-  }
-    .bio-content h5 {
-      font-size: 19px;
-    }
+}
+.bio-content h5 {
+font-size: 19px;
+}
 }
 .bio-content p{
-font-weight:600;
-font-size:25px;
+font-weight:400;
 }
-
-.bio ul {
-list-style: none;
-margin: 0;
-padding: 0;
-}
-
-.bio ul li {
-display: inline;
-padding-left: 5px;
-}
-
-.bio ul li i {
-font-size: 30px;
-letter-spacing: 20px;
-}
-
-.fa-css3 {
-color: #38B0DE;
-}
-
-.fa-html5 {
-color: #A52A2A;
-}
-
-.fa-js {
-color: #FF7F24;
-}
-.fa-vuejs {
-color: #228B22;
-}
-
-.fa-gitlab {
-  color:#FF7F24;
-}
-
-/* ========= Footer ======= */
-footer {
-  position: relative;
-  color: #FFF;
-  text-align: center;
-  background:url(https://res.cloudinary.com/simplytammy/image/upload/v1544792773/bg.png) repeat;
-  background-color: #222;
-}
-
-.footer-links {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background:url(https://res.cloudinary.com/simplytammy/image/upload/v1544838825/hero-background.png) repeat;
-  padding: 0.75em 0;
-  color: #222;
-}
-
-.footer-links a {
-  font-size: 1.25em;
-  color: #222;
-}
-
-.footer-links a,
-.footer-links .link {
-  text-decoration: none;
-  margin-right: 2em;
-}
-
-.footer-links a:hover,
-.footer-links .link:hover {
-  color: #FFFFFF;
-}
-
-@media (max-width:768px) {
-  .footer-links {
-    padding: 2em 1.5em;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .footer-links a,
-  .footer-links .link {
-    margin-right: 0;
-  }
-}
-
-@media (max-width:768px) {
-  .fa {
-    font-size: 1.2em
-  }
-}
-
