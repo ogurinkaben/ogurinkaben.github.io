@@ -394,16 +394,6 @@ text-align:center;
 background: linear-gradient(90deg, #e8e8e8 50%, #236B8E 50%);
 background-attachment: fixed;
 }
-.heading{
-background: #fff;
-padding: 1%;
-text-align: left;
-box-shadow: 0px 0px 4px 0px #545b62;
-}
-.heading img{
-width: 10%;
-}
-
 
 .bio-info{
 padding: 5%;
