@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  
+  // Smooth scrolling
   var scrollLink = $('.scroll');
 
   scrollLink.click(function(e) {
@@ -8,6 +8,18 @@ $(document).ready(function() {
       scrollTop: $(this.hash).offset().top
     }, 1000 );
   });
+
+  // Back to top
+
+  var btn = $('#top');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
   
 
   
