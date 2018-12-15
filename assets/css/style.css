@@ -17,10 +17,9 @@ font-family: "Raleway", sans-serif;
 }
 section {
 padding: 80px;
-height: 600px;
+height: 300px;
 
 }
-
 /* ======== Scrollbar === */
 /* width */
 ::-webkit-scrollbar {
@@ -412,6 +411,13 @@ text-align:left;
 
 .bio-content h1,h5 {
   font-weight: 500;
+  margin-bottom:5px;
+  padding: 0;
+
+}
+
+.bio-content .first {
+  font-size: 19px;
 }
 
 @media screen and (max-width: 600px) {
@@ -458,5 +464,63 @@ color: #FF7F24;
 }
 .fa-vuejs {
 color: #228B22;
+}
+
+.fa-gitlab {
+  color:#FF7F24;
+}
+
+/* ========= Footer ======= */
+footer {
+  position: relative;
+  color: #FFF;
+  text-align: center;
+  background:url(https://res.cloudinary.com/simplytammy/image/upload/v1544792773/bg.png) repeat;
+  background-color: #222;
+}
+
+.footer-links {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background:url(https://res.cloudinary.com/simplytammy/image/upload/v1544838825/hero-background.png) repeat;
+  padding: 0.75em 0;
+  color: #222;
+}
+
+.footer-links a {
+  font-size: 1.25em;
+  color: #222;
+}
+
+.footer-links a,
+.footer-links .link {
+  text-decoration: none;
+  margin-right: 2em;
+}
+
+.footer-links a:hover,
+.footer-links .link:hover {
+  color: #FFFFFF;
+}
+
+@media (max-width:768px) {
+  .footer-links {
+    padding: 2em 1.5em;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footer-links a,
+  .footer-links .link {
+    margin-right: 0;
+  }
+}
+
+@media (max-width:768px) {
+  .fa {
+    font-size: 1.2em
+  }
 }
 
