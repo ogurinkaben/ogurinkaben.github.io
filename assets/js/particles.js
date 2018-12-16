@@ -13,7 +13,7 @@ particlesJS("particles-js", {
       "value": "#555"
     },
     "shape": {
-      "type": "circle",
+      "type": ["circle", "triangle", "polygon"],
       "stroke": {
         "width": 0,
         "color": "#000000"
@@ -22,7 +22,7 @@ particlesJS("particles-js", {
         "nb_sides": 5
       },
       "image": {
-        "src": "http://image.ibb.co/g9eFcF/logo_transparent.png",
+        "src": "https://res.cloudinary.com/simplytammy/image/upload/v1544838825/hero-background.png",
         "width": 100,
         "height": 100
       }
@@ -38,7 +38,7 @@ particlesJS("particles-js", {
       }
     },
     "size": {
-      "value": 3,
+      "value": 5,
       "random": true,
       "anim": {
         "enable": false,
