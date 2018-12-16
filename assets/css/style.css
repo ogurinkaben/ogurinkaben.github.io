@@ -353,10 +353,18 @@ a:hover,
   opacity: 0.2;
   position: absolute;
   top: 32%;
-  left: 23%;
+  left: 24%;
   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
+}
+
+@media screen and (max-width: 600px) {
+  .square {
+  position: absolute;
+  top: 32%;
+  left: 26%;
+  }
 }
 
 .spin {
