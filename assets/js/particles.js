@@ -10,13 +10,13 @@ particlesJS("particles-js", {
       }
     },
     "color": {
-      "value": "#555"
+      "value": "#C0C0C0"
     },
     "shape": {
       "type": ["circle", "triangle", "polygon"],
       "stroke": {
         "width": 0,
-        "color": "#000000"
+        "color": "#0198E1"
       },
       "polygon": {
         "nb_sides": 5
@@ -38,7 +38,7 @@ particlesJS("particles-js", {
       }
     },
     "size": {
-      "value": 5,
+      "value": 3,
       "random": true,
       "anim": {
         "enable": false,
