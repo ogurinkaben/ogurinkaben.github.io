@@ -117,7 +117,7 @@ section {
 
 .center {
   margin: auto;
-  width: 60%;
+  width: 80%;
   padding-top: 6%;
   background: transparent;
 }
@@ -129,7 +129,7 @@ section {
 
 @media screen and (max-width: 600px) {
   .center {
-    width: 80%;
+    width: 100%;
   }
 }
 
