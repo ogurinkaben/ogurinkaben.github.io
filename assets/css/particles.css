@@ -5,8 +5,8 @@
   height:100vh;
   background:url(https://res.cloudinary.com/simplytammy/image/upload/v1544792773/bg.png) repeat;
   background-color: #555;
-  border-bottom-left-radius: 50% 20%;
-  border-bottom-right-radius: 50% 20%;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
 
 canvas.particles-js-canvas-el {
