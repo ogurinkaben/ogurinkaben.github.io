@@ -1101,7 +1101,7 @@ a:hover,
 /*========== Footer =======*/
 
 footer {
-  background;url(https://res.cloudinary.com/simplytammy/image/upload/v1545064528/footer-bg.png);
+  background:url(https://res.cloudinary.com/simplytammy/image/upload/v1545064528/footer-bg.png);
   background-color:#555;
   background-size: contain;
   background-position: left bottom;
