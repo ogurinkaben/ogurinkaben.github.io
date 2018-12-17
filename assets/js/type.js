@@ -1,3 +1,4 @@
+// typing animation
 var TypeString = function(el, Typing, period) {
   this.Typing = Typing;
   this.el = el;
