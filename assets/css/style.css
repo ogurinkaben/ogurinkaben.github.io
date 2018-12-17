@@ -592,6 +592,8 @@ a:hover,
   padding: 1em;
   box-shadow: none;
   z-index: 10;
+  border-bottom-left-radius: 50% 18%;
+  border-bottom-right-radius: 50% 18%;
 }
 
 .navbar-brand a {
