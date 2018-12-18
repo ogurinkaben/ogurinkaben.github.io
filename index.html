@@ -10,7 +10,7 @@
     <link rel="shortcut icon" type="image/png" href="https://res.cloudinary.com/simplytammy/image/upload/v1545002128/favicon.png" />
     <link rel="shortcut icon" type="image/png" href="https://res.cloudinary.com/simplytammy/image/upload/v1545002128/favicon.png" />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.min.css">
     <!-- Material icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Bootstrap core CSS -->
@@ -33,7 +33,7 @@
       <div class="container">
         <span class="navbar-brand">
           <a href="#home" class=" scroll" >
-          <i class="fa fa-code"></i></a>
+          <i class="fas fa-code"></i></a>
         </span>
         <span class="navbar-toggler collapsed" data-toggle="collapse" data-target=".navbar-collapse" style="color: #0198E1;">
           <hr>
@@ -91,7 +91,6 @@
           <p>Apart from web developement, I also pay attention to AI and IOT and also spend my free time doing other geeky stuff.</p>
           <a href="https://about.me/ogurinkabenjamin/" target="_blank" class="pulse-button btn btn-sm">Know more <i class="fa fa-arrow-right right"></i></a>
           <div class="triangle float"></div>
-          <div class="hexagon float"></div>
           <p></p>
         </div>
       </div>
@@ -183,7 +182,7 @@
               <h1>Languages I speak</h1>
               <i class="fab fa-2x fa-fw fa-html5 text-black" style="color: #DC143C;"></i>
               <i class="fab fa-2x fa-fw fa-css3 text-black" style="color: #1E90FF;"></i>
-              <i class="fab fa-2x fa-fw fa-js text-black" style="color:#FF8C00;"></i>
+              <i class="fab fa-2x fa-fw fa-js-square text-black" style="color:#FF8C00;"></i>
               <i class="fab fa-2x fa-fw fa-sass text-black" style="color:#C69;"></i>
             </div>
           </div>
@@ -198,8 +197,8 @@
           <div class="col-md-4 tool-set">
             <div class="mycard">
               <h1>My Dev Tools</h1>
-              <i class="fab fa-2x fa-fw fa-git" style="color:#EF2F1E;"></i>
-              <i class="fab fa-2x fa-fw fa-github text-black" style="color: #555;"></i>
+              <i class="fab fa-2x fa-fw fa-git-square" style="color:#EF2F1E;"></i>
+              <i class="fab fa-2x fa-fw fa-github-square text-black" style="color: #555;"></i>
               <i class="fab fa-2x fa-fw fa-gitlab text-black" style="color: #FC6D26;"></i>
               
               
@@ -219,8 +218,10 @@
           <div class="wrapper">
             <div class="outer">
               <div class="content">
+                <div class="info">
                 <h1>Studentpady</h1>
              <p>Official Website of studentpady</p>
+           </div>
                         <div class="overlay">
     <div class="overlay-content"> <div class="btn-portfolio center">
                   <a href="#">View details <i class="fa fa-eye"></i></a>
@@ -238,8 +239,10 @@
           <div class="wrapper">
             <div class="outer">
               <div class="content">
+                <div class="info">
                 <h1>Q &amp; A app</h1>
                 <p>Simple and free conference Q&amp;A app</p>
+              </div>
                 
                            <div class="overlay">
     <div class="overlay-content"> <div class="btn-portfolio center">
@@ -256,8 +259,10 @@
           <div class="wrapper">
             <div class="outer">
               <div class="content">
+                <div class="info">
                 <h1>Password Generator</h1>
                 <p>Tool to help you generate secure passwords</p>
+              </div>
                 
                            <div class="overlay">
     <div class="overlay-content"> <div class="btn-portfolio center">
@@ -273,8 +278,10 @@
           <div class="wrapper">
             <div class="outer">
               <div class="content">
+                <div class="info">
                 <h1>My Portfolio</h1>
                 <p>The design of my portfolio website</p>
+              </div>
                 
                          <div class="overlay">
     <div class="overlay-content"> <div class="btn-portfolio center">
@@ -291,8 +298,10 @@
           <div class="wrapper">
             <div class="outer">
               <div class="content">
+                <div class="info">
                 <h1>Chrome social</h1>
                 <p>A simple chrome extension</p>
+              </div>
                 
                          <div class="overlay">
     <div class="overlay-content"> <div class="btn-portfolio center">
@@ -308,8 +317,10 @@
           <div class="wrapper">
             <div class="outer">
               <div class="content">
+                <div class="info">
                 <h1>Mini Bitcoin Converter</h1>
                 <p>A lightweight web app that converts Bitcoin</p>
+              </div>
                 
                           <div class="overlay">
     <div class="overlay-content"> <div class="btn-portfolio center">
@@ -323,7 +334,7 @@
         </div>
       </div>
       <div class="see-more">
-        <a href="" class="btn">Email me for more <i class="fa fa-fw fa-envelope"></i></a>
+        <a href="mailto:ogurinkabenjamin@gmail.com" class="btn">Email me for more <i class="fa fa-fw fa-envelope"></i></a>
       </div>
       
     </section>
@@ -399,26 +410,32 @@
     </section> -->
     
     <section class="container cta" style="background: #222;" id="contact">
-      <div class="container-fluid screen">
-        <div class="center">
-          <p class="code">
-            <span class="function">function </span>
-            <span class="fname">buildAwesomeStuff </span>( ) { <br>
-            <span class="ret">return </span>
-            <span class="string">“Ogurinka Benjamin” ; <br>
-              }
-            </span><br>
-                        <span class="comment"><i>// wanna work with me ?</i></span>
-          </p>
-          <a href="" target="_blank" class="btn btn-contact">
-            Say Hello
-          </a>
+      <div class="container-fluid screen row">
+        <div class="col-md-4">
+          <div class="f1">
+            <h1 class="text-white">Start a project</h1>
+          </div>
         </div>
+        <div class="col-md-4">
+          <div class="f2">
+            <p class="text-white">You want to bring me on board your new project? Tell me about it. I'll pay for coffee (maybe)</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="f3">
+            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=2349052657514" target="_blank" class="btn btn-contact">
+            Say Hello <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+          
+        
+
       </div>
     </section>
     <footer class="mt-5">
       <div class="container-fluid py-3">
         <div class="container">
+          <div class="hexagon float"></div>
           <div class="py-3">
             <div class="text-center text-white">
               <div class="container">
@@ -427,25 +444,22 @@
                 </h5>
                 <br>
               </div>
-              <div class="d-inline-block text-center">
-                <div class="bg-circle-outline d-inline-block footer-link">
-                  <a href="https://www.facebook.com/" class="text-white"><i class="fab fa-2x fa-fw fa-facebook"></i>
+              <div class="d-inline-block text-center footer-holder">
+        
+                  <a href="https://www.facebook.com/ogb.tammy" class="text-white footer-link" target="_blank">
+                    <i class="fab fa-fw fa-facebook"></i>
                   </a>
-                </div>
-                <div class="bg-circle-outline d-inline-block footer-link">
-                  <a href="https://twitter.com/" class="text-white">
-                  <i class="fab fa-2x fa-fw fa-twitter"></i></a>
-                </div>
-                <div class="bg-circle-outline d-inline-block footer-link">
-                  <a href="https://www.github.com/" class="text-white">
-                  <i class="fab fa-2x fa-fw fa-github"></i></a>
-                </div>
-                <div class="bg-circle-outline d-inline-block footer-link">
-                  <a href="https://www.instagram.com/" class="text-white">
-                  <i class="fab fa-2x fa-fw fa-instagram"></i></a>
-                </div>
+        
+                  <a href="https://twitter.com/_simplytammy" class="text-white footer-link" target="_blank">
+                  <i class="fab  fa-fw fa-twitter"></i></a>
+        
+                  <a href="https://www.github.com/simplytammy" class="text-white footer-link" target="_blank">
+                  <i class="fab  fa-fw fa-github-alt"></i></a>
+        
+                  <a href="https://www.instagram.com/ogurinkabenjamin" class="text-white footer-link" target="_blank">
+                  <i class="fab  fa-fw fa-instagram"></i></a>
                 <br>
-                <p class="text-white">&copy; simplytammy</p>
+                <p class="text-white copyright">&copy; simplytammy</p>
               </div>
             </div>
           </div>
