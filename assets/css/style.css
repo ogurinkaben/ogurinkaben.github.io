@@ -1094,7 +1094,7 @@ a:hover,
   color: #fff;
   position: relative;
   background: #236B8E;
-  height: auto;
+  height: 300px;
   width: 100%;
   padding: 15px;
   margin-bottom: 30px;
@@ -1104,8 +1104,16 @@ a:hover,
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.11);
 }
 .content {
-  z-index: 3
+  z-index: 3;
   
+}
+
+.info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
 
 .btn-portfolio {
@@ -1781,43 +1789,38 @@ a:hover,
   width: 100%;
   border-radius: 20px;
   margin-bottom: -10%;
-  padding-top: 0;
-  padding-bottom: 18px;
   position: relative;
   top: 0;
   left: 0;
-  z-index: 9999;
+  height: 200px;
+  text-align: center;
+}
+.f1,.f2,.f3 {
+  text-align: center;
+}
+
+.f1 h1 {
+  font-weight: 900;
+  text-align: center;
 }
 
 @media screen and (max-width: 600px) {
  .cta {
    width:90%;
-   margin-bottom: -30%;
+   margin-bottom: -50%;
+   height: 300px;
+   text-align: center;
+ }
+ .f1 h1 {
+  font-size: 30px;
  }
 }
-.function {
-  color: #cc99cd;
-}
-.fname {
-  color: #f08d49;
-}
-.string {
-  color: #7ec699;
-}
-.code {
- font-family: 'Montserrat', sans-serif;
-  color: white;
-  font-size: 20px;
-  font-weight: 700;
-  padding-left: 5px;
-  text-align: left;
-}
-.comment {
-  color: #555;
-  font-weight: normal;
-}
 .screen {
-    border-left: 2px solid #c0c0c0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
 .btn-contact {
@@ -1848,14 +1851,30 @@ footer {
 
 @media screen and (max-width: 600px) {
   footer {
-  padding-top: 30%;
+  padding-top: 50%;
   z-index: 1;
 }
 }
 
-.footer-link:hover {
-  background: #0198E1;
+.footer-holder {
+  margin-bottom: 90px;
+}
+
+.footer-link {
+  font-size: 20px;
+  padding: 14px 16px;
+  margin-bottom: 30px;
+
+}
+
+.footer-link:hover i {
+  color: #0198E1;
+  transform: scale(1.1);
   -webkit-transition: .6s;
   -o-transition: .6s;
   transition: .6s;
+}
+
+.copyright {
+  padding: 20px;
 }
