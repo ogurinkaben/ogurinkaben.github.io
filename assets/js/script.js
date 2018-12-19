@@ -1,4 +1,34 @@
+const app = new Vue({
+  el: '#vueInit',
+  data: {
+    nameError:null,
+    emailError:null,
+    msgError:null,
+    name: null,
+    email: null,
+    msg: null
+  },
+  methods:{
+    checkForm: function (e) {
+      if (this.name) {
+        return true;
+      }
 
+      this.errors = [];
+
+      if (!this.name) {
+        this.nameError="Enter a name please"
+      }
+      if (!this.email) {
+     this.emailError="Let's enter an email, shall we?"
+      }
+      if (!this.msg) {
+        this.msgError="Please enter a message"
+      }
+      e.preventDefault();
+    }
+  }
+});
 //particles.js config
 particlesJS("particles-js", {
 
