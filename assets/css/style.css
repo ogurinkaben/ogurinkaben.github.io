@@ -475,9 +475,10 @@ a:hover,
 
 .right {
     -webkit-animation: right 2.5s infinite;
+                 animation: right 2.5s infinite;
 }
 
-@-webkit-keyframes right {
+@keyframes right {
     0% {
         margin-left: 2px;
     }
@@ -505,7 +506,6 @@ a:hover,
     margin: 0 auto;
     position: relative;
     opacity: .3;
-}
 }
 
 .hexagon:before {
@@ -1087,7 +1087,6 @@ a:hover,
     margin: 0 auto;
 }
 
-.do-text {}
 
 .do-text h1 {
     font-weight: 900;
@@ -1840,65 +1839,42 @@ a:hover,
 
 }
 
-/*========== CTA ==========*/
-.cta {
-    width: 100%;
+/*========== Contact ==========*/
+#contact {
+   position: relative;
+   margin-bottom: -20%;;
+   border-radius: 10px;
+}
+input[type="text"] , input[type="email"]{
+    background: transparent;
+    color: #FFF;
+    border-radius: 10px;
+}
+#textarea {
+    background: transparent;
+    border-radius: 10px;
+    color:#FFF;
+}
+input[type="text"]:focus {
+    outline: none;
+    background: transparent;
+    color: #FFF;
+}
+
+.btn-submit {
+    background: transparent;
+    color: #FFF;
+    border: 1px solid #FFF;
     border-radius: 20px;
-    margin-bottom: -10%;
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 200px;
-    text-align: center;
 }
-
-.f1,
-.f2,
-.f3 {
-    text-align: center;
-}
-
-.f1 h1 {
-    font-weight: 900;
-    text-align: center;
-}
-
-@media screen and (max-width: 600px) {
-    .cta {
+@media screen and (max-width:600px) {
+    #contact {
         width: 90%;
         margin-bottom: -50%;
-        height: 300px;
-        text-align: center;
     }
-
-    .f1 h1 {
-        font-size: 30px;
-    }
-}
-
-.screen {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-}
-
-.btn-contact {
-    border: 2px solid #fff;
-    border-radius: 20px;
-    font-weight: 800;
-}
-
-.btn-contact:hover {
-    background: #fff;
-    color: #222;
-}
-
-@media screen and (max-width: 600px) {
-    .code {
-        font-size: 15px;
-    }
+    .form-holder {
+        width: 100%;
+        } 
 }
 
 /*========== Footer =======*/
