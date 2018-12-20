@@ -311,14 +311,6 @@ $(function(){
 });
 //Tooltip init
 $('[data-toggle="tooltip"]').tooltip();
-
-//Preloader init
-$(window).on('load', function() { 
-$('#loader').fadeOut(); 
-$('#holder').delay(350).fadeOut('slow');
-$('body').css('overflow','visible');
-});
-    
 });
 
 
