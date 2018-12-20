@@ -6,7 +6,6 @@ body {
     -o-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
-    overflow: hidden;
 }
 @media screen and (max-width: 600px) {
 
@@ -16,54 +15,7 @@ body {
     }
 }
 
-#holder {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #222;
-    z-index: 99999999;
-    height: 100vh;
-  }
-  
-  #loader {
-      position: absolute;
-      top:45%;
-      left: 48%;
-    -webkit-animation: spinning 5s linear infinite;
-            animation: spinning 5s linear infinite;
-    border: 5px solid #ddd;
-    border-top: 4px solid #50A6C2;
-    border-bottom: 4px solid #50A6C2;
-    height: 75px;
-    width: 75px;
-  }
-  @media screen and (max-width:600px) {
-     #loader {
-        position: absolute;
-        top:45%;
-        left: 40%;
-     } 
-  }
-  @-webkit-keyframes spinning {
-    to {
-      border-top-color: #236B8E;
-      border-bottom: 4px solid #50A6C2;
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes spinning {
-    to {
-      border-top-color: #236B8E;
-      border-bottom: 4px solid #50A6C2;
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
-  }
-  
+
 #particles-js {
     position: relative;
     width: 100%;
