@@ -1,3 +1,4 @@
+//<============ Vue.js <============+
 const app = new Vue({
   el: '#vueInit',
   data: {
@@ -151,13 +152,15 @@ particlesJS("particles-js", {
   "retina_detect": true
 });
 
+////===========> Vanilla JS <==============
+
 // Testimonial carousel
-var testim = document.getElementById("testim"),
+let testim = document.getElementById("testim"),
     testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
     testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
     testimLeftArrow = document.getElementById("left-arrow"),
     testimRightArrow = document.getElementById("right-arrow"),
-    testimSpeed = 4500,
+    testimSpeed = 6500,
     currentSlide = 0,
     currentActive = 0,
     testimTimer,
@@ -169,7 +172,7 @@ var testim = document.getElementById("testim"),
 
 window.onload = function() {
     function playSlide(slide) {
-        for (var k = 0; k < testimDots.length; k++) {
+        for (let k = 0; k < testimDots.length; k++) {
             testimContent[k].classList.remove("active");
             testimContent[k].classList.remove("inactive");
             testimDots[k].classList.remove("active");
@@ -205,7 +208,7 @@ window.onload = function() {
         playSlide(currentSlide += 1);
     })    
 
-    for (var l = 0; l < testimDots.length; l++) {
+    for (let l = 0; l < testimDots.length; l++) {
         testimDots[l].addEventListener("click", function() {
             playSlide(currentSlide = testimDots.indexOf(this));
         })
@@ -257,6 +260,90 @@ window.onload = function() {
       
     })
 }
+
+// typing animation
+var TypeString = function(el, Typing, period) {
+  this.Typing = Typing;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TypeString.prototype.tick = function() {
+  var i = this.loopNum % this.Typing.length;
+  var fullTxt = this.Typing[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('type');
+  for (var i=0; i<elements.length; i++) {
+    var Typing = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (Typing) {
+      new TypeString(elements[i], JSON.parse(Typing), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".type > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+//============> jQuery <==============
+
+$(document).ready(function() {
+  // Smooth scrolling
+  let scrollLink = $('.scroll');
+
+  scrollLink.click(function(e) {
+    e.preventDefault();
+    $('body,html').animate({
+      scrollTop: $(this.hash).offset().top
+    }, 1000 );
+  });
+
+  // Back to top
+
+  let btn = $('#top');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+    
+});
 
 
 
