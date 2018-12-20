@@ -36,13 +36,17 @@
 </head>
 
 <body id="home">
+        <div id="loading" class="split-bg">
+                    <div id="loader-1"></div>
+                    <div id="loader-2"></div>
+              </div>
     <div id="vueInit">
         <header class="navbar navbar-expand-md fixed-top scrolling-navbar">
             <div class="container">
                 <span class="navbar-brand">
                     <a href="https://api.whatsapp.com/send?1=pt_BR&phone=2349022618844" target="_blank" class="btn btn-sm btn-hi  pulse">say hello</a>
                 </span>
-                <span class="navbar-toggler collapsed" data-toggle="collapse" data-target=".navbar-collapse" style="color: #0198E1;">
+                <span class="navbar-toggler collapsed" data-toggle="collapse" data-target=".navbar-collapse" style="color: #50A6C2;">
                     <hr>
                     <hr>
                 </span>
@@ -62,13 +66,12 @@
                 <div class="square">
                 </div>
                 <div class="intro">
-                    <span class="greet">Hi.. I'm</span>
                     <h1 class="text-white first">Ogurinka <strong class="name">Benjamin</strong></h1>
                     <p class="sub pulse">
-                        < / <span class="typing"> </span> >
+                        &lt; / <span>Front End Developer </span> &gt;
                     </p>
 
-                    <div class="lines"></div>
+                  
                 </div>
                 <div class="mouse"></div>
                 <div class="arrow-scroll">
@@ -593,21 +596,19 @@
             </div>
         </section>
         <section class="testimonial-section">
-            <ul class="bg-bubbles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <div class="triangle-1"></div>
-            <div class="triangle-2"></div>
-            <div class="triangle-3"></div>
+                <ul class="bg-bubbles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+
             <div class="row text-center">
                 <div class="col-md-12">
                     <p class="testim-quote">,,</p>
@@ -661,8 +662,13 @@
                         </div>
                         <div>
                             <div class="img"><img src="" alt=""></div>
-                            <div class="h4">Dev David <br><span class="role">Test</span></div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                            <div class="h4">Kelvin Gobo <br><span class="role">Front End Developer @SprintHub</span></div>
+                            <p>
+                                    One of the quotes Facebook is known for is "move fast, break things." Ever since we met, Benjamin has practiced this. 
+                                    Always experimenting with something new, always learning. Anytime we meet, he has learnt something new. 
+                                    With best practices and tools updated frequently, you need to move quickly in the field of software development to thrive. 
+                                    And I believe Benjamin is on the path to doing just that.
+                            </p>
                         </div>
 
                     </div>
@@ -672,6 +678,7 @@
         </section>
 
         <section class="container" style="background: #222;" id="contact">
+
             <div class="form-holder">
 
                 <div class="container contact-form">
@@ -689,7 +696,7 @@
                                     <p v-if="emailError" class="text-danger">{{emailError}}</p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="phoneno" class="form-control" placeholder="Your Phone Number (Optional)" value="" />
+                                    <input type="text" name="phoneno" class="form-control" placeholder="Your Phone Number (Optional)" value="" v-model="phone" />
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -705,7 +712,20 @@
 
                     </form>
                 </div>
+                
         </section>
+        <ul class="bg-bubbles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         <footer class="mt-5">
             <div class="container-fluid py-3">
                 <div class="container">
