@@ -1142,7 +1142,6 @@ a:hover,
     .tools .heading {
         position: relative;
         display: inline-block;
-        letter-spacing: 4px;
         color:#50A6C2;
         font-size:18px;
       }
