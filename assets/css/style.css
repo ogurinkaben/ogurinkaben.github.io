@@ -1,6 +1,7 @@
 /* ======= General stuff =========== */
-
-html,
+html {
+    overflow-x: hidden;
+}
 body {
     margin: 0;
     padding: 0;
@@ -8,8 +9,8 @@ body {
     -o-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+    overflow: hidden;
 }
-
 @media screen and (max-width: 600px) {
 
     html,
@@ -18,6 +19,54 @@ body {
     }
 }
 
+#holder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #222;
+    z-index: 99999999;
+    height: 100vh;
+  }
+  
+  #loader {
+      position: absolute;
+      top:45%;
+      left: 48%;
+    -webkit-animation: spinning 5s linear infinite;
+            animation: spinning 5s linear infinite;
+    border: 5px solid #ddd;
+    border-top: 4px solid #50A6C2;
+    border-bottom: 4px solid #50A6C2;
+    height: 75px;
+    width: 75px;
+  }
+  @media screen and (max-width:600px) {
+     #loader {
+        position: absolute;
+        top:45%;
+        left: 40%;
+     } 
+  }
+  @-webkit-keyframes spinning {
+    to {
+      border-top-color: #236B8E;
+      border-bottom: 4px solid #50A6C2;
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spinning {
+    to {
+      border-top-color: #236B8E;
+      border-bottom: 4px solid #50A6C2;
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  
 #particles-js {
     position: relative;
     width: 100%;
@@ -43,6 +92,24 @@ h6 {
     color: #222;
     font-family: "Raleway", sans-serif;
 }
+#preloader {
+    height: 30px;
+    width: 30px;
+    margin: 40vh auto;
+    border: 5px solid rgba(60,60,180,0.45);
+    border-top: 5px solid rgb(60,60,180);
+    border-radius: 50%;
+    animation: rotate 1s infinite linear;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
 p {
     font-family: "Raleway", sans-serif;
@@ -459,7 +526,7 @@ a:hover,
     right: 2%;
 }
 
-.right {
+.right-arrow {
     -webkit-animation: right 2.5s infinite;
                  animation: right 2.5s infinite;
 }
@@ -1072,7 +1139,7 @@ a:hover,
 
 .do-text h1 {
     font-weight: 900;
-    color: #236B8E;
+    color: #236b8e;
 }
 
 @media screen and (max-width: 920px) {
@@ -1087,14 +1154,13 @@ a:hover,
 
 .tools {
     padding: 0;
-    border: 2px solid #236B8E; 
+    border-bottom: 2px solid #50A6C2; 
     border-top:none;
     padding-bottom: 6%;
 }
 .tools .heading {
     position: relative;
     display: inline-block;
-    letter-spacing: 4px;
     color:#236B8E;
   }
 
@@ -1113,7 +1179,7 @@ a:hover,
 .tool-set h1 {
     font-size: 21px;
     font-weight: 800;
-    color: #236B8E;
+    color: #50A6C2;
 }
 
 @media screen and (max-width: 600px) {
@@ -1122,13 +1188,13 @@ a:hover,
     }
     .tools {
         border:none;
-        border-bottom: 2px solid #236B8E;
+        border-bottom: 2px solid #50A6C2;
     }
     .tools .heading {
         position: relative;
         display: inline-block;
         letter-spacing: 4px;
-        color:#236B8E;
+        color:#50A6C2;
         font-size:18px;
       }
 }
@@ -1179,7 +1245,7 @@ a:hover,
 .outer {
     color: #fff;
     position: relative;
-    background: #236B8E;
+    background: #50A6C2;
     height: 300px;
     width: 100%;
     padding: 15px;
@@ -1227,7 +1293,7 @@ a:hover,
 }
 
 .btn-portfolio .btn-details:hover {
-    color: #236B8E;
+    color: #50A6C2;
     transition: all 0.5s ease;
     background: #fff;
 }
@@ -1265,7 +1331,7 @@ a:hover,
 
 .testimonial-section {
     position: relative;
-    background-color: #0198E1;
+    background-color: #50A6C2;
     margin-top: 10px;
     margin-bottom: 80px;
 }
@@ -1888,8 +1954,10 @@ input[type="text"]:focus {
 /*========== Footer =======*/
 
 footer {
-    background: url(https://res.cloudinary.com/simplytammy/image/upload/v1545064528/footer-bg.png);
-    background-color: #555;
+    /* background: url(https://res.cloudinary.com/simplytammy/image/upload/v1545064528/footer-bg.png); */
+    background-color: #50A6C2;
+    color:#222;
+    font-weight: 800;
     background-size: contain;
     background-position: left bottom;
     background-repeat: no-repeat;
@@ -1912,11 +1980,13 @@ footer {
     font-size: 20px;
     padding: 14px 16px;
     margin-bottom: 30px;
+    color:#222;
 
 }
 
 .footer-link:hover i {
     opacity: .7;
+    color:#222;
     transform: scale(0.9);
     -webkit-transition: .6s;
     -o-transition: .6s;
