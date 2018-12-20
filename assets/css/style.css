@@ -855,8 +855,7 @@ a:hover,
     -webkit-box-shadow: none;
     box-shadow: none;
     z-index: 99999999;
-    border-bottom-left-radius: 50% 18%;
-    border-bottom-right-radius: 50% 18%;
+    
 }
 
 .navbar-brand a {
