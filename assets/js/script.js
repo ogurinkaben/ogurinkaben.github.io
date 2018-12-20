@@ -7,6 +7,7 @@ const app = new Vue({
     msgError:null,
     name: null,
     email: null,
+    phone:null,
     msg: null
   },
   methods:{
@@ -286,31 +287,14 @@ $(window).scroll(function() {
     btn.removeClass('show');
   }
 });
-// Type.js init
-$('.resource').hide();
-$(function(){
-  setTimeout ( function() {
-    $(".typing").typed({
-    strings: ["Front End Developer"," AI Lover", "Code for fun", "Curious Learner"," Movie Lover",  "Slightly Geeky"], 
-    typeSpeed: 120,
-    startDelay: 0, 
-    backSpeed: 0,
-    backDelay: 800,
-    loop: true,
-    loopCount: false,
-    showCursor: true,
-    cursorChar: "",
-    attr: null,
-    contentType: 'html',
-    callback: function() {},
-    preStringTyped: function() {},
-    onStringTyped: function() {},
-    resetCallback: function() {}
-  });
-  }, 200);
-});
 //Tooltip init
 $('[data-toggle="tooltip"]').tooltip();
+
+ $(window).on('load', function() {
+  $("#loader").fadeOut();
+  $("#loading").delay(100).fadeOut("slow");
+});
+
 });
 
 
