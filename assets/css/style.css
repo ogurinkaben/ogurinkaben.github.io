@@ -6,13 +6,79 @@ body {
     -o-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
 }
-@media screen and (max-width: 600px) {
+
+  #loading {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999999999;
+    margin-top: 0px;
+    top: 0px;
+
+  }
+    
+  #loader-1 {
+    width: 100px;
+    height: 50px;
+    border:3px solid #FFF;
+    position: absolute;
+    top: 45%;
+    left: 47.3%;
+    animation: moveUp 1s infinite ease;
+ 
+  }
+  #loader-2 {
+    width: 100px;
+    height: 50px;
+    border:3px solid #FFF;
+    position: absolute;
+    top: 52%;
+    left: 47.3%;
+    animation: moveDown 1s infinite ease;
+  }
+  @keyframes moveUp {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(25px);
+    }
+    100% {
+        transform: translateY(50px);
+    }
+  }
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+}
+  100% {
+      transform: translateY(-50px);
+  }
+}
+  @media screen and (max-width: 600px) {
 
     html,
     body {
         overflow-x: hidden;
     }
+    #loader-1 {
+        position: absolute;
+        top: 45%;
+        left: 39%;
+      }
+      #loader-2 {
+        position: absolute;
+        top: 52%;
+        left: 39%;
+      }
 }
 
 
@@ -41,24 +107,6 @@ h6 {
     color: #222;
     font-family: "Raleway", sans-serif;
 }
-#preloader {
-    height: 30px;
-    width: 30px;
-    margin: 40vh auto;
-    border: 5px solid rgba(60,60,180,0.45);
-    border-top: 5px solid rgb(60,60,180);
-    border-radius: 50%;
-    animation: rotate 1s infinite linear;
-  }
-  
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
 
 p {
     font-family: "Raleway", sans-serif;
@@ -103,7 +151,7 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 100%;
     height: 100%;
     z-index: 1;
 }
@@ -114,7 +162,8 @@ section {
     display: block;
     width: 40px;
     height: 40px;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: #50A6C2;
+    opacity: .2;
     bottom: -160px;
     -webkit-animation: square 25s infinite;
     animation: square 25s infinite;
@@ -128,8 +177,8 @@ section {
 
 .bg-bubbles li:nth-child(2) {
     left: 20%;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     -webkit-animation-delay: 2s;
     animation-delay: 2s;
     -webkit-animation-duration: 17s;
@@ -157,8 +206,8 @@ section {
 
 .bg-bubbles li:nth-child(6) {
     left: 80%;
-    width: 120px;
-    height: 120px;
+    width: 70px;
+    height: 70px;
     -webkit-animation-delay: 3s;
     animation-delay: 3s;
     background-color: rgba(255, 255, 255, 0.2);
@@ -166,8 +215,8 @@ section {
 
 .bg-bubbles li:nth-child(7) {
     left: 32%;
-    width: 160px;
-    height: 160px;
+    width: 80px;
+    height: 80px;
     -webkit-animation-delay: 7s;
     animation-delay: 7s;
 }
@@ -195,8 +244,8 @@ section {
 
 .bg-bubbles li:nth-child(10) {
     left: 90%;
-    width: 160px;
-    height: 160px;
+    width: 20px;
+    height: 20px;
     -webkit-animation-delay: 11s;
     animation-delay: 11s;
 }
@@ -824,15 +873,15 @@ a:hover,
 .sub {
     margin-top: 0px;
     font-weight: 900;
-    color: #0198E1;
-    font-size: 16px;
+    color: #50A6C2;
+    font-size: 20px;
+    text-align: center;
     font-family: "Raleway";
-    float: right;
 }
 
 @media screen and (max-width: 600px) {
     .intro .first {
-        font-size: 45px;
+        font-size: 46px;
     }
 
     .sub {
@@ -842,7 +891,6 @@ a:hover,
         color: #0198E1;
         font-size: 16px;
         font-family: "Raleway";
-        float: right;
         line-height: 1px;
     }
 }
@@ -863,7 +911,7 @@ a:hover,
 }
 
 .btn-hi {
-    border: 2px solid #0198E1;
+    border: 2px solid #50A6C2;
     border-radius: 20px;
     border-bottom-left-radius: 0;
     font-weight: 700;
@@ -871,7 +919,7 @@ a:hover,
 }
 
 .btn-hi:hover {
-    background: #0198E1;
+    background: #50A6C2;
     color: #222;
 }
 
@@ -1102,7 +1150,7 @@ a:hover,
 
 .tools {
     padding: 0;
-    border-bottom: 2px solid #50A6C2; 
+    border-bottom: 2px solid #EEE; 
     border-top:none;
     padding-bottom: 6%;
 }
@@ -1136,7 +1184,6 @@ a:hover,
     }
     .tools {
         border:none;
-        border-bottom: 2px solid #50A6C2;
     }
     .tools .heading {
         position: relative;
@@ -1278,9 +1325,9 @@ a:hover,
 
 .testimonial-section {
     position: relative;
-    background-color: #50A6C2;
     margin-top: 10px;
     margin-bottom: 80px;
+    color:#222;
 }
 
 @media screen and (max-width: 600px) {
@@ -1300,7 +1347,7 @@ a:hover,
 .testim .arrow {
     display: block;
     position: absolute;
-    color: #eee;
+    color: #222;
     cursor: pointer;
     font-size: .8em;
     top: 50%;
@@ -1363,6 +1410,10 @@ a:hover,
         z-index: 3333;
         height: 12px;
     }
+    .testim .arrow {
+        font-size: .5em;
+      
+    }
     .h2 {
         font-size: 20px;
         font-weight: 800;
@@ -1379,7 +1430,7 @@ a:hover,
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    border: 1px solid #eee;
+    border: 1px solid #555;
     cursor: pointer;
     -webkit-transition: all .5s ease-in-out;
     -ms-transition: all .5s ease-in-out;
@@ -1440,14 +1491,14 @@ a:hover,
     font-size: 18px;
 }
 .testim .cont div .h4 {
-    color: #222;
+    color: #50A6C2;
     font-size: 2.2em;
     margin: 15px 0;
 }
 
 .testim .cont div p {
     font-size: 1.1em;
-    color: #eee;
+    color: #222;
     width: 100%;
     margin: auto;
 }
