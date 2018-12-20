@@ -286,7 +286,7 @@ $(window).scroll(function() {
     btn.removeClass('show');
   }
 });
-// My code
+// Type.js init
 $('.resource').hide();
 $(function(){
   setTimeout ( function() {
@@ -308,6 +308,15 @@ $(function(){
     resetCallback: function() {}
   });
   }, 200);
+});
+//Tooltip init
+$('[data-toggle="tooltip"]').tooltip();
+
+//Preloader init
+$(window).on('load', function() { 
+$('#loader').fadeOut(); 
+$('#holder').delay(350).fadeOut('slow');
+$('body').css('overflow','visible');
 });
     
 });
