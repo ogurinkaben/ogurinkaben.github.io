@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.min.css">
     <!--Devicons-->
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <!--Animate.css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
 
     <!-- Material icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -34,11 +36,16 @@
 </head>
 
 <body id="home">
-    <div id="vueInit">
+        <div id="holder">
+                <div id="loader" class="pulse">
+                   
+                </div>
+              </div>
+    <div id="vueInit" class="body">
         <header class="navbar navbar-expand-md fixed-top scrolling-navbar">
             <div class="container">
                 <span class="navbar-brand">
-                    <a href="https://api.whatsapp.com/send?1=pt_BR&phone=2349052657514" target="_blank" class="btn btn-sm btn-hi  pulse">Let's talk <i class="far fa-smile-wink"></i></a>
+                    <a href="https://api.whatsapp.com/send?1=pt_BR&phone=2349022618844" target="_blank" class="btn btn-sm btn-hi  pulse">say hello</a>
                 </span>
                 <span class="navbar-toggler collapsed" data-toggle="collapse" data-target=".navbar-collapse" style="color: #0198E1;">
                     <hr>
@@ -94,7 +101,7 @@
                         I code for fun and I build cool stuff as a hobby. Pay attention to best practices known to me and I'm always open to learn new things and take on challenging paths.
                     </p>
                     <p>Apart from web developement, I also pay attention to AI and IOT and also spend my free time doing other geeky stuff.</p>
-                    <a href="https://about.me/ogurinkabenjamin/" target="_blank" class="pulse-button btn btn-sm pulse">Know more <i class="fa fa-arrow-right right"></i></a>
+                    <a href="https://about.me/ogurinkabenjamin/" target="_blank" class="pulse-button btn btn-sm pulse">Know more <i class="fa fa-arrow-right right-arrow"></i></a>
                     <div class="triangle float"></div>
                     <p></p>
                 </div>
@@ -109,8 +116,7 @@
                 </div>
             </div>
             <div class="do-heading center">
-                <h2>So,</h2>
-                <h3>I said I'm a <span style="color: #236B8E;"> Front End Developer</span>.. what does that even mean?</h3>
+                <h2>I said I'm a <span style="color: #236B8E;"> Front End Developer</span>.. what does that even mean?</h2>
             </div>
             <div class="row">
                 <div class="col-md-6 do do-1">
@@ -120,7 +126,7 @@
                                 <img src="https://res.cloudinary.com/simplytammy/image/upload/v1544975493/design.jpg">
                             </div>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-8 animated fadeInLeft">
                             <div class="do-text">
                                 <h1>I design websites</h1>
                                 <p>Well, being a Front End Developer means I take responsibility for the design and feel of web pages,
@@ -131,7 +137,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 do do-2">
+                <div class="col-md-6 do do-2 animated fadeInRight">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="do-img">
@@ -147,11 +153,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 do do-3">
+                <div class="col-md-6 do do-3 animated fadeInLeft">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="do-img">
-                                <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545214827/app.jpg">
+                                <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545314888/webapp.png">
                             </div>
                         </div>
                         <div class="col-md-8">
@@ -162,7 +168,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 do do-4">
+                <div class="col-md-6 do do-4 animated fadeInRight">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="do-img">
@@ -179,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 do do-5">
+                <div class="col-md-6 do do-5 animated fadeInLeft">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="do-img">
@@ -196,7 +202,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 do do-6">
+                <div class="col-md-6 do do-6 animated fadeInRight">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="do-img">
@@ -261,7 +267,7 @@
                 <div class="col-md-4">
 
                     <div class="wrapper">
-                        <div class="outer">
+                        <div class="outer animated fadeIn">
                             <div class="content">
                                 <div class="info">
                                     <h1>Studentpady</h1>
@@ -318,7 +324,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="wrapper">
-                        <div class="outer">
+                        <div class="outer animated fadeIn">
                             <div class="content">
                                 <div class="info">
                                     <h1>Q &amp; A app</h1>
@@ -375,7 +381,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="wrapper">
-                        <div class="outer">
+                        <div class="outer animated fadeIn">
                             <div class="content">
                                 <div class="info">
                                     <h1>Password Generator</h1>
@@ -430,7 +436,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="wrapper">
-                        <div class="outer">
+                        <div class="outer animated fadeIn">
                             <div class="content">
                                 <div class="info">
                                     <h1>My Portfolio</h1>
@@ -485,7 +491,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="wrapper">
-                        <div class="outer">
+                        <div class="outer animated fadeIn">
                             <div class="content">
                                 <div class="info">
                                     <h1>Chrome social</h1>
@@ -538,7 +544,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="wrapper">
-                        <div class="outer">
+                        <div class="outer animated fadeIn">
                             <div class="content">
                                 <div class="info">
                                     <h1>Mini Bitcoin Converter</h1>
@@ -629,7 +635,7 @@
                     <div id="testim-content" class="cont">
                         <div>
                             <div class="img"><img src="https://res.cloudinary.com/simplytammy/image/upload/v1545266380/vderek.jpg" alt=""></div>
-                            <div class="h4">Vinebo Derek <br> <span class="role">Operations Manager &amp; Developer @ Uniract</span></div>
+                            <div class="h4">Vinebo Derek <br> <span class="role">Operations Manager &amp;<br> Developer @ Uniract</span></div>
 
                             <p>Diligent and hardworking. Understands the importance of continous trial and never backs down from
                                 an assignment and I think this is the greatest strength of a developer.
@@ -652,8 +658,11 @@
 
                         <div>
                             <div class="img"><img src="https://res.cloudinary.com/simplytammy/image/upload/v1545266796/dozie.jpg" alt=""></div>
-                            <div class="h4">Anyanwu Nnadozie<br> <span class="role">CEO, studentpady</span></div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                            <div class="h4">Anyanwu Nnadozie<br> <span class="role">CEO/Cofounder <strong>studentpady</strong></span></div>
+                            <p>
+                                He's an embodiment of a good listener, good receptor and swift accessibility, just to mention a few. 
+                                He provided us with web development services and we rated his service: above average. We're glad we gave him the contract.
+                            </p>
                         </div>
                         <div>
                             <div class="img"><img src="" alt=""></div>
@@ -706,32 +715,30 @@
             <div class="container-fluid py-3">
                 <div class="container">
                     <div class="py-3">
-                        <div class="text-center text-white">
+                        <div class="text-center">
                             <div class="container">
-                                <h5 class="text-white">Coding awesomeness,
-                                    one line at a time.
-                                </h5>
+                                <p><i class="fa fa-envelope"></i> <br> ogurinkabenjamin@gmail.com </p>
+                                <p><i class="fa fa-mobile"></i> <br> +234 902 261 8844</p>
                                 <br>
                             </div>
                             <div class="d-inline-block text-center footer-holder">
 
-                                <a href="https://www.facebook.com/ogb.tammy" class="text-white footer-link" target="_blank" data-toggle="tooltip" title="Facebook" data-placement="bottom">
+                                <a href="https://www.facebook.com/ogb.tammy" class="footer-link" target="_blank" data-toggle="tooltip" title="Facebook" data-placement="bottom">
                                     <i class="fab fa-fw fa-facebook"></i>
                                 </a>
 
-                                <a href="https://twitter.com/_simplytammy" class="text-white footer-link" target="_blank" data-toggle="tooltip" title="Twitter" data-placement="bottom">
+                                <a href="https://twitter.com/_simplytammy" class=" footer-link" target="_blank" data-toggle="tooltip" title="Twitter" data-placement="bottom">
                                     <i class="fab  fa-fw fa-twitter"></i></a>
 
-                                <a href="https://www.github.com/simplytammy" class="text-white footer-link" target="_blank" data-toggle="tooltip" title="Github" data-placement="bottom">
+                                <a href="https://www.github.com/simplytammy" class=" footer-link" target="_blank" data-toggle="tooltip" title="Github" data-placement="bottom">
                                     <i class="fab  fa-fw fa-github-alt"></i></a>
 
-                                <a href="https://www.instagram.com/ogurinkabenjamin" class="text-white footer-link" target="_blank" data-toggle="tooltip" title="Instagram" data-placement="bottom">
+                                <a href="https://www.instagram.com/ogurinkabenjamin" class=" footer-link" target="_blank" data-toggle="tooltip" title="Instagram" data-placement="bottom">
                                     <i class="fab  fa-fw fa-instagram"></i></a>
-                                <a href="mailto:ogurinkabenjamin@gmail.com" class="text-white footer-link" data-toggle="tooltip" title="Send me a mail" data-placement="bottom">
-                                    <i class="fa  fa-fw fa-envelope"></i></a>
                                 <br>
-                                <p class="text-white copyright">Made with <i class="fa fa-fw fa-code"></i> and <i class="fa fa-heart text-danger"></i><br><br>
-                                    &copy; simplytammy</p>
+                                <p class=" copyright">Made with <i class="fa fa-fw fa-code"></i> and <i class="fa fa-heart text-danger"></i><br><br>
+                                    &copy; 2018</p>
+                                    <br>
                                 <div class="hexagon float center"></div>
                             </div>
                         </div>
@@ -750,12 +757,7 @@
     <script type="text/javascript" src="assets/mdbootstrap/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="assets/mdbootstrap/js/mdb.min.js"></script>
-    <!-- Custom javascript -->
-    <script>
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
+
     <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!--Vue.js cdn-->
