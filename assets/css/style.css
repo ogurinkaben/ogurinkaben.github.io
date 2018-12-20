@@ -53,10 +53,7 @@ section {
 }
 
 .bs {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 900;
-    border: 1px solid #401F7C;
-    border-radius: 5px;
+
     color: #401F7C;
 }
 
@@ -918,10 +915,6 @@ a:hover,
     transform: rotate(45deg);
 }
 
-.navbar .navbar-toggler:not(.collapsed) hr.hide {
-    width: 0;
-}
-
 .navbar .navbar-toggler:not(.collapsed) hr:last-child {
     width: 100%;
     -webkit-transform: rotate(-45deg);
@@ -1105,10 +1098,22 @@ a:hover,
 
 .tools {
     padding: 0;
+    border: 2px solid #236B8E; 
+    border-top:none;
+    padding-bottom: 6%;
 }
+.tools .heading {
+    position: relative;
+    display: inline-block;
+    letter-spacing: 4px;
+    color:#236B8E;
+  }
 
+  
+  
 .tool-set {
     margin-bottom: 10px;
+    
 }
 
 .tool-set .mycard {
@@ -1126,6 +1131,17 @@ a:hover,
     .tool-set h1 {
         font-size: 14px;
     }
+    .tools {
+        border:none;
+        border-bottom: 2px solid #236B8E;
+    }
+    .tools .heading {
+        position: relative;
+        display: inline-block;
+        letter-spacing: 4px;
+        color:#236B8E;
+        font-size:18px;
+      }
 }
 
 /*=======Portfolio ===========*/
@@ -1300,12 +1316,6 @@ a:hover,
     z-index: 22222222;
 }
 
-.h2 {
-    font-size: 30px;
-    font-weight: 800;
-    padding: 0;
-    margin: 0;
-}
 
 .testim-quote {
     font-size: 89px;
@@ -1351,6 +1361,13 @@ a:hover,
         z-index: 3333;
         height: 12px;
     }
+    .h2 {
+        font-size: 20px;
+        font-weight: 800;
+        padding: 0;
+        margin: 0;
+    }
+    
 
 }
 
@@ -1417,7 +1434,9 @@ a:hover,
     margin: auto;
     border-radius: 50%;
 }
-
+.role {
+    font-size: 18px;
+}
 .testim .cont div .h4 {
     color: #222;
     font-size: 2.2em;
