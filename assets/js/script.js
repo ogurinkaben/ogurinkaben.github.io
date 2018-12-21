@@ -12,23 +12,26 @@ const app = new Vue({
   },
   methods:{
     checkForm: function (e) {
-      if (this.name) {
-        return true;
-      }
-
-      this.errors = [];
-
       if (!this.name) {
-        this.nameError="Enter a name please"
+        this.nameError="Enter a name please";
+        e.preventDefault();
+      } else {
+        this.nameError="";
       }
       if (!this.email) {
-     this.emailError="Let's enter an email, shall we?"
+     this.emailError="Let's enter an email, shall we?";
+     e.preventDefault();
+      } else {
+        this.emailError="";
       }
       if (!this.msg) {
-        this.msgError="Please enter a message"
+        this.msgError="Please enter a message";
+        e.preventDefault();
+      } else {
+        this.msgError="";
       }
-      e.preventDefault();
-    }
+
+    },
   }
 });
 //particles.js config

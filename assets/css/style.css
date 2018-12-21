@@ -23,7 +23,7 @@ body {
     width: 100%;
     height: 100vh;
     background: url(https://res.cloudinary.com/simplytammy/image/upload/v1544792773/bg.png) repeat;
-    background-color: #555;
+    background-color: #222;
 }
 
 canvas.particles-js-canvas-el {
@@ -909,7 +909,7 @@ a:hover,
 
 #do-section {
     padding-top: 6%;
-    padding-bottom: 6%;
+    padding-bottom: 1%;
     text-align: center;
     position: relative;
     margin-top: -70px;
@@ -1047,7 +1047,7 @@ a:hover,
 
 /*=======Portfolio ===========*/
 #portfolio {
-    padding: 10% 5%;
+    padding: 2% 10%;
     margin: 0;
     text-align: center;
 }
@@ -1091,7 +1091,10 @@ a:hover,
 .outer {
     color: #fff;
     position: relative;
-    background: #50A6C2;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: .8;
     height: 300px;
     width: 100%;
     padding: 15px;
@@ -1102,6 +1105,36 @@ a:hover,
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.11);
 }
 
+.studpadi {
+    background: #e43a15;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #e65245, #e43a15);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #e65245, #e43a15); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.passwordgen {
+    background: #373B44;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.myportfolio {
+    background: #2b5876;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #4e4376, #2b5876);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.chrome {
+    background: #c31432;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.bitcoin {
+    background: #3C3B3F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #605C3C, #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #605C3C, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
 .content {
     z-index: 3;
 
@@ -1112,7 +1145,13 @@ a:hover,
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+}
+.info h1 {
+    color:#FFF;
+}
+.info img {
+    width: 80%;
 }
 
 .btn-portfolio {
@@ -1165,12 +1204,12 @@ a:hover,
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: #0198E1;
+    background-color: #223;
     border-radius: 20px;
 }
 
 .outer:hover .overlay {
-    opacity: .9;
+    opacity: .8;
 }
 
 /*=========== Testimonial ==========*/
@@ -1800,6 +1839,8 @@ input[type="text"]:focus {
     outline: none;
     background: transparent;
     color: #FFF;
+    border:none;
+    outline-color: #000;
 }
 
 .btn-submit {
@@ -1821,9 +1862,11 @@ input[type="text"]:focus {
 /*========== Footer =======*/
 
 footer {
-    background-color: #222;
+    background: #222;
+    background: -webkit-linear-gradient(to top, #434343, #222); 
+    background: linear-gradient(to top, #434343, #222); 
     color:#FFF;
-    font-weight: 800;
+    font-weight: 200;
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
