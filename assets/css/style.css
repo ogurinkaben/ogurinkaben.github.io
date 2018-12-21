@@ -838,8 +838,11 @@ a:hover,
     padding: 1em;
     -webkit-box-shadow: none;
     box-shadow: none;
-    z-index: 99999999;
+    z-index: 99999988;
     
+}
+.modal {
+z-index:99999999;
 }
 
 .navbar-brand a {
