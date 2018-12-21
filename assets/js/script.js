@@ -289,12 +289,6 @@ $(window).scroll(function() {
 });
 //Tooltip init
 $('[data-toggle="tooltip"]').tooltip();
-
- $(window).on('load', function() {
-  $("#loader").fadeOut();
-  $("#loading").delay(100).fadeOut("slow");
-});
-
 });
 
 
