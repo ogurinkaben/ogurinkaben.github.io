@@ -11,7 +11,8 @@ let filesToCache = [
 	'./mdbootstrap/js/jquery-3.3.1.min.js',
 	'./mdbootstrap/js/popper.min.js',
 	'./mdbootstrap/js/bootstrap.min.js',
-	'./mdbootstrap/js/mdb.min.js'
+	'./mdbootstrap/js/mdb.min.js',
+	'./fontawesome/css/all.min.css'
 
 ];
 //<======  Install service worker =======>
