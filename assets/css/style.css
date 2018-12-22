@@ -915,6 +915,7 @@ a:hover,
     margin-top: -70px;
     background: #fff;
     border-radius: 30px;
+    width: 90%;
 }
 
 @media screen and (max-width: 600px) {
@@ -1047,7 +1048,7 @@ a:hover,
 
 /*=======Portfolio ===========*/
 #portfolio {
-    padding: 2% 5%;
+    padding: 2% 12%;
     margin: 0;
     text-align: center;
 }
@@ -1172,9 +1173,10 @@ a:hover,
     height: auto;
     width: 100%;
     opacity: 0;
-    transition: .5s ease;
+    transition: .5s ease-in-out;
     background-color: #222;
     border-radius: 20px;
+    cursor:pointer;
 }
 
 .outer:hover .overlay {
@@ -1186,6 +1188,7 @@ a:hover,
 .testimonial-section {
     position: relative;
     margin-top: 10px;
+    min-height: 900px;;
     margin-bottom: 80px;
     color:#222;
 }
