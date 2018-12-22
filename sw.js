@@ -1,4 +1,3 @@
-
 self.addEventListener('install', function (event) {
     var indexPage = new Request('index.html');
     event.waitUntil(
