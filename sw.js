@@ -1,74 +1,43 @@
-//<========== Name cache ===========>
-const myCache = 'start';
-//<========= Choose files to cache ========>
-let filesToCache = [
-    './',
-    './index.html',
-    './assets/js/script.js',
-    './assets/css/style.css',
-    './assets/mdbootstrap/css/bootstrap.min.css',
-    './assets/mdbootstrap/css/mdb.min.css',
-    './assets/mdbootstrap/js/jquery-3.3.1.min.js',
-    './assets/mdbootstrap/js/popper.min.js',
-    './assets/mdbootstrap/js/bootstrap.min.js',
-    './assets/mdbootstrap/js/mdb.min.js',
-    './assets/fontawesome/css/all.min.css'
+//This is the "Offline copy of pages" service worker
 
-];
-//<======  Install service worker =======>
-
-self.addEventListener('install', function (event) {
-    console.log('[my PWA] Installed');
-    event.waitUntil(
-        caches.open(myCache).then(function (cache) {
-            console.log('[my PWA] Caching filesToCache');
-            return cache.addAll(filesToCache);
-        })
-    );
+//Install stage sets up the index page (home page) in the cache and opens a new cache
+self.addEventListener('install', function(event) {
+  var indexPage = new Request('index.html');
+  event.waitUntil(
+    fetch(indexPage).then(function(response) {
+      return caches.open('pwabuilder-offline').then(function(cache) {
+        console.log('[PWA Builder] Cached index page during Install'+ response.url);
+        return cache.put(indexPage, response);
+      });
+  }));
 });
 
-//<====== Activate service worker and check to delete similar caches ========>
+//If any fetch fails, it will look for the request in the cache and serve it from there first
+self.addEventListener('fetch', function(event) {
+  var updateCache = function(request){
+    return caches.open('pwabuilder-offline').then(function (cache) {
+      return fetch(request).then(function (response) {
+        console.log('[PWA Builder] add page to offline'+response.url)
+        return cache.put(request, response);
+      });
+    });
+  };
 
-self.addEventListener('activate', function (event) {
-    console.log('[my PWA] Activated');
-    event.waitUntil(caches.keys().then(function (myCaches) {
-        return Promise.all(myCaches.map(function (newCache) {
-            if (newCache !== myCache) {
-                console.log('[my PWA] Removing Cached Files from Cache - ', newCache);
-                return caches.delete(newCache);
-            }
-        }));
-    }));
-});
+  event.waitUntil(updateCache(event.request));
 
-//<========== Fetch Cache data when offline =======>
-self.addEventListener('fetch', function (event) {
-    console.log('[my PWA] Fetch', event.request.url);
-    event.respondWith(
-        caches.match(event.request)
-        .then(function (response) {
-            if (response) {
-                console.log("[my PWA] Found in Cache", event.request.url, response);
-                return response;
-            }
-            let myRequest = event.request.clone();
-            return fetch(myRequest)
-                .then(function (response) {
+  event.respondWith(
+    fetch(event.request).catch(function(error) {
+      console.log( '[PWA Builder] Network request Failed. Serving content from cache: ' + error );
 
-                    if (!response) {
-                        console.log("[my PWA] No response from fetch ")
-                        return response;
-                    }
-                    let myResponse = response.clone();
-                    caches.open(myCache).then(function (cache) {
-                        cache.put(event.request, myResponse);
-                        console.log('[my PWA] New Data Cached', event.request.url);
-                        return response;
-                    });
-                })
-                .catch(function (err) {
-                    console.log('[my PWA] Error Fetching & Caching New Data', err);
-                });
-        })
-    );
-});
+      //Check to see if you have it in the cache
+      //Return response
+      //If not in the cache, then return error page
+      return caches.open('pwabuilder-offline').then(function (cache) {
+        return cache.match(event.request).then(function (matching) {
+          var report =  !matching || matching.status == 404?Promise.reject('no-match'): matching;
+          return report
+        });
+      });
+    })
+  );
+})
