@@ -1,34 +1,74 @@
+//<========== Name cache ===========>
+const myCache = 'start';
+//<========= Choose files to cache ========>
+let filesToCache = [
+    './',
+    './index.html',
+    './assets/js/script.js',
+    './assets/css/style.css',
+    './assets/mdbootstrap/css/bootstrap.min.css',
+    './assets/mdbootstrap/css/mdb.min.css',
+    './assets/mdbootstrap/js/jquery-3.3.1.min.js',
+    './assets/mdbootstrap/js/popper.min.js',
+    './assets/mdbootstrap/js/bootstrap.min.js',
+    './assets/mdbootstrap/js/mdb.min.js',
+    './assets/fontawesome/css/all.min.css'
+
+];
+//<======  Install service worker =======>
+
 self.addEventListener('install', function (event) {
-    var indexPage = new Request('index.html');
+    console.log('[my PWA] Installed');
     event.waitUntil(
-        fetch(indexPage).then(function (response) {
-            return caches.open('mypwa-offline').then(function (cache) {
-                console.log('[My PWA] Cached index page during Install' + response.url);
-                return cache.put(indexPage, response);
-            });
-        }));
+        caches.open(myCache).then(function (cache) {
+            console.log('[my PWA] Caching filesToCache');
+            return cache.addAll(filesToCache);
+        })
+    );
 });
+
+//<====== Activate service worker and check to delete similar caches ========>
+
+self.addEventListener('activate', function (event) {
+    console.log('[my PWA] Activated');
+    event.waitUntil(caches.keys().then(function (myCaches) {
+        return Promise.all(myCaches.map(function (newCache) {
+            if (newCache !== myCache) {
+                console.log('[my PWA] Removing Cached Files from Cache - ', newCache);
+                return caches.delete(newCache);
+            }
+        }));
+    }));
+});
+
+//<========== Fetch Cache data when offline =======>
 self.addEventListener('fetch', function (event) {
-    var updateCache = function (request) {
-        return caches.open('mypwa-offline').then(function (cache) {
-            return fetch(request).then(function (response) {
-                console.log('[My PWA] add page to offline' + response.url)
-                return cache.put(request, response);
-            });
-        });
-    };
-
-    event.waitUntil(updateCache(event.request));
-
+    console.log('[my PWA] Fetch', event.request.url);
     event.respondWith(
-        fetch(event.request).catch(function (error) {
-            console.log('[My PWA] Network request Failed. Serving content from cache: ' + error);
-            return caches.open('mypwa-offline').then(function (cache) {
-                return cache.match(event.request).then(function (matching) {
-                    var report = !matching || matching.status == 404 ? Promise.reject('no-match') : matching;
-                    return report
+        caches.match(event.request)
+        .then(function (response) {
+            if (response) {
+                console.log("[my PWA] Found in Cache", event.request.url, response);
+                return response;
+            }
+            let myRequest = event.request.clone();
+            return fetch(myRequest)
+                .then(function (response) {
+
+                    if (!response) {
+                        console.log("[my PWA] No response from fetch ")
+                        return response;
+                    }
+                    let myResponse = response.clone();
+                    caches.open(myCache).then(function (cache) {
+                        cache.put(event.request, myResponse);
+                        console.log('[my PWA] New Data Cached', event.request.url);
+                        return response;
+                    });
+                })
+                .catch(function (err) {
+                    console.log('[my PWA] Error Fetching & Caching New Data', err);
                 });
-            });
         })
     );
 });
