@@ -6,7 +6,8 @@ body {
     -o-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden; 
+    background-color: #07374a;
 }
 
 @media screen and (max-width: 600px) {
@@ -23,21 +24,13 @@ body {
 
 }
 
-#particles-js {
+#hero {
     position: relative;
     width: 100%;
     height: 100vh;
     background: url(https://res.cloudinary.com/simplytammy/image/upload/v1544792773/bg.png) repeat;
     background-color: #07374a;
 }
-
-canvas.particles-js-canvas-el {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-
 h1,
 h2,
 h3,
@@ -383,73 +376,38 @@ a:hover,
 
 
 /* ======= Animations ====== */
-#loading {
-    margin: 0;
-    padding: 0;
-    background-color: #07374a;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 999999999;
-    margin-top: 0px;
-    top: 0px;
-}
-
-#loading-center {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-#loading-center-absolute {
+#loader {
     position: absolute;
     left: 50%;
     top: 50%;
-    height: 200px;
-    width: 200px;
-    margin-top: -100px;
-    margin-left: -100px;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    margin: -75px 0 0 -75px;
+    border: 8px solid #f3f3f3;
+    border-bottom: 8px solid #48a898;
+    border-radius: 50%;
+    -webkit-animation: spinn 3s linear infinite;
+    animation: spinn 3s linear infinite;
 }
 
-#object {
-    width: 80px;
-    height: 80px;
-   border: 5px solid #FFF;
-    -webkit-animation: animate 1s infinite ease-in-out;
-    animation: animate 1s infinite ease-in-out;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 60px;
-}
-
-@-webkit-keyframes animate {
+@-webkit-keyframes spinn {
     0% {
-        -webkit-transform: perspective(160px);
-    }
-
-    50% {
-        -webkit-transform: perspective(160px) rotateY(-180deg);
+        -webkit-transform: rotate(0deg);
     }
 
     100% {
-        -webkit-transform: perspective(160px) rotateY(-180deg) rotateX(-180deg);
+        -webkit-transform: rotate(360deg);
     }
 }
 
-@keyframes animate {
+@keyframes spinn {
     0% {
-        transform: perspective(160px) rotateX(0deg) rotateY(0deg);
-        -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg);
-    }
-
-    50% {
-        transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
-        -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+        transform: rotate(0deg);
     }
 
     100% {
-        transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
-        -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+        transform: rotate(360deg);
     }
 }
 .bounce {
