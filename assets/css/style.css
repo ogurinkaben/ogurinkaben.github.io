@@ -84,7 +84,7 @@ section {
     left: 0;
     width: 50%;
     height: 100%;
-    z-index: 1;
+    z-index: 0;
 }
 
 .bg-bubbles li {
@@ -381,8 +381,8 @@ a:hover,
       padding: 0;
       height: 100%;
       width: 100%;
-      position: fixed;
-      z-index: 9999;
+      position: absolute;
+      z-index: 0;
       margin-top: 0px;
       top: 0px;
 }
@@ -1748,7 +1748,7 @@ footer {
     background-position: bottom;
     background-repeat: no-repeat;
     padding-top: 15%;
-    z-index: 1;
+
 }
 
 @media screen and (max-width: 600px) {
@@ -1766,6 +1766,7 @@ footer {
     font-size: 20px;
     height: 50px;
     width: 50px;
+    z-index: 99999;
     border: 1px solid #FFF;
     border-radius: 50%;
     padding: 10px;
