@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="portfolio, Ogurinka Benjamin, Tammy, simplytammy simply tammy">
-    <meta name="description" 
-    content=" I started my journey as a Front End Developer in February 2018 and since then I've been able to
+    <meta name="description" content=" I started my journey as a Front End Developer in February 2018 and since then I've been able to
                   learn a lot and grow myself.
                   I code for fun and I build cool stuff as a hobby. Pay attention to best practices known to me
                   and I'm always open to learn new things and take on challenging paths.">
@@ -54,13 +53,13 @@
         </div>
     </div>
 
- 
-    
+
+
     <div id="vueInit" style="display:none;">
         <header class="navbar navbar-expand-md fixed-top scrolling-navbar">
             <div class="container">
                 <span class="navbar-brand">
-                    <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545696133/santa-hat_1.png" id="xmas"/>
+                    <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545696133/santa-hat_1.png" id="xmas" />
                     <a href="#home" class="scroll"> <i class="fa fa-code" style="color:#FFF;"></i> </a>
                 </span>
                 <span class="navbar-brand" style="float:right">
@@ -420,13 +419,66 @@
                     </div>
                 </div> -->
             </div>
+            <!-- Modal -->
+            <div class="modal fade bottom" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true" style="z-index:9999999999;">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true" style="font-size:50px; color:#8E2323;">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="">
+
+                                <h5 class="card-header white-text text-center py-4" style="background:#07374a;">
+                                    <strong>Let's build something amazing together</strong>
+                                </h5>
+                                <div class="card-body px-lg-5 pt-0">
+                                    <form accept-charset="UTF-8" action="https://usebasin.com/f/0f8bb37918ea" method="POST"
+                                        class="text-center" style="color: #757575;">
+                                        <div class="md-form mt-3">
+                                            <input type="text" name="name" id="projectName" class="form-control">
+                                            <label for="projectName">Name</label>
+                                        </div>
+                                        <div class="md-form">
+                                            <input type="email" name="email" id="projectEmail" class="form-control">
+                                            <label for="projectEmail">E-mail</label>
+                                        </div>
+                                        <span style="float: left; margin-bottom:5px;">Project type</span>
+                                        <select class="mdb-select form-control" name="project">
+                                            <option value="" disabled>Choose option</option>
+                                            <option value="Landing Page" selected>Landing Page</option>
+                                            <option value="Web App">Web App</option>
+                                            <option value="Website UI/UX">Website UI/UX</option>
+                                            <option value="SEO">SEO</option>#
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <div class="md-form">
+                                            <textarea type="text" name="description" id="description" class="form-control md-textarea"
+                                                rows="3"></textarea>
+                                            <label for="description">Please describe your project</label>
+                                        </div>
+                                        <button class="btn btn-submit" type="submit" data-dismiss="modal">Send</button>
+
+                                    </form>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="portfolio-footer row">
                 <div class="col-md-8 pf-text pt-3">
                     <h3>Want to bring me on board your new project?</h3>
 
                 </div>
                 <div class="col-md-4">
-                    <a href="#contact" class="btn btn-lg pf-btn scroll">Let's do this</a>
+                    <button class="btn btn-lg pf-btn" type="button" data-toggle="modal" data-target="#projectModal">Let's
+                        do this</button>
                 </div>
 
 
@@ -545,7 +597,7 @@
             <div class="form-holder" style="border-left:2px solid #48a898">
 
                 <div class="container contact-form wow fadeIn">
-                    <form method="POST" action="https://formspree.io/ogurinkabenjamin@gmail.com" @submit="checkForm">
+                    <form method="POST" action="https://usebasin.com/f/0f8bb37918ea " @submit="checkForm">
                         <h3 style="color:#07374a;">Drop me a message</h3>
                         <div class="row">
                             <div class="col-md-6">
