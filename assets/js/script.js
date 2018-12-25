@@ -291,7 +291,15 @@ $(window).scroll(function() {
   }
 });
 //Tooltip init
-$('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="tooltip"]').tooltip();
+  
+   //makes sure the whole site is loaded
+   $(window).on('load', function () {
+     // will first fade out the loading animation
+     $("#object").fadeOut();
+     // will fade out the whole DIV that covers the website.
+     $("#loading").delay(100).fadeOut("slow");
+   })
 });
 
 
