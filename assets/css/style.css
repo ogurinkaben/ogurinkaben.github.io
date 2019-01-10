@@ -981,13 +981,13 @@ a:hover,
 .do-1,
 .do-3,
 .do-5 {
-    border-right: 3px solid #07374a;
+    border-right: 1px solid #07374a;
 }
 
 .do-2,
 .do-4,
 .do-6 {
-    border-left: 3px solid #07374a;
+    border-left: 1px solid #07374a;
 }
 
 
@@ -1030,12 +1030,32 @@ a:hover,
 }
 
 .do-img img {
-    width: 50%;
+    width: 100%;
     display: block;
     margin: 0 auto;
 }
 
-
+@media (max-width: 940px) {
+    .do-img img {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+}
+@media (max-width: 720px) {
+    .do-img img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+}
+@media (max-width: 600px) {
+    .do-img img {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+}
+}
 .do-text h1 {
     font-weight: 900;
     color: #07374a;
