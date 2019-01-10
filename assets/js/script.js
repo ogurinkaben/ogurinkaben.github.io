@@ -105,15 +105,15 @@ window.onload = function () {
 
   }
 
-                  // Animations init
-                wow = new WOW({
-                boxClass: 'wow', // default
-                animateClass: 'wow', // default
-                offset: 0, // default
-                mobile: true, // default
-                live: true // default
-                })
-                wow.init();
+  // Animations init
+wow = new WOW({
+boxClass: 'wow', // default
+animateClass: 'wow', // default
+offset: 0, // default
+mobile: true, // default
+live: true // default
+})
+wow.init();
 }
 //============> jQuery <==============
 
