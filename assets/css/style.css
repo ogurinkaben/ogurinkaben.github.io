@@ -9,6 +9,16 @@ body {
     background-color: #07374a;
 }
 
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity 1s ease-in-out;
+}
+
+.component-fade-enter, .component-fade-leave-to {
+-webkit-transform: translate(100%);
+               transform: translate(100%);
+               opacity: 0;
+}
+
 @media screen and (max-width: 600px) {
 
     html,
@@ -587,6 +597,8 @@ a:hover,
     font-family: 'Trebuchet MS', sans-serif;
     text-transform: uppercase;
     color: white;
+    width: 50%;
+    margin: 0 auto;
     border: 2px solid #48a898;
     border-radius: 30px;
     background: #48a898;
@@ -892,6 +904,7 @@ a:hover,
     padding: 1em;
     box-shadow: none;
     z-index: 99999999;
+     background-color: #07374a;
 
 }
 
@@ -1379,7 +1392,40 @@ a:hover,
         margin: auto;
     }
 }
+/*==========Project area ===========*/
+.project-field {
+    width: 100%;
+    padding: 10px 12px;
+        border: 2px solid #07374a;
+}
 
+.project-field:focus {
+    opacity: .8;
+    outline: none;
+    border: 2px solid #07374a;
+}
+
+#project-img {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 920px) {
+    #project-img {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+}
+}
+
+@media (max-width: 600px) {
+    #project-img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+}
 /*========== Contact ==========*/
 #contact {
     position: relative;
@@ -1397,16 +1443,7 @@ input[type="email"] {
 #textarea {
     background: transparent;
     border: 2px solid #07374a;
-    border-radius: 10px;
     color: #222;
-}
-
-input[type="text"]:focus {
-    outline: none;
-    background: transparent;
-    color: #222;
-    border: none;
-    outline-color: #000;
 }
 
 .btn-submit {
