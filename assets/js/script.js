@@ -1,16 +1,18 @@
-//<============ Vue.js <============+
-const app = new Vue({
-  el: '#vueInit',
-  data: {
-    nameError:null,
+//<============ Vue.js <============
+const Main = {
+  data: function() {
+return {
+      nameError:null,
     emailError:null,
     msgError:null,
     name: null,
     email: null,
     phone:null,
     msg: null
+}
   },
-  methods:{
+
+    methods:{
     checkForm: function (e) {
       if (!this.name) {
         this.nameError="Enter a name please";
@@ -32,8 +34,71 @@ const app = new Vue({
       }
 
     },
-  }
+  },
+  template: '#main'
+}
+const About = {
+  data:function() {
+   return {
+    nameError:null,
+    emailError:null,
+    msgError:null,
+    projectErr:null,
+    name: null,
+    email: null,
+    phone:null,
+    msg: null,
+    projectType: null
+}
+  },
+
+    methods:{
+    checkForm: function (e) {
+      if (!this.name) {
+        this.nameError="Enter a name please";
+        e.preventDefault();
+      } else {
+        this.nameError="";
+      }
+      if (!this.email) {
+     this.emailError="Let's enter an email, shall we?";
+     e.preventDefault();
+      } else {
+        this.emailError="";
+      }
+      if (!this.msg) {
+        this.msgError="Please enter a message";
+        e.preventDefault();
+      } else {
+        this.msgError="";
+      }
+
+        if (!this.projectType) {
+        this.projectErr="I really want to know what you have in mind";
+        e.preventDefault();
+      } else {
+        this.projectErr="";
+      }
+
+    },
+  },
+  template: '#project-planner'
+}
+
+const routes = [
+  { path: '/', component: Main },
+  { path: '/project-planner', component: About },
+]
+
+const router = new VueRouter({
+  routes
 });
+const app = new Vue({
+  router,
+  el: '#vueInit',
+
+
+}).$mount('#vueInit');
 //===========> Vanilla JS <============== 
 window.onload = function () {
   //preloader
@@ -49,6 +114,16 @@ window.onload = function () {
     document.getElementById("loader").style.display = "none";
 
   }
+
+                  // Animations init
+                wow = new WOW({
+                boxClass: 'wow', // default
+                animateClass: 'wow', // default
+                offset: 0, // default
+                mobile: true, // default
+                live: true // default
+                })
+                wow.init();
 }
 //============> jQuery <==============
 
