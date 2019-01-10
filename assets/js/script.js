@@ -43,12 +43,10 @@ const About = {
     nameError:null,
     emailError:null,
     msgError:null,
-    projectErr:null,
     name: null,
     email: null,
     phone:null,
     msg: null,
-    projectType: null
 }
   },
 
@@ -72,14 +70,6 @@ const About = {
       } else {
         this.msgError="";
       }
-
-        if (!this.projectType) {
-        this.projectErr="I really want to know what you have in mind";
-        e.preventDefault();
-      } else {
-        this.projectErr="";
-      }
-
     },
   },
   template: '#project-planner'

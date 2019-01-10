@@ -375,7 +375,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <textarea name="message" class="project-field" placeholder="Your Message *" style="width: 100%; height: 150px;"
+                                            <textarea name="message" class="project-field" placeholder="Your Message *" style="width: 100%; height: 178px;"
                                             id="textarea" v-model="msg"></textarea>
                                             <p v-if="msgError" class="text-danger">{{msgError}}</p>
                                         </div>
@@ -460,19 +460,19 @@
                                             <p v-if="emailError" class="text-danger">{{emailError}}</p>
                                         </div>
                                         <div class="form-group">
-                                            <select  class="project-field"  v-model="projectType">
-                                                <option disabled value="">Please select one</option>
-                                                <option>Landing Page</option>
-                                                <option>Portfolio/Resume Page</option>
-                                                <option>Website UI/UX</option>
-                                                <option >Other</option>
+                                            <select class="project-field">
+                                                <option disabled value="" selected>Project type</option>
+                                                <option value="Landing Page" >Landing Page</option>
+                                                <option value="Portfolio/Resume Page">Portfolio/Resume Page</option>
+                                                <option value="Website UI/UX">Website UI/UX</option>
+                                                <option value="Other">Other</option>
                                             </select>
                                             <p v-if="projectErr" class="text-danger">{{projectErr}}</p>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <textarea name="message" class="project-field" placeholder="Tell me more about your project *" style="width: 100%; height: 175px;"
+                                            <textarea name="message" class="project-field" placeholder="Tell me more about your project *" style="width: 100%; height: 178px;"
                                             id="textarea" v-model="msg"></textarea>
                                             <p v-if="msgError" class="text-danger">{{msgError}}</p>
                                         </div>
@@ -503,7 +503,7 @@
             <!-- Custom script -->
             <script type="text/javascript" src="assets/js/script.js"></script>
             <!-- Register serviceworker -->
-                        <script type="text/javascript">
+            <script type="text/javascript">
             if (navigator.serviceWorker.controller) {
             console.log('[My PWA] active service worker found, no need to register')
             } else {

@@ -1396,7 +1396,7 @@ a:hover,
 .project-field {
     width: 100%;
     padding: 10px 12px;
-        border: 2px solid #07374a;
+    border: 2px solid #07374a;
 }
 
 .project-field:focus {
