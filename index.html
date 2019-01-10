@@ -53,7 +53,7 @@
             <header class="navbar navbar-expand-md fixed-top scrolling-navbar">
                 <div class="container">
                     <span class="navbar-brand">
-                        <a href="#home" class="scroll"> <i class="fa fa-code" style="color:#FFF;"></i> </a>
+                        <router-link to="/"> <i class="fa fa-code" style="color:#FFF;"></i></router-link>
                     </span>
                     <span class="navbar-brand" style="float:right">
                         <a href="https://api.whatsapp.com/send?1=pt_BR&phone=2349022618844" target="_blank" class="btn btn-sm btn-hi  pulse">say
@@ -61,414 +61,371 @@
                     </span>
                 </div>
             </header>
-            <div id="hero">
-                <div class="home">
-                    <div class="square">
+            <router-view keep-alive></router-view>
+        </div>
+        <template id="main">
+        <transition name="component-fade" appear>
+            <div class="main">
+                <div id="hero">
+                    <div class="home">
+                        <div class="square">
+                        </div>
+                        <div class="intro">
+                            <h1 class="text-white first">Ogurinka <strong class="name">Benjamin</strong></h1>
+                            <p class="sub">
+                                &lt; / <span>Front End Developer </span> &gt;
+                            </p>
+                        </div>
+                        <div class="mouse"></div>
+                        <div class="arrow-scroll">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
-                    <div class="intro">
-                        <h1 class="text-white first">Ogurinka <strong class="name">Benjamin</strong></h1>
-                        <p class="sub">
-                            &lt; / <span>Front End Developer </span> &gt;
-                        </p>
-                    </div>
-                    <div class="mouse"></div>
-                    <div class="arrow-scroll">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-            <div class="center">
-                <div class="intro-img">
-                    <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545621534/154562081970861148.png" alt="Intro image"
-                    style="width: 100%;" />
-                </div>
-            </div>
-            <section id="about" class="main-bg text-center">
-                <div class="container">
                 </div>
                 <div class="center">
-                    <div class="quote">
-                        <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545359542/quote.png" alt="Quotes"
-                        style="width: 50%;">
-                    </div>
-                    <div class="about-heading">
-                        <div class="spin">
-                        </div>
-                        <h1>Hi there,</h1>
-                        <p>I started my journey as a Front End Developer in February 2018 and since then I've been able to
-                            learn a lot and grow myself.
-                            I code for fun and build amazingly beautiful and simple things as a hobby. I Pay attention to best practices known to me
-                            and I'm always open to learn new things and take on challenging paths.
-                        </p>
-                        <p>Apart from web developement, I also pay attention to AI and IoT and also spend my free time
-                        doing other geeky stuff.</p>
-                        <a href="https://about.me/ogurinkabenjamin/" target="_blank" class="pulse-button btn btn-sm pulse">Know
-                        more <i class="fa fa-info"></i></a>
-                        <div class="triangle float"></div>
-                        <p></p>
+                    <div class="intro-img">
+                        <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545621534/154562081970861148.png" alt="Intro image"
+                        style="width: 100%;" />
                     </div>
                 </div>
-            </section>
-            <section id="do-section" class="container">
-                <div class="shapes-bg float">
-                    <div class="hr">
-                        <hr class="cir">
-                        <hr class="sq">
-                        <hr class="rect">
+                <section id="about" class="main-bg text-center">
+                    <div class="container">
                     </div>
-                </div>
-                <div class="do-heading center">
-                    <h2>What do I do <span style="color: #07374a;"> Exactly ?</span></h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 do do-1 fadeIn ">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="do-img">
-                                    <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545967217/design_6aa75107cdc3dae4d99282b5fe25d2e5.jpg"
-                                    alt="Web design">
-                                </div>
-                            </div>
-                            <div class="col-md-8 wow fadeIn">
-                                <div class="do-text">
-                                    <h1>I design websites</h1>
-                                    <p>Well, being a Front End Developer means I take responsibility for the design and
-                                        feel of web pages,
-                                        from a beautiful UI (User Interface) to awesome UX (User Experience). Also make
-                                        sure that websites easily adapt to any
-                                        device.
-                                    </p>
-                                </div>
-                            </div>
+                    <div class="center">
+                        <div class="quote">
+                            <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545359542/quote.png" alt="Quotes"
+                            style="width: 50%;">
                         </div>
-                    </div>
-                    <div class="col-md-6 do do-2 wow fadeIn">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="do-img">
-                                    <img src="https://res.cloudinary.com/simplytammy/image/upload/v1547110278/dynamic.png" alt="Dynamic and Fluid">
-                                </div>
+                        <div class="about-heading">
+                            <div class="spin">
                             </div>
-                            <div class="col-md-8">
-                                <div class="do-text">
-                                    <h1>Dynamic and Fluid</h1>
-                                    <p>I make my sites simple and intuitive, granting an ease of use and a wonderful/fun experience to regular
-                                        users and one time visitors.
-                                    </p>
-                                </div>
-                            </div>
+                            <h1>Hi there,</h1>
+                            <p>I started my journey as a Front End Developer in February 2018 and since then I've been able to
+                                learn a lot and grow myself.
+                                I code for fun and build amazingly beautiful and simple things as a hobby. I Pay attention to best practices known to me
+                                and I'm always open to learn new things and take on challenging paths.
+                            </p>
+                            <p>Apart from web developement, I also pay attention to AI and IoT and also spend my free time
+                            doing other geeky stuff.</p>
+                            <div class="triangle float"></div>
+                            <p></p>
                         </div>
-                    </div>
-                    <div class="col-md-6 do do-3 wow fadeIn">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="do-img">
-                                    <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545967140/webdev_15018530f1b95694aaf540410283757e.jpg" alt="Modern Builds">
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="do-text">
-                                    <h1>Modern builds</h1>
-                                    <p>I use the latest technologies available and the most modern approach in building
-                                    websites while maintaining compatibility and keeping performance at its best</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 do do-4 wow fadeIn">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="do-img">
-                                    <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545967092/performance_17ee88de05cf831d2be951dc8d1af888.jpg"
-                                    alt="Website Maintainance">
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="do-text">
-                                    <h1>Maintainance</h1>
-                                    <p>I just don't leave sites lying around, I check every now and then for new upgrades
-                                        and new technologies to make them even better as well as
-                                        improve their awesome designs
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tools">
-                    <div class="row">
-                        <div class="col-md-4 tool-set wow fadeIn">
-                            <div class="mycard">
-                                <h1>Languages I speak</h1>
-                                <i class="fa-2x devicon-html5-plain-wordmark colored"></i>
-                                <i class="fa-2x devicon-css3-plain-wordmark colored"></i>
-                                <i class="fa-2x devicon-javascript-plain colored"></i>
-                                <i class="fa-2x devicon-sass-original colored"></i>
-                            </div>
-                        </div>
-                        <div class="col-md-4 tool-set wow fadeIn">
-                            <div class="mycard">
-                                <h1>Libraries and Frameworks</h1>
-                                <i class="fa-2x devicon-bootstrap-plain colored"></i>
-                                <i class="fa-2x devicon-jquery-plain-wordmark colored"></i>
-                                <i class="fa-2x devicon-vuejs-plain-wordmark colored"></i>
-                            </div>
-                        </div>
-                        <div class="col-md-4 tool-set wow fadeIn">
-                            <div class="mycard">
-                                <h1>Dev Tools</h1>
-                                <i class="fa-2x devicon-visualstudio-plain" style="color:#0059b3;"></i>
-                                <i class="fa-2x devicon-git-plain colored"></i>
-                                <i class="fa-2x devicon-github-plain-wordmark colored"></i>
-                                <i class="fa-2x devicon-gitlab-plain-wordmark colored"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="portfolio">
-                <div class="portfolio-heading">
-                    <h1>My Recent Work</h1>
-                    <p>Want to see more? <a href="mailto:ogurinkabenjamin@gmail.com">Email me <i class="fa fa-fw fa-envelope"></i></a></p>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="wrapper">
-                            <div class="outer wow fadeIn studpadi" style="background:#ddd">
-                                <div class="content">
-                                    <div class="info">
-                                        <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545418622/studentpady.png"
-                                        alt="studentpady">
-                                    </div>
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <div class="btn-portfolio center">
-                                                <p>studentpady is a mobile app that helps you hire professional &
-                                                well-trained service men you can trust and afford.</p>
-                                                <a href="http://studentpady.com.ng" target="_blank" class="btn btn-sm btn-details">preview
-                                                <i class="fa fa-eye"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="wrapper">
-                            <div class="outer wow fadeIn myportfolio" style="background:#236B8E">
-                                <div class="content">
-                                    <div class="info">
-                                        <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545501944/pwa.png"
-                                        alt="pwa-boilerplate" style="width:45%;">
-                                    </div>
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <div class="btn-portfolio center">
-                                                <p>This is a basic boilerplate to get you up and running with pwa features
-                                                on your static websites</p>
-                                                <a href="pwa-boilerplate" target="_blank" class="btn btn-sm btn-details">preview
-                                                <i class="fa fa-eye"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="wrapper">
-                            <div class="outer wow fadeIn chrome" style="background:#48a898;">
-                                <div class="content">
-                                    <div class="info">
-                                        <img src="https://connectedover.com/images/chrome01.png" alt="chrome desktop" style="width:50%;">
-                                    </div>
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <div class="btn-portfolio center">
-                                                <p>A chrome extension that gives a different unique view to your browser
-                                                start screen</p>
-                                                <a href="https://chrome.google.com/webstore/detail/cool-chrome-landing-page/ppaclombkbeigpmhdlkhdmdolmgjnndl"
-                                                target="_blank" class="btn btn-sm btn-details">preview <i class="fa fa-eye"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade bottom" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true" style="z-index:9999999999;">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true" style="font-size:50px; color:#8E2323;">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="">
-                                    <h5 class="card-header white-text text-center py-4" style="background:#07374a;">
-                                    <strong>Let's build something amazing together</strong>
-                                    </h5>
-                                    <div class="card-body px-lg-5 pt-0">
-                                        <form accept-charset="UTF-8" action="https://usebasin.com/f/0f8bb37918ea" method="POST"
-                                            class="text-center" style="color: #757575;">
-                                            <div class="md-form mt-3">
-                                                <input type="text" name="name" id="projectUserName" class="form-control" required>
-                                                <label for="projectUserName">Name <span class="text-danger">*</span></label>
-                                            </div>
-                                            <div class="md-form">
-                                                <input type="email" name="email" id="projectEmail" class="form-control" required>
-                                                <label for="projectEmail">E-mail <span class="text-danger">*</span></label>
-                                            </div>
-                                            <span style="float: left; margin-bottom:5px;">Project type</span>
-                                            <select class="mdb-select form-control" name="project">
-                                                <option value="" disabled>Choose option</option>
-                                                <option value="Landing Page" selected>Landing Page</option>
-                                                <option value="Portfolio/Resume">Portfolio/Resume Page</option>
-                                                <option value="Website UI/UX">Website UI/UX</option>
-                                                <option value="Other">Other</option>
-                                            </select>
-                                            <div class="md-form">
-                                                <textarea type="text" name="description" id="description" class="form-control md-textarea"
-                                                rows="3" required></textarea>
-                                                <label for="description">Please describe your project in a few words <span class="text-danger">*</span></label>
-                                            </div>
-                                            <button class="btn btn-sm btn-submit" type="submit">Send</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-footer row">
-                    <div class="col-md-8 pf-text pt-3">
-                        <h3>Want to bring me on board your new project?</h3>
-                    </div>
-                    <div class="col-md-4">
-                        <button class="btn btn-lg pf-btn" type="button" data-toggle="modal" data-target="#projectModal">Let's
-                        do this</button>
-                    </div>
-                </div>
-            </section>
-            <section class="testimonial-section">
-                <ul class="bg-bubbles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <div class="row text-center">
-                    <div class="col-md-12">
-                        <p class="testim-quote">,,</p>
-                        <div class="h2">People say nice things about me</div>
-                    </div>
-                </div>
-                <div  class="testim">
-                    <div class="wrap">
-                        <div id="testim-content" class="cont">
-                            <div>
-                                <div class="img"><img src="https://res.cloudinary.com/simplytammy/image/upload/v1545967532/dozie_4611bc9a461214459e0345e5d76184b3.jpg"
-                                alt="Anyanwu Nnadozie"></div>
-                                <div class="h4">Anyanwu Nnadozie<br> <span class="role">CEO/Cofounder <strong>studentpady</strong></span></div>
-                                <p>
-                                    He's an embodiment of a good listener, good receptor and swift accessibility, just to
-                                    mention a few.
-                                    He provided us with web development services and we rated his service: above average.
-                                    We're glad we gave him the contract.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="container" id="contact">
-                <div class="form-holder" style="border-left:2px solid #07374a">
-                    <div class="container contact-form wow fadeIn">
-                        <form method="POST" action="https://usebasin.com/f/0f8bb37918ea " @submit="checkForm">
-                            <h3 style="color:#07374a;">Drop me a message</h3>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" name="fullname" class="form-control" placeholder="Your Name *"
-                                        value="" v-model="name" />
-                                        <p v-if="nameError" class="text-danger">{{nameError}}</p>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="email" class="form-control" placeholder="Your Email *"
-                                        value="" v-model="email" />
-                                        <p v-if="emailError" class="text-danger">{{emailError}}</p>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="phoneno" class="form-control" placeholder="Your Phone Number (Optional)"
-                                        value="" v-model="phone" />
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"
-                                        id="textarea" v-model="msg"></textarea>
-                                        <p v-if="msgError" class="text-danger">{{msgError}}</p>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="btn btn-sm btn-submit" type="submit" class="btnContact" value="Send Message" />
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
                     </div>
                 </section>
-                <ul class="bg-bubbles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <footer class="">
-                    <div class="container-fluid py-3">
-                        <div class="container">
-                            <div class="py-3">
-                                <div class="text-center">
-                                    <div class="container">
-                                        <p><i class="fa fa-envelope"></i> <br> ogurinkabenjamin@gmail.com </p>
-                                        <p><i class="fa fa-mobile"></i> <br> +234 902 261 8844</p>
-                                        <br>
+                <section id="do-section" class="container">
+                    <div class="shapes-bg float">
+                        <div class="hr">
+                            <hr class="cir">
+                            <hr class="sq">
+                            <hr class="rect">
+                        </div>
+                    </div>
+                    <div class="do-heading center">
+                        <h2>What do I do <span style="color: #07374a;"> Exactly ?</span></h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 do do-1 fadeIn ">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="do-img">
+                                        <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545967217/design_6aa75107cdc3dae4d99282b5fe25d2e5.jpg"
+                                        alt="Web design">
                                     </div>
-                                    <div class="d-inline-block text-center footer-holder">
-                                        <a href="https://www.facebook.com/ogb.tammy" class="footer-link" target="_blank"
-                                            data-toggle="tooltip" title="Facebook" data-placement="bottom">
-                                            <i class="fab fa-fw fa-facebook"></i>
-                                        </a>
-                                        <a href="https://twitter.com/_simplytammy" class=" footer-link" target="_blank"
-                                            data-toggle="tooltip" title="Twitter" data-placement="bottom">
-                                        <i class="fab  fa-fw fa-twitter"></i></a>
-                                        <a href="https://www.github.com/simplytammy" class=" footer-link" target="_blank"
-                                            data-toggle="tooltip" title="Github" data-placement="bottom">
-                                        <i class="fab  fa-fw fa-github-alt"></i></a>
-                                        <a href="https://www.instagram.com/ogurinkabenjamin" class=" footer-link" target="_blank"
-                                            data-toggle="tooltip" title="Instagram" data-placement="bottom">
-                                        <i class="fab  fa-fw fa-instagram"></i></a>
-                                        <br>
-                                        <p class=" copyright">Made with <i class="fa fa-fw fa-heart text-danger"></i> and <i class="fa fa-music text-secondary"></i><br><br>
-                                            &copy; <script> document.write(new Date().getFullYear());</script></p>
+                                </div>
+                                <div class="col-md-8 wow fadeIn">
+                                    <div class="do-text">
+                                        <h1>I design websites</h1>
+                                        <p>Well, being a Front End Developer means I take responsibility for the design and
+                                            feel of web pages,
+                                            from a beautiful UI (User Interface) to awesome UX (User Experience). Also make
+                                            sure that websites easily adapt to any
+                                            device.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 do do-2 wow fadeIn">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="do-img">
+                                        <img src="https://res.cloudinary.com/simplytammy/image/upload/v1547110278/dynamic.png" alt="Dynamic and Fluid">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="do-text">
+                                        <h1>Dynamic and Fluid</h1>
+                                        <p>I make my sites simple and intuitive, granting an ease of use and a wonderful/fun experience to regular
+                                            users and one time visitors.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 do do-3 wow fadeIn">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="do-img">
+                                        <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545967140/webdev_15018530f1b95694aaf540410283757e.jpg" alt="Modern Builds">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="do-text">
+                                        <h1>Modern builds</h1>
+                                        <p>I use the latest technologies available and the most modern approach in building
+                                        websites while maintaining compatibility and keeping performance at its best</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 do do-4 wow fadeIn">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="do-img">
+                                        <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545967092/performance_17ee88de05cf831d2be951dc8d1af888.jpg"
+                                        alt="Website Maintainance">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="do-text">
+                                        <h1>Maintainance</h1>
+                                        <p>I just don't leave sites lying around, I check every now and then for new upgrades
+                                            and new technologies to make them even better as well as
+                                            improve their awesome designs
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tools">
+                        <div class="row">
+                            <div class="col-md-4 tool-set wow fadeIn">
+                                <div class="mycard">
+                                    <h1>Languages I speak</h1>
+                                    <i class="fa-2x devicon-html5-plain-wordmark colored"></i>
+                                    <i class="fa-2x devicon-css3-plain-wordmark colored"></i>
+                                    <i class="fa-2x devicon-javascript-plain colored"></i>
+                                    <i class="fa-2x devicon-sass-original colored"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-4 tool-set wow fadeIn">
+                                <div class="mycard">
+                                    <h1>Libraries and Frameworks</h1>
+                                    <i class="fa-2x devicon-bootstrap-plain colored"></i>
+                                    <i class="fa-2x devicon-jquery-plain-wordmark colored"></i>
+                                    <i class="fa-2x devicon-vuejs-plain-wordmark colored"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-4 tool-set wow fadeIn">
+                                <div class="mycard">
+                                    <h1>Dev Tools</h1>
+                                    <i class="fa-2x devicon-visualstudio-plain" style="color:#0059b3;"></i>
+                                    <i class="fa-2x devicon-git-plain colored"></i>
+                                    <i class="fa-2x devicon-github-plain-wordmark colored"></i>
+                                    <i class="fa-2x devicon-gitlab-plain-wordmark colored"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="portfolio">
+                    <div class="portfolio-heading">
+                        <h1>My Recent Work</h1>
+                        <p>Want to see more? <a href="mailto:ogurinkabenjamin@gmail.com">Email me <i class="fa fa-fw fa-envelope"></i></a></p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="wrapper">
+                                <div class="outer wow fadeIn studpadi" style="background:#ddd">
+                                    <div class="content">
+                                        <div class="info">
+                                            <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545418622/studentpady.png"
+                                            alt="studentpady">
+                                        </div>
+                                        <div class="overlay">
+                                            <div class="overlay-content">
+                                                <div class="btn-portfolio center">
+                                                    <p>studentpady is a mobile app that helps you hire professional &
+                                                    well-trained service men you can trust and afford.</p>
+                                                    <a href="http://studentpady.com.ng" target="_blank" class="btn btn-sm btn-details">preview
+                                                    <i class="fa fa-eye"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="wrapper">
+                                <div class="outer wow fadeIn myportfolio" style="background:#236B8E">
+                                    <div class="content">
+                                        <div class="info">
+                                            <img src="https://res.cloudinary.com/simplytammy/image/upload/v1545501944/pwa.png"
+                                            alt="pwa-boilerplate" style="width:45%;">
+                                        </div>
+                                        <div class="overlay">
+                                            <div class="overlay-content">
+                                                <div class="btn-portfolio center">
+                                                    <p>This is a basic boilerplate to get you up and running with pwa features
+                                                    on your static websites</p>
+                                                    <a href="pwa-boilerplate" target="_blank" class="btn btn-sm btn-details">preview
+                                                    <i class="fa fa-eye"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="wrapper">
+                                <div class="outer wow fadeIn chrome" style="background:#48a898;">
+                                    <div class="content">
+                                        <div class="info">
+                                            <img src="https://connectedover.com/images/chrome01.png" alt="chrome desktop" style="width:50%;">
+                                        </div>
+                                        <div class="overlay">
+                                            <div class="overlay-content">
+                                                <div class="btn-portfolio center">
+                                                    <p>A chrome extension that gives a different unique view to your browser
+                                                    start screen</p>
+                                                    <a href="https://chrome.google.com/webstore/detail/cool-chrome-landing-page/ppaclombkbeigpmhdlkhdmdolmgjnndl"
+                                                    target="_blank" class="btn btn-sm btn-details">preview <i class="fa fa-eye"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-footer row">
+                        <div class="col-md-8 pf-text pt-3">
+                            <h3>Want to bring me on board your new project?</h3>
+                        </div>
+                        <div class="col-md-4 pt-2">
+                            <router-link to="/project-planner"><button class="btn pf-btn">Let's
+                            do this </button>
+                        </div>
+                    </div>
+                </section>
+                <section class="testimonial-section">
+                    <ul class="bg-bubbles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <p class="testim-quote">,,</p>
+                            <div class="h2">People say nice things about me</div>
+                        </div>
+                    </div>
+                    <div  class="testim">
+                        <div class="wrap">
+                            <div id="testim-content" class="cont">
+                                <div>
+                                    <div class="img"><img src="https://res.cloudinary.com/simplytammy/image/upload/v1545967532/dozie_4611bc9a461214459e0345e5d76184b3.jpg"
+                                    alt="Anyanwu Nnadozie"></div>
+                                    <div class="h4">Anyanwu Nnadozie<br> <span class="role">CEO/Cofounder <strong>studentpady</strong></span></div>
+                                    <p>
+                                        He's an embodiment of a good listener, good receptor and swift accessibility, just to
+                                        mention a few.
+                                        He provided us with web development services and we rated his service: above average.
+                                        We're glad we gave him the contract.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="container" id="contact">
+                    <div class="form-holder" style="border-left:2px solid #07374a">
+                        <div class="container contact-form wow fadeIn">
+                            <form method="POST" action="https://usebasin.com/f/0f8bb37918ea " @submit="checkForm">
+                                <h3 style="color:#07374a;">Drop me a message</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="fullname" class="project-field" placeholder="Your Name *"
+                                            value="" v-model="name" />
+                                            <p v-if="nameError" class="text-danger">{{nameError}}</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="email" class="project-field" placeholder="Your Email *"
+                                            value="" v-model="email" />
+                                            <p v-if="emailError" class="text-danger">{{emailError}}</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="phoneno" class="project-field" placeholder="Your Phone Number (Optional)"
+                                            value="" v-model="phone" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <textarea name="message" class="project-field" placeholder="Your Message *" style="width: 100%; height: 150px;"
+                                            id="textarea" v-model="msg"></textarea>
+                                            <p v-if="msgError" class="text-danger">{{msgError}}</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="btn btn-sm btn-submit" type="submit" class="btnContact" value="Send Message" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                    <ul class="bg-bubbles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <footer class="">
+                        <div class="container-fluid py-3">
+                            <div class="container">
+                                <div class="py-3">
+                                    <div class="text-center">
+                                        <div class="container">
+                                            <p><i class="fa fa-envelope"></i> <br> ogurinkabenjamin@gmail.com </p>
+                                            <p><i class="fa fa-mobile"></i> <br> +234 902 261 8844</p>
+                                            <br>
+                                        </div>
+                                        <div class="d-inline-block text-center footer-holder">
+                                            <a href="https://www.facebook.com/ogb.tammy" class="footer-link" target="_blank"
+                                                data-toggle="tooltip" title="Facebook" data-placement="bottom">
+                                                <i class="fab fa-fw fa-facebook"></i>
+                                            </a>
+                                            <a href="https://twitter.com/_simplytammy" class=" footer-link" target="_blank"
+                                                data-toggle="tooltip" title="Twitter" data-placement="bottom">
+                                            <i class="fab  fa-fw fa-twitter"></i></a>
+                                            <a href="https://www.github.com/simplytammy" class=" footer-link" target="_blank"
+                                                data-toggle="tooltip" title="Github" data-placement="bottom">
+                                            <i class="fab  fa-fw fa-github-alt"></i></a>
+                                            <a href="https://www.instagram.com/ogurinkabenjamin" class=" footer-link" target="_blank"
+                                                data-toggle="tooltip" title="Instagram" data-placement="bottom">
+                                            <i class="fab  fa-fw fa-instagram"></i></a>
+                                            <br>
+                                            <p class=" copyright">Made with <i class="fa fa-fw fa-heart text-danger"></i> and <i class="fa fa-music text-secondary"></i><br><br>
+                                            &copy;2019</p>
                                             <br>
                                             <div class="hexagon float center"></div>
                                         </div>
@@ -479,39 +436,83 @@
                     </footer>
                     <a class="scroll" id="top" href="#home"><i class="fa fa-arrow-up text-white bounce"></i> </a>
                 </div>
-                <!-- SCRIPTS -->
-                <!-- JQuery -->
-                <script type="text/javascript" src="assets/mdbootstrap/js/jquery-3.3.1.min.js"></script>
-                <!-- Bootstrap tooltips -->
-                <script type="text/javascript" src="assets/mdbootstrap/js/popper.min.js"></script>
-                <!-- Bootstrap core JavaScript -->
-                <script type="text/javascript" src="assets/mdbootstrap/js/bootstrap.min.js"></script>
-                <!-- MDB core JavaScript -->
-                <script type="text/javascript" src="assets/mdbootstrap/js/mdb.min.js"></script>
-                <!--Vue.js cdn-->
-                <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
-                <!-- Custom script -->
-                <script type="text/javascript" src="assets/js/script.js"></script>
-                <!-- Register serviceworker -->
-                <script type="text/javascript">
-                if (navigator.serviceWorker.controller) {
-                console.log('[My PWA] active service worker found, no need to register')
-                } else {
-                navigator.serviceWorker.register('sw.js', {
-                scope: './'
-                }).then(function (reg) {
-                console.log('Service worker has been registered for scope:' + reg.scope);
-                });
-                }
-                // Animations init
-                wow = new WOW({
-                boxClass: 'wow', // default
-                animateClass: 'wow', // default
-                offset: 0, // default
-                mobile: true, // default
-                live: true // default
-                })
-                wow.init();
-                </script>
-            </body>
-        </html>
+            </transition>
+            </template>
+            <template id="project-planner">
+            <transition name="component-fade" appear>
+                <section class="container" id="contact">
+                    
+                    <img src="https://res.cloudinary.com/simplytammy/image/upload/v1547160267/project-img.png" id="project-img" alt="Project Planner">
+                    <div class="form-holder" style="border-top:2px solid #07374a">
+                        <div class="container contact-form wow fadeIn">
+                            <form method="POST" action="https://usebasin.com/f/0f8bb37918ea " @submit="checkForm">
+                                <h3 style="color:#07374a;">Let's build something beautiful</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="fullname" class="project-field" placeholder="Your Name *"
+                                            value="" v-model="name" />
+                                            <p v-if="nameError" class="text-danger">{{nameError}}</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="email" class="project-field" placeholder="Your Email *"
+                                            value="" v-model="email" />
+                                            <p v-if="emailError" class="text-danger">{{emailError}}</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <select  class="project-field"  v-model="projectType">
+                                                <option disabled value="">Please select one</option>
+                                                <option>Landing Page</option>
+                                                <option>Portfolio/Resume Page</option>
+                                                <option>Website UI/UX</option>
+                                                <option >Other</option>
+                                            </select>
+                                            <p v-if="projectErr" class="text-danger">{{projectErr}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <textarea name="message" class="project-field" placeholder="Tell me more about your project *" style="width: 100%; height: 175px;"
+                                            id="textarea" v-model="msg"></textarea>
+                                            <p v-if="msgError" class="text-danger">{{msgError}}</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="btn btn-sm btn-submit" type="submit" class="btnContact" value="Send Message" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </transition>
+            </template>
+            <!-- SCRIPTS -->
+            <!-- JQuery -->
+            <script type="text/javascript" src="assets/mdbootstrap/js/jquery-3.3.1.min.js"></script>
+            <!-- Bootstrap tooltips -->
+            <script type="text/javascript" src="assets/mdbootstrap/js/popper.min.js"></script>
+            <!-- Bootstrap core JavaScript -->
+            <script type="text/javascript" src="assets/mdbootstrap/js/bootstrap.min.js"></script>
+            <!-- MDB core JavaScript -->
+            <script type="text/javascript" src="assets/mdbootstrap/js/mdb.min.js"></script>
+            <!--Vue.js cdn-->
+            <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+            <!--  Router --->
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/vue-router.js"></script>
+            <!-- Custom script -->
+            <script type="text/javascript" src="assets/js/script.js"></script>
+            <!-- Register serviceworker -->
+                        <script type="text/javascript">
+            if (navigator.serviceWorker.controller) {
+            console.log('[My PWA] active service worker found, no need to register')
+            } else {
+            navigator.serviceWorker.register('sw.js', {
+            scope: './'
+            }).then(function (reg) {
+            console.log('Service worker has been registered for scope:' + reg.scope);
+            });
+            }
+            </script>
+        </body>
+    </html>
