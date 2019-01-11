@@ -1,11 +1,13 @@
 {
  "name": "Ogurinka Benjamin:. Portfolio",
- "short_name": "Tammy's Portfolio",
+ "short_name": "Portfolio",
+ "description" : "Ogurinka Benjamin's personal portfolio site",
  "lang": "en-UK",
- "start_url": "/",
+ "start_url": "https://simplytammy.github.io/",
  "background_color": "#07374a",
  "theme_color": "#07374a",
  "display": "standalone",
+ "orientation": "portrait",
  "icons": [
   {
    "src": "android-icon-36x36.png",
