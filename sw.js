@@ -8,7 +8,6 @@ self.addEventListener('install', function(event) {
       });
   }));
 });
-
 self.addEventListener('fetch', function(event) {
   var updateCache = function(request){
     return caches.open('mypwa-offline').then(function (cache) {
@@ -18,9 +17,7 @@ self.addEventListener('fetch', function(event) {
       });
     });
   };
-
   event.waitUntil(updateCache(event.request));
-
   event.respondWith(
     fetch(event.request).catch(function(error) {
       console.log( '[My PWA] Network request Failed. Serving content from cache: ' + error );
