@@ -4,7 +4,7 @@ window.onload = function () {
   var delayLoad;
 
   function preLoad() {
-    delayLoad = setTimeout(showPage, 4000);
+    delayLoad = setTimeout(showPage, 1000);
   }
   preLoad();
   function showPage() {
