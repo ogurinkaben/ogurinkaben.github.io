@@ -1,4 +1,5 @@
 /* ======= General stuff =========== */
+html,
 body {
     margin: 0;
     padding: 0;
@@ -7,34 +8,21 @@ body {
     font-family: 'Raleway', sans-serif;
     overflow-x: hidden;
     background-color: rgb(7, 55, 74);
-}
-
-.component-fade-enter-active,
-.component-fade-leave-active {
-         opacity: 1;
-         transform: none;
-         transition: all 2s ease-in-out;
-}
-.component-fade-enter,
-.component-fade-leave-to {
-   transform: translateX(100%);
-    opacity: 0;
-}
-
-@media screen and (max-width: 600px) {
-
-    html,
-    body {
+    @media screen and (max-width: 600px) {
         overflow-x: hidden;
     }
 }
 
-#xmas {
-    margin-top: -18px;
-    margin-right: -25%;
-    z-index: 99999999999;
-
+.component-fade-enter-active,
+.component-fade-leave-active {
+         transition: all 2s linear;
 }
+.component-fade-enter,
+.component-fade-leave-to {
+    opacity: 0;
+}
+
+
 
 #hero {
     position: relative;
@@ -57,6 +45,7 @@ h6 {
 
 p {
     font-family: "Raleway", sans-serif;
+    text-align: justify;
 }
 
 section {
@@ -633,13 +622,10 @@ a:hover,
     transform: translatey(0px);
     -webkit-animation: float 6s ease-in-out infinite;
     animation: float 6s ease-in-out infinite;
-}
-
-@media screen and (max-width: 600px) {
-    .square {
-        position: absolute;
-        top: 32%;
-        left: 26%;
+    @media screen and (max-width: 600px) {
+     position: absolute;
+     top: 32%;
+     left: 26%;
     }
 }
 

@@ -1,4 +1,5 @@
 /* ======= General stuff =========== */
+html,
 body {
   margin: 0;
   padding: 0;
@@ -10,22 +11,6 @@ body {
   background-color: #07374a;
 }
 
-.component-fade-enter-active,
-.component-fade-leave-active {
-  opacity: 1;
-  -webkit-transform: none;
-          transform: none;
-  -webkit-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
-}
-
-.component-fade-enter,
-.component-fade-leave-to {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  opacity: 0;
-}
-
 @media screen and (max-width: 600px) {
   html,
   body {
@@ -33,10 +18,15 @@ body {
   }
 }
 
-#xmas {
-  margin-top: -18px;
-  margin-right: -25%;
-  z-index: 99999999999;
+.component-fade-enter-active,
+.component-fade-leave-active {
+  -webkit-transition: all 2s linear;
+  transition: all 2s linear;
+}
+
+.component-fade-enter,
+.component-fade-leave-to {
+  opacity: 0;
 }
 
 #hero {
@@ -60,6 +50,7 @@ h6 {
 
 p {
   font-family: "Raleway", sans-serif;
+  text-align: justify;
 }
 
 section {

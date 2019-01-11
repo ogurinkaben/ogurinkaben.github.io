@@ -65,7 +65,7 @@ const About = {
                 this.emailError = "";
             }
             if (!this.msg) {
-                this.msgError = "Please enter a message";
+                this.msgError = "I really want to understand your project";
                 e.preventDefault();
             } else {
                 this.msgError = "";
