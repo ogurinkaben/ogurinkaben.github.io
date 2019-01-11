@@ -8,11 +8,13 @@ body {
     font-family: 'Raleway', sans-serif;
     overflow-x: hidden;
     background-color: rgb(7, 55, 74);
-    @media screen and (max-width: 600px) {
-        overflow-x: hidden;
-    }
-}
 
+}
+    @media screen and (max-width: 600px) {
+       html, body {
+            overflow-x: hidden;
+       }
+    }
 .component-fade-enter-active,
 .component-fade-leave-active {
          transition: all 2s linear;
