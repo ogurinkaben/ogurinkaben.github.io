@@ -27,7 +27,7 @@
         <link rel="manifest" href="assets/img/icons/manifest.json">
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="assets/img/icons//ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
+        <meta name="theme-color" content="#236B8E">
         <!-- Font Awesome -->
         <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.min.css">
         <!--Devicons-->
@@ -37,7 +37,7 @@
         <!-- Material Design Bootstrap -->
         <link href="assets/mdbootstrap/css/mdb.min.css" rel="stylesheet">
         <!--  Custom styles-->
-        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/main.css" rel="stylesheet">
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     </head>
@@ -439,7 +439,7 @@
             </transition>
             </template>
             <template id="project-planner">
-            <transition name="component-fade" appear>
+            <transition name="component-fade" mode="out-in" appear>
                 <section class="container" id="contact">
                     
                     <img src="https://res.cloudinary.com/simplytammy/image/upload/v1547160267/project-img.png" id="project-img" alt="Project Planner">
@@ -460,14 +460,13 @@
                                             <p v-if="emailError" class="text-danger">{{emailError}}</p>
                                         </div>
                                         <div class="form-group">
-                                            <select class="project-field">
+                                            <select name="ProjectType" class="project-field">
                                                 <option disabled value="" selected>Project type</option>
                                                 <option value="Landing Page" >Landing Page</option>
                                                 <option value="Portfolio/Resume Page">Portfolio/Resume Page</option>
                                                 <option value="Website UI/UX">Website UI/UX</option>
                                                 <option value="Other">Other</option>
                                             </select>
-                                            <p v-if="projectErr" class="text-danger">{{projectErr}}</p>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -497,9 +496,11 @@
             <!-- MDB core JavaScript -->
             <script type="text/javascript" src="assets/mdbootstrap/js/mdb.min.js"></script>
             <!--Vue.js cdn-->
-            <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+            <script type="text/javascript" src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
             <!--  Router --->
-            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/vue-router.js"></script>
+            <script type="text/javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/vue-router.js"></script>
+            <!-- App.vue-->
+            <script type="text/javascript" src="assets/js/app.js"></script>
             <!-- Custom script -->
             <script type="text/javascript" src="assets/js/script.js"></script>
             <!-- Register serviceworker -->
