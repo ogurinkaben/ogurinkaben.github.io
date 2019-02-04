@@ -49,7 +49,7 @@ h6 {
 
 p {
   font-family: "Raleway", sans-serif;
-  text-align: justify;
+  text-align: center;
 }
 
 section {
@@ -918,6 +918,12 @@ a:hover,
   padding: 7px;
 }
 
+@media (max-width: 600px) {
+  .about-text {
+    font-size: 14px;
+  }
+}
+
 .about-heading h1 {
   color: #fff;
   font-weight: 700;
@@ -927,20 +933,21 @@ a:hover,
 
 @media screen and (max-width: 600px) {
   .about-heading h1 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 900;
   }
 }
 
 #do-section {
-  padding-top: 6%;
-  padding-bottom: 1%;
+  padding: 6% 2%;
   text-align: center;
   position: relative;
   margin-top: -70px;
   background: #fff;
-  border-radius: 30px;
+  border-radius: 1em;
   width: 90%;
+  -webkit-box-shadow: 8px 20px 20px 20px rgba(7, 55, 74, 0.15);
+  box-shadow: 8px 20px 20px 20px rgba(7, 55, 74, 0.15);
 }
 
 @media screen and (max-width: 600px) {
@@ -1040,51 +1047,11 @@ a:hover,
   .do-text {
     text-align: center;
   }
-  .do-text h1 {
-    font-size: 20px;
-  }
-}
-
-.tools {
-  padding: 0;
-  border-bottom: 2px solid #EEE;
-  border-top: none;
-  padding-bottom: 6%;
-}
-
-.tools .heading {
-  position: relative;
-  display: inline-block;
-  color: #07374a;
-}
-
-.tool-set {
-  margin-bottom: 10px;
-}
-
-.tool-set .mycard {
-  padding-top: 10%;
-  padding-bottom: 10%;
-}
-
-.tool-set h1 {
-  font-size: 21px;
-  font-weight: 800;
-  color: #07374a;
-}
-
-@media screen and (max-width: 600px) {
-  .tool-set h1 {
+  .do-text p {
     font-size: 14px;
   }
-  .tools {
-    border: none;
-  }
-  .tools .heading {
-    position: relative;
-    display: inline-block;
-    color: #48a898;
-    font-size: 18px;
+  .do-text h1 {
+    font-size: 20px;
   }
 }
 
@@ -1121,7 +1088,7 @@ a:hover,
   .portfolio-heading h1 {
     padding-bottom: 1em;
     font-weight: 800;
-    font-size: 30px;
+    font-size: 20px;
   }
 }
 
@@ -1233,6 +1200,13 @@ a:hover,
 
 .pf-text h3 {
   font-weight: 300;
+  font-size: 30px;
+}
+
+@media (max-width: 600px) {
+  .pf-text h3 {
+    font-size: 20px;
+  }
 }
 
 .pf-btn {
@@ -1241,12 +1215,14 @@ a:hover,
   border: 2px soild #07374a;
   border-radius: 30px;
   font-weight: 700;
+  -webkit-transition: .9s;
+  transition: .9s;
 }
 
 .pf-btn:hover {
   background: transparent;
-  border: 2px solid #07374a;
   color: #07374a;
+  border: 2px soild #07374a;
 }
 
 /*=========== Testimonial ==========*/
@@ -1310,6 +1286,12 @@ a:hover,
   color: #48a898;
   font-size: 2.2em;
   margin: 15px 0;
+}
+
+@media (max-width: 600px) {
+  .testimonial-section .testim .cont div .h4 {
+    font-size: 20px;
+  }
 }
 
 .testimonial-section .testim .cont div .h4 {
