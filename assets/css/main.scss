@@ -904,6 +904,7 @@ a:hover,
     box-shadow: none;
     z-index: 99999999;
     background-color: #07374a;
+    
 
 }
 
@@ -928,14 +929,16 @@ a:hover,
     .navbar.top-nav-collapse {
         padding: 0.5em;
         background-color: #07374a;
-        box-shadow: 0 2px 30px rgba(0, 0, 0, 0.16);
+             -webkit-box-shadow: 8px 6px 10px 10px rgba(7, 55, 74, 0.15);
+             box-shadow: 8px 6px 20px 10px rgba(7, 55, 74, 0.15);
     }
 }
 
 @media (max-width:768px) {
     .navbar {
         background-color: #07374a;
-        box-shadow: 0 2px 30px rgba(0, 0, 0, 0.16);
+             -webkit-box-shadow: 8px 6px 10px 10px rgba(7, 55, 74, 0.15);
+             box-shadow: 8px 6px 20px 10px rgba(7, 55, 74, 0.15);
     }
 
     .navbar-nav {
