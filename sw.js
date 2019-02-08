@@ -8,25 +8,25 @@ self.addEventListener('install', function(event) {
       });
   }));
 });
-self.addEventListener('fetch', function(event) {
-  var updateCache = function(request){
+self.addEventListener('fetch', function (event) {
+  var updateCache = function (request) {
     return caches.open('mypwa-offline').then(function (cache) {
       return fetch(request).then(function (response) {
-        console.log('[My PWA] add page to offline'+response.url)
+        console.log('[My PWA] add page to offline' + response.url)
         return cache.put(request, response);
       });
     });
   };
   event.waitUntil(updateCache(event.request));
   event.respondWith(
-    fetch(event.request).catch(function(error) {
-      console.log( '[My PWA] Network request Failed. Serving content from cache: ' + error );
+    fetch(event.request).catch(function (error) {
+      console.log('[My PWA] Network request Failed. Serving content from cache: ' + error);
       return caches.open('mypwa-offline').then(function (cache) {
         return cache.match(event.request).then(function (matching) {
-          var report =  !matching || matching.status == 404?Promise.reject('no-match'): matching;
+          var report = !matching || matching.status == 404 ? Promise.reject('no-match') : matching;
           return report
         });
       });
     })
   );
-})
+});
