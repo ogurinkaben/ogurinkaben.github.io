@@ -882,6 +882,7 @@ a:hover,
 }
 
 .btn-hi {
+  background: transparent;
   border: 2px solid #FFF;
   border-radius: 20px;
   margin: 0;
