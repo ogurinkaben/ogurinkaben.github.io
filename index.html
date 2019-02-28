@@ -57,6 +57,18 @@
 		<div id="vueInit">
 			
 			<header class="navbar navbar-expand-md fixed-top  scrolling-navbar">
+				<div class="col-md-12 loader-container" id="myloader">
+					<div id="loader">
+						<div class="l-1"></div>
+						<div class="l-2"></div>
+						<div class="l-3"></div>
+						<div class="l-4"></div>
+						<div class="l-5"></div>
+						<div class="l-6"></div>
+						<div class="l-7"></div>
+						<div class="l-8"></div>
+					</div>
+				</div>
 				<div class="container">
 					<span class="navbar-brand" title="Personal Avatar">
 						<router-link to="/"> <img src="https://res.cloudinary.com/simplytammy/image/upload/v1551345806/persona/avatar_bg.png" alt="Avatar"></router-link>
@@ -67,18 +79,6 @@
 						hello</button></router-link>
 					</span>
 				</div>
-				<!-- <div class="loader-container" id="myloader">
-								<div id="loader">
-												<div class="c-1"></div>
-												<div class="c-2"></div>
-												<div class="c-3"></div>
-												<div class="c-4"></div>
-												<div class="c-5"></div>
-												<div class="c-6"></div>
-												<div class="c-7"></div>
-												<div class="c-8"></div>
-								</div>
-				</div> -->
 			</header>
 			<router-view keep-alive></router-view>
 		</div>

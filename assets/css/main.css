@@ -372,12 +372,12 @@ a:hover,
 
 /* ======= Animations ====== */
 .loader-container {
-    width: 100%;
     display: block;
-    position: fixed;
+    position: absolute;
     bottom: 0;
-    margin: 0 auto;
-    
+    left: 0;
+    width: 100%;
+
 }
 
 .loader-container #loader div{
@@ -393,44 +393,44 @@ a:hover,
   margin-top:  50px;
   padding: 0;
 }
-.loader-container #loader .c-1{
+.loader-container #loader .l-1{
   z-index: 2;
-  background-color: red;
+  background-color: #4286f4;
   -webkit-animation-delay: -2s;
 }
-.loader-container #loader.c-2{
+.loader-container #loader.l-2{
   z-index: 1;
-  background-color: green;
+  background-color: #153466;
   -webkit-animation-delay: -1s;
 }
-.loader-container #loader .c-3{
+.loader-container #loader .l-3{
   z-index: 0;
-  background-color: blue;
+  background-color: #23c4ac;
 }
-.loader-container #loader .c-4{
+.loader-container #loader .l-4{
   z-index: 0;
-  background-color: orange;
+  background-color: #9224c9;
    -webkit-animation-delay: 1s;
 }
-.loader-container #loader.c-5{
+.loader-container #loader.l-5{
   z-index: 0;
-  background-color: pink;
+  background-color: #c08cdb;
    -webkit-animation-delay: 2s;
 }
-.loader-container #loader .c-6{
+.loader-container #loader .l-6{
   z-index: 0;
-  background-color: brown;
+  background-color: #8a7d91;
    -webkit-animation-delay: 3s;
 }
-.loader-container #loader .c-7{
+.loader-container #loader .l-7{
   z-index: 0;
-  background-color: purple;
+  background-color: #e01a59;
    -webkit-animation-delay: 4s;
 }
 
-.loader-container #loader.c8 {
+.loader-container #loader.l-  8 {
   z-index: 0;
-  background-color: firebrick;
+  background-color: #910a35;
    -webkit-animation-delay: 5s;
 }
 
@@ -903,7 +903,6 @@ a:hover,
 /*========= Navbar ==========*/
 .navbar {
   padding: 1em;
-  padding-top: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
   z-index: 99999999;
