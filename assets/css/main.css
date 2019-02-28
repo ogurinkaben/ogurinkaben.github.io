@@ -371,10 +371,11 @@ a:hover,
 }
 
 /* ======= Animations ====== */
-/* .loader-container {
+.loader-container {
     width: 100%;
     display: block;
     position: fixed;
+    bottom: 0;
     margin: 0 auto;
     
 }
@@ -467,7 +468,7 @@ a:hover,
     }
 }
 
- */
+
 .bounce {
   -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
