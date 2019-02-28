@@ -395,12 +395,12 @@ a:hover,
 }
 .loader-container #loader .l-1{
   z-index: 2;
-  background-color: #4286f4;
+  background-color: #c6738d;
   -webkit-animation-delay: -2s;
 }
 .loader-container #loader.l-2{
   z-index: 1;
-  background-color: #153466;
+  background-color: #44e817;
   -webkit-animation-delay: -1s;
 }
 .loader-container #loader .l-3{
