@@ -4,8 +4,8 @@
  "description" : "Ogurinka Benjamin's personal portfolio site",
  "lang": "en-UK",
  "start_url": "https://simplytammy.github.io/",
- "background_color": "#07374a",
- "theme_color": "#FFFFFF",
+ "background_color": "#FFFFFF",
+ "theme_color": "#07374a",
  "display": "standalone",
  "orientation": "portrait",
  "icons": [
