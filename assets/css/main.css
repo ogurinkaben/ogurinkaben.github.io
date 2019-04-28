@@ -903,6 +903,7 @@ a:hover,
 /*========= Navbar ==========*/
 .navbar {
   padding: 1em;
+  padding-right: 1em;
   -webkit-box-shadow: none;
           box-shadow: none;
   z-index: 99999999;
