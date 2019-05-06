@@ -114,16 +114,12 @@ footer {
   height: 50px;
   width: 50px;
   z-index: 99999;
-  border: 1px solid #FFF;
-  border-radius: 50%;
   padding: 10px;
   margin-bottom: 30px;
   color: #FFF;
 }
 
 .footer-link:hover {
-  opacity: .7;
-  background: #48a898;
   color: #FFF;
   -webkit-transition: .6s;
   transition: .6s;
