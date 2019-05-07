@@ -1,9 +1,9 @@
 {
- "name": "Ogurinka Benjamin:. Portfolio",
+ "name": "Ogurinka Benjamin::",
  "short_name": "Portfolio",
- "description" : "Ogurinka Benjamin's personal portfolio site",
+ "description" : "Personal portfolio site",
  "lang": "en-UK",
- "start_url": "https://simplytammy.github.io/",
+ "start_url": "/",
  "background_color": "#FFFFFF",
  "theme_color": "#07374a",
  "display": "standalone",
