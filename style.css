@@ -187,9 +187,11 @@ Resusable content
  .og-quick-contact-link {
   font-size: 18px;
   z-index: 99999;
-  padding: 10px 10px 10px 0;
+  padding: 10px;
   margin-bottom: 30px;
   color: #48A898;
+  text-align:center;
+
 }
 .og-quick-contact-link:hover {
   color: #FFF;
