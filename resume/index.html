@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="portfolio, Ogurinka Benjamin, Ogurinka Tammy Benjamin, Tammy, simplytammy simply tammy">
+    <meta name="description" content="My personal resume with work history, skillset and experience.">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ogurinka :: Resume</title>
+    <!-- open graph tags -->
+    <meta property="og:title" content="Ogurinka Benjamin :. Portfolio" />
+    <meta property="og:description" content="Official portfolio website of Ogurinka Benjamin" />
+    <meta property="og:url" content="https://ogurinkabenjamin.me" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://pbs.twimg.com/profile_images/1122402512957575169/da6vHW3F_400x400.jpg" />
+    <!-- twitter cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@simplytammy" />
+    <meta name="twitter:creator" content="@simplytammy" />
+    <meta name="twitter:title" content="Ogurinka Benjamin ::" />
+    <meta name="twitter:description" content="My personal resume with work history, skillset and experience.." />
+    <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1122402512957575169/da6vHW3F_400x400.jpg" />
+    <!--Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#07374a">
+    <meta name="msapplication-TileImage" content="assets/img/icons//ms-icon-144x144.png">
+    <meta name="theme-color" content="#07374a">
+    <!--Bulma.io-->
+    <link rel="stylesheet" href="/assets/css/bulma.min.css">
+    <!--Icons-->
+    <link rel="stylesheet" type="text/css" href="/assets/fontawesome/css/all.min.css">
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Space+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .skill {
+            margin-bottom: 35px;
+            position: relative;
+            overflow-x: hidden;
+
+        }
+
+        .skill>p {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1716;
+            margin: 0;
+        }
+
+        .skill:before {
+            width: 100%;
+            height: 5px;
+            content: "";
+            display: block;
+            position: absolute;
+            background: #959595;
+            bottom: 0;
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 5px;
+            background: #f4392f;
+            display: block;
+            position: relative;
+        }
+
+        /* SKILL 1 */
+        .skill1 {
+            width: 89%;
+
+        }
+
+        .skill-bar span {
+            position: absolute;
+            top: -30px;
+            padding: 0;
+            font-size: 18px;
+            padding: 3px 0;
+            font-weight: 500;
+        }
+
+        .skill-bar {
+            position: relative;
+
+        }
+
+        .skill1 .skill-count1 {
+            right: 0;
+        }
+
+        /* SKILL 2 */
+        .skill2 {
+            width: 70%;
+            background: #2965f1 !important;
+        }
+
+        .skill2 .skill-count2 {
+            right: 0;
+        }
+
+        /* SKILL 3 */
+        .skill3 {
+            width: 85%;
+            background: #563d7c !important;
+        }
+
+        .skill3 .skill-count3 {
+            right: 0;
+        }
+
+        /* SKILL 4 */
+        .skill4 {
+            width: 49%;
+            background: #f0db4f !important;
+        }
+
+        .skill4 .skill-count4 {
+            right: 0;
+
+        }
+
+        /* SKILL 5 */
+        .skill5 {
+            width: 80%;
+        }
+
+        .skill5 .skill-count5 {
+            right: 0;
+        }
+
+        /* SKILL 6 */
+        .skill6 {
+            width: 20%;
+            background: #42b883 !important;
+
+
+        }
+
+        .skill6 .skill-count6 {
+            left: 5em;
+        }
+
+        #resHead {
+            text-align: center;
+            background-color: #383839;
+            color: #fff;
+            padding: 5%;
+        }
+
+        #resHead h3 {
+            color: #BABBBE;
+            font-size: 17px;
+        }
+
+        #resHead h1 {
+            font-weight: bold;
+            font-size: 35px;
+        }
+
+        h1 {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        #workExp,
+        #skillEdu {
+            margin: 20px 0px 5px 0px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+
+        .contact {
+            background-color: #383839;
+            color: #fff;
+            margin-top: 30px;
+        }
+
+        .contact .title,
+        .contact .subtitle {
+            color: #fff;
+            text-align: center;
+        }
+
+        .contact .title {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .contact img {
+            margin: 0 auto;
+            padding: 15px 15px 0px 15px;
+
+        }
+
+        .contact p {
+            margin-bottom: 15px;
+            line-height: 30px;
+        }
+
+        .heading {
+            font-size: 28px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #636366;
+            margin-top: 30px;
+        }
+
+        .title {
+            color: #383839;
+            margin: 0px;
+            margin-top: 30px;
+            font-size: 22px;
+            padding-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            margin: 0px;
+            color: #555 !important;
+            font-size: 14px !important;
+        }
+
+        .date {
+            padding-bottom: 5px;
+            margin: 0px;
+            color: #9E9598;
+            font-family: "Space Mono", monospace;
+            font-size: 12px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        a {
+            display: block;
+        }
+
+        a:link {
+            color: #fff;
+        }
+
+        a:visited {
+            color: #fff;
+        }
+
+        a:hover {
+            color: #636366;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: #fff;
+        }
+
+
+        @media (max-width: 992px) {
+
+            html,
+            body {
+                text-align: center;
+            }
+
+            .skills {
+                padding: 0 1em;
+            }
+
+            .skill {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="columns">
+            <div class="column is-12" id="resHead">
+                <h1>Ogurinka-Woruka Benjamin</h1>
+                <a href="https://ogurinkabenjamin.me" class="subtitle"><i class="fa fa-globe"></i> ogurinkabenjamin.me</a>
+                <a href="mailto:hi@ogurinkabenjamin.me" class="subtitle"><i class="fa fa-envelope"></i> hi@ogurinkabenjamin.me</a>
+                <p class="subtitle">
+                    <i class="fa fa-map-marker"></i> Rivers, Nigeria</p>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column is-6" id="workExp">
+                <div class="">
+                    <h1 class="heading">Work Experience</h1>
+                    <h2 class="title">Uniract.com</h2>
+                    <h3 class="subtitle">Front End Developer (Intern)</h3>
+                    <h4 class="date">September 2018 – November 2018</h4>
+                    <p>I worked as a part of a team to redesign certain parts of the platforms User Interface (uniract.com)
+                        as well as contributing to other smaller projects.</p>
+                </div>
+
+                <div class="">
+                    <h2 class="title">Bubble innovation Hub</h2>
+                    <h3 class="subtitle">Front End Developer</h3>
+                    <h4 class="date">February 2019 - Present</h4>
+                    <p>Created graphics to be displayed on the video board, in TV ads, and other materials to help promote the Sioux Falls Stampede.</p>
+                </div>
+
+                <div class="">
+                    <h2 class="title">Bubble innovation Hub</h2>
+                    <h3 class="subtitle">Front End Developer</h3>
+                    <h4 class="date">February 2019 - Present</h4>
+                    <p>Work as a Front End Developer responsible for bringing UI designs to life as well as
+                        designing interactive web pages.
+                    </p>
+                </div>
+                <div class="">
+                    <h1 class="heading">Volunteer</h1>
+                    <h2 class="title">Developer Student Clubs, UNIPORT</h2>
+                    <h3 class="subtitle">Mentor and Core Team member</h3>
+                    <h4 class="date">September 2018 – Present</h4>
+                </div>
+                <div class="">
+                    <h2 class="title">Ingressive</h2>
+                    <h3 class="subtitle">Campus Ambassador</h3>
+                    <h4 class="date">April 2019 – Present</h4>
+                </div>
+
+            </div>
+            <div class="column is-6" id="skillEdu">
+                <div class="skills">
+                    <h1 class="heading">Skills</h1>
+                    <div class="skill">
+                        <p>HTML5</p>
+                        <div class="skill-bar skill1 wow slideInLeft animated">
+                            <span class="skill-count1">89%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>CSS3</p>
+                        <div class="skill-bar skill2 wow slideInLeft animated">
+                            <span class="skill-count2">70%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Javascript</p>
+                        <div class="skill-bar skill4 wow slideInLeft animated">
+                            <span class="skill-count4">49%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Bootstrap</p>
+                        <div class="skill-bar skill3 wow slideInLeft animated">
+                            <span class="skill-count3">85%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Bulma</p>
+                        <div class="skill-bar skill5 wow slideInLeft animated">
+                            <span class="skill-count5">80%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Vuejs</p>
+                        <div class="skill-bar skill6 wow slideInLeft animated">
+                            <span class="skill-count6">20%</span>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="heading">Education</h1>
+                <h2 class="title">University of Port Harcourt, Nigeria</h2>
+                <h3 class="subtitle">Bachelor's Degree, Computer Science</h3>
+                <h4 class="date">November 2017 - Prdent</h4>
+
+            </div>
+        </div>
+    </div>
+    <script src="/app.js"></script>
+</body>
+
+</html>
