@@ -108,7 +108,7 @@ Resusable content
 }
 .hi {
   border:1px solid #FFFFFF;
-  border-radius: 1em;
+  border-radius: 0;
   transition:.8s ease;
   padding:.35em;
 }
