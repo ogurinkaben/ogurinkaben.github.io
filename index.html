@@ -45,10 +45,30 @@
         <!--Google font-->
         <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
     </head>
-    <body>
+    <body id="body">
+        <div id="myNav" class="menu-overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="menu-overlay-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="https://portfolio.ogurinkabenjamin.me">Portfolio</a>
+            </div>
+        </div>
+        <div class=" portfolio_nav">
+            <div class="top_nav">
+                <div class="brand">
+                    <span onclick="toggleTheme()" class="fas fa-sun" id="toggle"></span>
+                    <a href="https://ogurinkabenjamin.me" class="link">$ Ogurinka<span class="blink">|</span> </a>
+                </div>
+                <div class="menu">
+                    <a href="https://ogurinkabenjamin.me/about.html" class="link">[ about ]</a>
+                    <a href="https://portfolio.ogurinkabenjamin.me" class="link">[ portfolio ]</a>
+                </div>
+                <a href="#" class="menuToggle" onclick="openNav()">Menu</a>
+            </div>
+        </div>
         <div class="og_container">
             <div class="wrapper">
-                <a href="https://ogurinkabenjamin.me"><i class="fa fa-home" class="home"></i></a>
                 <h1 class="">Hi There 👋</h1>
                 <p>You've reached my portfolio, look around and get back to me if you find something cool <br>
                 😎  😎 </p>
@@ -56,9 +76,6 @@
                     <div class='row'>
                         <div class='column'>
                             <div class="portfolio_item">
-                                <div class="portfolio_item_img">
-                                    <img src="assets/img/core/studentpady.png">
-                                </div>
                                 <div class="portfolio_item_desc">
                                     <h1 class="title">Studentpady</h1>
                                     <p class="desc">studentpady is a mobile app that helps you hire professional & well-trained service men you can trust and afford.</p>
@@ -71,9 +88,6 @@
                         </div>
                         <div class='column'>
                             <div class="portfolio_item">
-                                <div class="portfolio_item_img">
-                                    <img src="assets/img/core/tig.png">
-                                </div>
                                 <div class="portfolio_item_desc">
                                     <h1 class="title">The Invisible Gym</h1>
                                     <p class="desc">Let’s talk about the Bible,
@@ -91,9 +105,6 @@
                     <div class="row">
                         <div class='column'>
                             <div class="portfolio_item">
-                                <div class="portfolio_item_img">
-                                    <img src="assets/img/core/chrome.png">
-                                </div>
                                 <div class="portfolio_item_desc">
                                     <h1 class="title">Chrome Desktop</h1>
                                     <p class="desc">
@@ -106,9 +117,7 @@
                         </div>
                         <div class='column'>
                             <div class="portfolio_item">
-                                <div class="portfolio_item_img">
-                                    <img src="assets/img/core/fd_logo.png">
-                                </div>
+                                
                                 <div class="portfolio_item_desc">
                                     <h1 class="title">Fliredoth</h1>
                                     <p class="desc">We hold the perception that the possibilities that can be explored in churning out outputs are borderless.</p>
@@ -122,9 +131,7 @@
                     <div class="row">
                         <div class='column'>
                             <div class="portfolio_item">
-                                <div class="portfolio_item_img">
-                                    <img src="assets/img/core/cgpaApp.png">
-                                </div>
+                                
                                 <div class="portfolio_item_desc">
                                     <h1 class="title">CGPA Calculator</h1>
                                     <p class="desc">
@@ -137,9 +144,7 @@
                         </div>
                         <div class='column'>
                             <div class="portfolio_item">
-                                <div class="portfolio_item_img">
-                                    <img src="assets/img/core/audio.png">
-                                </div>
+                                
                                 <div class="portfolio_item_desc">
                                     <h1 class="title">Audio Player</h1>
                                     <p class="desc">Audio Player UI component for a podcast web app</p>
@@ -151,8 +156,7 @@
                         </div>
                     </div>
                 </div>
-                <p>Keep an eye (or two) on me via social media</p>
-                <div class="og-quick-contact-holder w3-animate-bottom">
+                <div class="og-quick-contact-holder">
                     <a href="https://twitter.com/_simplytammy" class="og-quick-contact-link" target="_blank"
                         >
                     <i class="fab  fa-fw fa-twitter"></i></a>
@@ -166,6 +170,9 @@
                         >
                     <i class="fab  fa-fw fa-dev"></i></a>
                     <br>
+                    <div class="copyright">
+                        <p>Made with <i class="fa fa-heart redColor"></i> and <i class="fa fa-code purpleColor"></i> by ME!</p>
+                    </div>
                 </div>
             </div>
         </div>
