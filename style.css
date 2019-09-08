@@ -4,7 +4,7 @@
 }
 
 * {
-	background: inherit;
+	background: transparent;
 	font-family: 'Space Mono', monospace;
 }
 
@@ -20,6 +20,34 @@ body {
 	padding: 0;
 	margin: 0;
 	transition: 0.9s ease-in-out;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.3s
+}
+
+.fade-enter,
+.fade-leave-active {
+	opacity: 0
+}
+
+.nav {
+	margin: 1em auto;
+}
+
+.pagination {
+	border: 2px solid var(--color_default);
+	padding: 0.35em 0.85em;
+	margin: 5px;
+	border-radius: 50%;
+	transition: 0.8s ease;
+}
+
+.router-link-exact-active,
+.pagination:hover {
+	background: var(--color_default);
+	color: #fff;
 }
 
 body.theme {
@@ -147,6 +175,15 @@ img {
 	color: #555;
 }
 
+.tag {
+	font-size: 12px;
+	background: #25282c;
+	color: #ccc;
+	padding: 4px 8px;
+	border-radius: 1em;
+	line-height: 1;
+}
+
 .og_container {
 	min-height: 100vh;
 	display: flex;
@@ -205,8 +242,9 @@ img {
 	border-radius: 20px !important;
 	margin: 10px auto;
 	min-height: 300px;
-	transition: 0.6s ease;
+	transition: all 0.5s ease;
 	cursor: pointer;
+	padding: 2em 0.45em;
 }
 
 .portfolio_item:hover {
@@ -214,6 +252,14 @@ img {
 	animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
 	transform: translate3d(0, 0, 0);
 	perspective: 1000px;
+	background: rgba(21, 22, 24, 1);
+	background: -moz-linear-gradient(-45deg, rgba(21, 22, 24, 1) 0%, rgba(21, 22, 24, 1) 94%, rgba(24, 191, 99, 1) 95%, rgba(24, 191, 99, 1) 96%, rgba(24, 191, 99, 1) 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(21, 22, 24, 1)), color-stop(94%, rgba(21, 22, 24, 1)), color-stop(95%, rgba(24, 191, 99, 1)), color-stop(96%, rgba(24, 191, 99, 1)), color-stop(100%, rgba(24, 191, 99, 1)));
+	background: -webkit-linear-gradient(-45deg, rgba(21, 22, 24, 1) 0%, rgba(21, 22, 24, 1) 94%, rgba(24, 191, 99, 1) 95%, rgba(24, 191, 99, 1) 96%, rgba(24, 191, 99, 1) 100%);
+	background: -o-linear-gradient(-45deg, rgba(21, 22, 24, 1) 0%, rgba(21, 22, 24, 1) 94%, rgba(24, 191, 99, 1) 95%, rgba(24, 191, 99, 1) 96%, rgba(24, 191, 99, 1) 100%);
+	background: -ms-linear-gradient(-45deg, rgba(21, 22, 24, 1) 0%, rgba(21, 22, 24, 1) 94%, rgba(24, 191, 99, 1) 95%, rgba(24, 191, 99, 1) 96%, rgba(24, 191, 99, 1) 100%);
+	background: linear-gradient(135deg, rgba(21, 22, 24, 1) 0%, rgba(21, 22, 24, 1) 94%, rgba(24, 191, 99, 1) 95%, rgba(24, 191, 99, 1) 96%, rgba(24, 191, 99, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#151618', endColorstr='#18bf63', GradientType=1);
 }
 
 .portfolio_item .portfolio_item_desc {

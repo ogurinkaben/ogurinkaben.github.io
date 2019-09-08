@@ -61,8 +61,8 @@
                     <a href="https://ogurinkabenjamin.me" class="link">$ Ogurinka<span class="blink">|</span> </a>
                 </div>
                 <div class="menu">
-                    <a href="https://ogurinkabenjamin.me/about.html" class="link">[ about ]</a>
-                    <a href="https://portfolio.ogurinkabenjamin.me" class="link">[ portfolio ]</a>
+                    <a href="https://ogurinkabenjamin.me/about.html" class="link">&lt; about/&gt;</a>
+                    <a href="https://portfolio.ogurinkabenjamin.me" class="link">&lt; portfolio/&gt;</a>
                 </div>
                 <a href="#" class="menuToggle" onclick="openNav()">Menu</a>
             </div>
@@ -72,12 +72,28 @@
                 <h1 class="">Hi There 👋</h1>
                 <p>You've reached my portfolio, look around and get back to me if you find something cool <br>
                 😎  😎 </p>
+                <div id="app">
+                    
+                    <div class="nav">
+                        <router-link to="/" class="pagination"> 1</router-link>
+                        
+                        <router-link to="/page2" class="pagination">
+                        2
+                        </router-link>
+                    </div>
+                    <transition name="fade" appear>
+                        <router-view keep-alive></router-view>
+                    </transition>
+                </div>
+                <template id="main">
                 <div class="portfolio_area">
                     <div class='row'>
                         <div class='column'>
                             <div class="portfolio_item">
                                 <div class="portfolio_item_desc">
                                     <h1 class="title">Studentpady</h1>
+                                    <span class="tag"> # website</span>
+                                    <span class="tag"> # bootstrap</span>
                                     <p class="desc">studentpady is a mobile app that helps you hire professional & well-trained service men you can trust and afford.</p>
                                     
                                 </div>
@@ -90,6 +106,8 @@
                             <div class="portfolio_item">
                                 <div class="portfolio_item_desc">
                                     <h1 class="title">The Invisible Gym</h1>
+                                    <span class="tag"> # website</span>
+                                    <span class="tag"> # wordpress</span>
                                     <p class="desc">Let’s talk about the Bible,
                                         Its Chapters and Verses
                                         For they hold all the different energy
@@ -107,6 +125,7 @@
                             <div class="portfolio_item">
                                 <div class="portfolio_item_desc">
                                     <h1 class="title">Chrome Desktop</h1>
+                                    <span class="tag"> # extension</span>
                                     <p class="desc">
                                     A custom chrome extension that changes the look and feel of your chrome start screen.</p>
                                 </div>
@@ -120,6 +139,8 @@
                                 
                                 <div class="portfolio_item_desc">
                                     <h1 class="title">Fliredoth</h1>
+                                    <span class="tag"> # website</span>
+                                    <span class="tag"> # bootstrap</span>
                                     <p class="desc">We hold the perception that the possibilities that can be explored in churning out outputs are borderless.</p>
                                 </div>
                                 <div class="preview">
@@ -134,6 +155,8 @@
                                 
                                 <div class="portfolio_item_desc">
                                     <h1 class="title">CGPA Calculator</h1>
+                                    <span class="tag"> # pwa</span>
+                                    <span class="tag"> # webapp</span>
                                     <p class="desc">
                                     Simple Progressive Web App that serves as a CGPA Calculator for students in higher institutions</p>
                                 </div>
@@ -147,6 +170,8 @@
                                 
                                 <div class="portfolio_item_desc">
                                     <h1 class="title">Audio Player</h1>
+                                    <span class="tag"> # uicomponent</span>
+                                    
                                     <p class="desc">Audio Player UI component for a podcast web app</p>
                                 </div>
                                 <div class="preview">
@@ -156,6 +181,42 @@
                         </div>
                     </div>
                 </div>
+                </template>
+                <template id="page2">
+                <div class="portfolio_area">
+                    <div class="row">
+                        <div class='column'>
+                            <div class="portfolio_item">
+                                
+                                <div class="portfolio_item_desc">
+                                    <h1 class="title">Wedding Bells</h1>
+                                    <span class="tag"> # website</span>
+                                    <span class="tag"> # template</span>
+                                    <p class="desc">
+                                    Fancy wedding landing page website template</p>
+                                </div>
+                                <div class="preview">
+                                    <a href="https://portfolio.ogurinkabenjamin.me/wedding-bells/" target="_blank" class="preview_btn">Preview</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='column'>
+                            <div class="portfolio_item">
+                                
+                                <div class="portfolio_item_desc">
+                                    <h1 class="title">Fancy todo</h1>
+                                    <span class="tag"> # webapp</span>
+                                    
+                                    <p class="desc">Simple and basic Todo list with local storage capabilities</p>
+                                </div>
+                                <div class="preview">
+                                    <a href="https://portfolio.ogurinkabenjamin.me/fancy-todo" target="_blank" class="preview_btn">Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </template>
                 <div class="og-quick-contact-holder">
                     <a href="https://twitter.com/_simplytammy" class="og-quick-contact-link" target="_blank"
                         >
@@ -176,6 +237,10 @@
                 </div>
             </div>
         </div>
+        <!--Vue.js cdn-->
+        <script type="text/javascript" src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+        <!--  Router --->
+        <script type="text/javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/vue-router.js"></script>
         <script src="app.js"></script>
         <script>
         if (navigator.serviceWorker.controller) {
