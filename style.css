@@ -36,6 +36,16 @@ body {
 	margin: 1em auto;
 }
 
+.og_button {
+	border: 2px solid rgb(23, 191, 99);
+	color: rgb(23, 191, 99);
+	padding: 12px 33px;
+	text-decoration: none;
+	background: inherit;
+	transition: 0.8s ease;
+	box-shadow: 0 4px 30px rgb(23, 191, 99, 0.12);
+}
+
 .pagination {
 	border: 2px solid var(--color_default);
 	padding: 0.35em 0.85em;
