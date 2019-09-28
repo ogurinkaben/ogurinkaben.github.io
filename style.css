@@ -45,6 +45,12 @@ body {
 	background: inherit;
 	transition: 0.8s ease;
 	box-shadow: 0 4px 30px rgb(23, 191, 99, 0.12);
+	border-radius: 3rem;
+}
+
+.og_button:hover {
+	background: rgb(23, 191, 99);
+	color: #fff;
 }
 
 .pagination {
@@ -341,13 +347,15 @@ img {
 	padding: 1rem 2rem;
 }
 
-.portfolio_nav .top_nav {
-	display: flex;
+.top_nav {
+	display: block;
 	justify-content: space-between;
+	padding: 1em 0;
+	text-align: center;
 }
 
-.top_nav .brand .link {
-	font-weight: 800;
+.top_nav .brand {
+	margin-bottom: 1rem;
 }
 
 .menu-overlay {
@@ -393,7 +401,7 @@ img {
 }
 
 .top_nav .menuToggle {
-	padding: 5px 15px;
+	padding: 5px 15px 0 15px;
 	border: 2px solid var(--color_default);
 	display: none;
 }
@@ -408,6 +416,12 @@ img {
 }
 
 @media screen and (max-width: 950px) {
+	.top_nav {
+		display: flex;
+		justify-content: space-between;
+		padding: 0.55rem 0;
+		text-align: center;
+	}
 	.og_container {
 		padding: 0.35em;
 	}
