@@ -35,6 +35,18 @@ body {
 
 .nav {
 	margin: 1em auto;
+	position: fixed;
+	top: 45%;
+	right: 0;
+}
+
+.pagination {
+	border: 2px solid var(--color_default);
+	padding: 0.35em 0.85em;
+	margin: 5px;
+	border-radius: 50%;
+	transition: 0.8s ease;
+	display: block;
 }
 
 .og_button {
@@ -51,14 +63,6 @@ body {
 .og_button:hover {
 	background: rgb(23, 191, 99);
 	color: #fff;
-}
-
-.pagination {
-	border: 2px solid var(--color_default);
-	padding: 0.35em 0.85em;
-	margin: 5px;
-	border-radius: 50%;
-	transition: 0.8s ease;
 }
 
 .inTouch {
@@ -429,10 +433,11 @@ img {
 		width: 100%;
 	}
 	.og_container .wrapper h1 {
-		font-size: 20px;
+		font-size: 24px;
 	}
 	.og_container .wrapper p {
-		font-size: 14px;
+		font-size: 18px;
+		margin-bottom: 1.5rem;
 	}
 	.og-quick-contact-link {
 		font-size: 14px;
@@ -468,5 +473,12 @@ img {
 	}
 	.top_nav .menuToggle {
 		display: block;
+	}
+	.nav {
+		position: relative;
+		top: unset;
+	}
+	.pagination {
+		display: inline;
 	}
 }
