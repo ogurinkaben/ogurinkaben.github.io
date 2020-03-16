@@ -348,7 +348,7 @@
     }
 
     .portfolio_item:hover .portfolio_item_desc .desc {
-        color: #dfdfdf;
+        color: #dfdfdf !important;
     }
 
     .preview {
