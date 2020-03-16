@@ -59,7 +59,9 @@
     const router = new VueRouter({
       routes
     });
+    Vue.component('loading', { template: '<div>Loading!</div>' })
     const app = new Vue({
+      data: { loading: false },
       router,
       el: '#app',
     }).$mount('#app');

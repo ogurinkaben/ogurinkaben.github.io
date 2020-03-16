@@ -169,29 +169,6 @@
         }
     }
 
-    @keyframes shake {
-
-        10%,
-        90% {
-            transform: rotate(1deg);
-        }
-
-        20%,
-        80% {
-            transform: rotate(2deg);
-        }
-
-        30%,
-        50%,
-        70% {
-            transform: rotate(-1deg);
-        }
-
-        40%,
-        60% {
-            transform: rotate(-2deg);
-        }
-    }
 
     .fade-in {
         opacity: 0;
@@ -338,7 +315,6 @@
 
     .portfolio_item:hover {
         box-shadow: 10px 10px 0 rgb(23, 191, 99, 0.5);
-        animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
         transform: translate3d(0, 0, 0);
         perspective: 1000px;
         background: rgba(21, 22, 24, 1);
@@ -369,6 +345,10 @@
     body.light .portfolio_item .portfolio_item_desc .desc {
         font-size: 16px;
         color: #1c1c1c;
+    }
+
+    .portfolio_item:hover .portfolio_item_desc .desc {
+        color: #dfdfdf;
     }
 
     .preview {
@@ -523,7 +503,7 @@
         color: inherit;
     }
 
-    @media screen and (max-width: 950px) {
+    @media screen and (max-width: 1050px) {
         .top_nav {
             padding: 0.55rem 0;
             text-align: center;
