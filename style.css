@@ -347,7 +347,7 @@
         color: #1c1c1c;
     }
 
-    .portfolio_item:hover .portfolio_item_desc .desc {
+   body.light .portfolio_item:hover .portfolio_item_desc .desc {
         color: #dfdfdf !important;
     }
 
