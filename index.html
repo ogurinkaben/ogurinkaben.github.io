@@ -42,13 +42,14 @@
 	<meta name="msapplication-TileColor" content="#151618">
 	<meta name="msapplication-TileImage" content="assets/img/icons//ms-icon-144x144.png">
 	<meta name="theme-color" content="#151618">
-	<!--Custom Css-->
-	<link rel="stylesheet" href="style.css">
 	<!--Icons-->
 	<link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css">
 	<!--Google font-->
 	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/rstacruz/nprogress/master/nprogress.css">
+	<!--Custom Css-->
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body id="body">
@@ -79,10 +80,10 @@
 			<div class="stay_here">
 				<div id="app">
 					<div class="nav">
-						<router-link to="/" class="pagination">
+						<router-link :to="{ name: 'Code' }" class="pagination">
 							Code</router-link>
 						<span onclick="toggleTheme()" class="fas fa-moon toggleIcon" id="toggle"></span>
-						<router-link to="/design" class="pagination">
+						<router-link :to="{ name: 'Design' }" class="pagination">
 							Design
 						</router-link>
 					</div>
@@ -741,11 +742,11 @@
 							<div class="design_card">
 								<div>
 									<div class="img">
-										<img src="./assets/img/design/bh.png" alt="Beautiful Homes">
+										<img src="./assets/img/design/rev_mediaUI.png" alt="Rev Media">
 									</div>
 									<div class="content">
-										<h1>Beautiful Homes</h1>
-										<p>Hero Design for the landing page of a Home Decoration company</p>
+										<h1>Rev Media</h1>
+										<p>Website UI Design For Rev Media, a Fictional Creative Agency</p>
 									</div>
 									<div class="link">
 									</div>
@@ -761,6 +762,36 @@
 									<div class="content">
 										<h1>Double</h1>
 										<p>UI For a mobile app website</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="column">
+							<div class="design_card">
+								<div>
+									<div class="img">
+										<img src="./assets/img/design/dyces_mobile.png" alt="Dyces Mobile">
+									</div>
+									<div class="content">
+										<h1>Dyces</h1>
+										<p>UI Design for a fintech mobile app</p>
+									</div>
+									<div class="link">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="column">
+							<div class="design_card">
+								<div>
+									<div class="img">
+										<img src="./assets/img/design/nike_shop.png" alt="Nike Shop">
+									</div>
+									<div class="content">
+										<h1>The Nike Shop</h1>
+										<p>Landing page design for a Nike wears Shop</p>
 									</div>
 								</div>
 							</div>
@@ -796,6 +827,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
 	<!--  Router --->
 	<script type="text/javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/vue-router.js"></script>
+	<script type="text/javascript" src="https://cdn.rawgit.com/rstacruz/nprogress/master/nprogress.js"></script>
 	<script src="app.js"></script>
 	<script>
 	if (

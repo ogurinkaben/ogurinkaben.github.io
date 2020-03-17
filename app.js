@@ -26,14 +26,7 @@
     }
     window.onload = loadTheme;
 
-    function openNav() {
-      document.getElementById("myNav").style.width = "100%";
-    }
-
-    function closeNav() {
-      document.getElementById("myNav").style.width = "0%";
-    }
-    //<============ Vue.js <============
+    //Vue.js
     const Code = {
       template: '#code'
     }
@@ -44,22 +37,33 @@
       template: '#page-not-found'
     }
     const routes = [{
+        name: 'Code',
         path: '/',
         component: Code
       },
       {
+        name: 'Design',
         path: '/design',
         component: Design
       },
       {
+        name: 'NotFound',
         path: '*',
         component: NotFound
       },
     ]
-    const router = new VueRouter({
-      routes
-    });
-    Vue.component('loading', { template: '<div>Loading!</div>' })
+    const router = new VueRouter({ mode: 'history', routes: routes });
+    router.beforeResolve((to, from, next) => {
+      if (to.name) {
+        NProgress.start()
+      }
+      next()
+    })
+
+    router.afterEach((to, from) => {
+      NProgress.done()
+    })
+
     const app = new Vue({
       data: { loading: false },
       router,
