@@ -4,7 +4,7 @@
  "description" : "Personal portfolio site",
  "lang": "en-UK",
  "start_url": "/",
- "background_color": "#FFFFFF",
+ "background_color": "#151618",
  "theme_color": "#07374a",
  "display": "standalone",
  "orientation": "portrait",
