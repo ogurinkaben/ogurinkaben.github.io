@@ -33,6 +33,15 @@
         opacity: 0
     }
 
+    #nprogress .bar {
+        height: 8px;
+        background: var(--color_default);
+    }
+
+    #nprogress .spinner-icon {
+        border-top-color: var(--color_default);
+        border-left-color: var(--color_default);
+    }
 
     .nav {
         margin: 0;
@@ -44,17 +53,22 @@
         opacity: 1;
         z-index: 10000;
         padding: 1rem 0;
+        box-shadow: -1px -2px 2px rgba(21, 22, 24, .5),
+            2px 3px 2px rgba(0, 0, 0, .25);
 
     }
 
+
+
     .pagination {
         padding: 10px;
-        margin: 5px;
+        margin: 10px;
         border-radius: 2px;
         transition: 0.6s ease;
         display: inline-block;
         font-size: 14px;
         border-bottom: 2px solid transparent;
+        transition: 0.4s ease-in-out;
     }
 
     .og_button {
@@ -93,17 +107,6 @@
         border-bottom: 2px solid rgb(23, 191, 99);
         color: #fff;
     }
-
-    body.dark {
-        background: #2F3242 !important;
-        color: #dfdfdf !important;
-    }
-
-    body.light {
-        background: #f1f1f1 !important;
-        color: #151618 !important;
-    }
-
 
     a {
         color: var(--color_default);
@@ -303,14 +306,15 @@
 
     .portfolio_item {
         position: relative;
-        box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.23);
+        /*box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.23);*/
+
         border-radius: 20px !important;
         margin: 10px auto;
-        min-height: 300px;
-        transition: all 0.5s ease;
+        min-height: 350px;
         cursor: pointer;
         padding: 2rem 0;
         width: 100%;
+        transition: 0.5s ease-in-out;
     }
 
     .portfolio_item:hover {
@@ -342,15 +346,6 @@
         color: #dfdfdf;
     }
 
-    body.light .portfolio_item .portfolio_item_desc .desc {
-        font-size: 16px;
-        color: #1c1c1c;
-    }
-
-    body.light .portfolio_item:hover .portfolio_item_desc .desc {
-        color: #dfdfdf !important;
-    }
-
     .preview {
         width: 100%;
         text-align: center;
@@ -361,17 +356,18 @@
     .preview_btn {
         padding: 14px 16px;
         color: #fff;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.23);
+        box-shadow: 0px 0px 5px rgb(21, 22, 24, 0.15), -0px -0px 5px rgba(21, 22, 24, 0.5);
         background: #25282c;
         font-size: 15px;
         text-decoration: none;
-        border-radius: 4px;
+        border-radius: 0;
+        display: inline-block;
+        min-width: 120px;
     }
 
     .design_card {
         padding: 0;
         padding-bottom: 20px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.13);
         min-height: 250px;
         display: flex;
         align-items: center;
@@ -550,6 +546,7 @@
         .portfolio_item {
             min-height: 100px;
             margin: 20px auto;
+
         }
 
         .portfolio_item .preview {
@@ -576,7 +573,7 @@
 
 
     .not-found {
-        min-height: 100vh;
+        min-height: 60vh;
         padding-top: 0;
         display: flex;
         align-items: center;
@@ -624,4 +621,62 @@
         100% {
             transform: translateY(20px);
         }
+    }
+
+    body.dark .nav {
+        background: #2F3242 !important;
+        color: #dfdfdf !important;
+    }
+
+    body.dark .nav .pagination {
+        color: #dfdfdf !important;
+    }
+
+    body.light .nav {
+        background: #f1f1f1 !important;
+        color: #151618 !important;
+
+    }
+
+    body.light .nav .pagination {
+        color: #1c1c1c !important;
+
+    }
+
+
+    body.dark {
+        background: #2F3242 !important;
+        color: #dfdfdf !important;
+    }
+
+    body.light {
+        background: #f1f1f1 !important;
+        color: #151618 !important;
+    }
+
+    body.light .portfolio_item {
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15), -3px -3px 5px rgba(255, 255, 255, 0.65);
+    }
+
+    body.dark .portfolio_item {
+        box-shadow: 3px 3px 5px rgb(21, 22, 24, 0.15), -3px -3px 5px rgba(21, 22, 24, 0.5);
+    }
+
+    body.light .design_card {
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15), -3px -3px 5px rgba(255, 255, 255, 0.65);
+    }
+
+    body.dark .design_card {
+        box-shadow: 3px 3px 5px rgb(21, 22, 24, 0.15), -3px -3px 5px rgba(21, 22, 24, 0.5);
+    }
+
+
+
+    body.light .portfolio_item .portfolio_item_desc .desc {
+        font-size: 16px;
+        color: #1c1c1c;
+    }
+
+    body.light .portfolio_item:hover .portfolio_item_desc .desc {
+        color: #dfdfdf !important;
     }
