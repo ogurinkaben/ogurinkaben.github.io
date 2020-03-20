@@ -581,6 +581,10 @@
         text-align: center;
     }
 
+    .not-found.full {
+        min-height: 100vh;
+    }
+
     .message-box {
         padding: 1rem;
     }
