@@ -25,7 +25,6 @@
       }
     }
     window.onload = loadTheme;
-
     //Vue.js
     const Code = {
       template: '#code'
@@ -52,20 +51,18 @@
         component: NotFound
       },
     ]
-
-    const router = new VueRouter({ routes: routes });
-
+    const router = new VueRouter({
+      routes: routes
+    });
     router.beforeResolve((to, from, next) => {
       if (to.name) {
         NProgress.start()
       }
       next()
     })
-
     router.afterEach((to, from) => {
       NProgress.done()
     })
-
     const app = new Vue({
       data: { loading: false },
       router,

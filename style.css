@@ -53,9 +53,6 @@
         opacity: 1;
         z-index: 10000;
         padding: 1rem 0;
-        box-shadow: -1px -2px 2px rgba(21, 22, 24, .5),
-            2px 3px 2px rgba(0, 0, 0, .25);
-
     }
 
 
@@ -306,8 +303,6 @@
 
     .portfolio_item {
         position: relative;
-        /*box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.23);*/
-
         border-radius: 20px !important;
         margin: 10px auto;
         min-height: 350px;
@@ -318,6 +313,7 @@
     }
 
     .portfolio_item:hover {
+        transition: 0.5s ease-in-out;
         box-shadow: 10px 10px 0 rgb(23, 191, 99, 0.5);
         transform: translate3d(0, 0, 0);
         perspective: 1000px;
@@ -332,7 +328,7 @@
     }
 
     .portfolio_item .portfolio_item_desc {
-        padding: 1em;
+        padding: 1rem;
         border-radius: 20px;
     }
 
