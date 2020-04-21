@@ -1,5 +1,5 @@
     :root {
-        --bg_default: #151618;
+        --bg_default: #00091b;
         --color_default: rgb(23, 191, 99) !important;
     }
 
@@ -314,17 +314,9 @@
 
     .portfolio_item:hover {
         transition: 0.5s ease-in-out;
-        box-shadow: 10px 10px 0 rgb(23, 191, 99, 0.5);
+        box-shadow: 0 0 0 5px rgb(23, 191, 99, 0.9) !important;
         transform: translate3d(0, 0, 0);
         perspective: 1000px;
-        background: rgba(21, 22, 24, 1);
-        background: -moz-linear-gradient(-45deg, rgba(21, 22, 24, 1) 0%, rgba(21, 22, 24, 1) 94%, rgba(24, 191, 99, 1) 95%, rgba(24, 191, 99, 1) 96%, rgba(24, 191, 99, 1) 100%);
-        background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(21, 22, 24, 1)), color-stop(94%, rgba(21, 22, 24, 1)), color-stop(95%, rgba(24, 191, 99, 1)), color-stop(96%, rgba(24, 191, 99, 1)), color-stop(100%, rgba(24, 191, 99, 1)));
-        background: -webkit-linear-gradient(-45deg, rgba(21, 22, 24, 1) 0%, rgba(21, 22, 24, 1) 94%, rgba(24, 191, 99, 1) 95%, rgba(24, 191, 99, 1) 96%, rgba(24, 191, 99, 1) 100%);
-        background: -o-linear-gradient(-45deg, rgba(21, 22, 24, 1) 0%, rgba(21, 22, 24, 1) 94%, rgba(24, 191, 99, 1) 95%, rgba(24, 191, 99, 1) 96%, rgba(24, 191, 99, 1) 100%);
-        background: -ms-linear-gradient(-45deg, rgba(21, 22, 24, 1) 0%, rgba(21, 22, 24, 1) 94%, rgba(24, 191, 99, 1) 95%, rgba(24, 191, 99, 1) 96%, rgba(24, 191, 99, 1) 100%);
-        background: linear-gradient(135deg, rgba(21, 22, 24, 1) 0%, rgba(21, 22, 24, 1) 94%, rgba(24, 191, 99, 1) 95%, rgba(24, 191, 99, 1) 96%, rgba(24, 191, 99, 1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#151618', endColorstr='#18bf63', GradientType=1);
     }
 
     .portfolio_item .portfolio_item_desc {
@@ -398,7 +390,7 @@
 
     body.light .design_card .content p {
         font-size: 16px;
-        color: #1c1c1c;
+        color: #00091b;
     }
 
     .og-quick-contact-link {
@@ -624,7 +616,7 @@
     }
 
     body.dark .nav {
-        background: #2F3242 !important;
+        background: #00091b !important;
         color: #dfdfdf !important;
     }
 
@@ -634,18 +626,18 @@
 
     body.light .nav {
         background: #f1f1f1 !important;
-        color: #151618 !important;
+        color: #00091b !important;
 
     }
 
     body.light .nav .pagination {
-        color: #1c1c1c !important;
+        color: #00091b !important;
 
     }
 
 
     body.dark {
-        background: #2F3242 !important;
+        background: #00091b !important;
         color: #dfdfdf !important;
     }
 
@@ -678,5 +670,5 @@
     }
 
     body.light .portfolio_item:hover .portfolio_item_desc .desc {
-        color: #dfdfdf !important;
+        color: #00091b !important;
     }
