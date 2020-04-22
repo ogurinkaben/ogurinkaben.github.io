@@ -344,8 +344,8 @@
     .preview_btn {
         padding: 14px 16px;
         color: #fff;
-        box-shadow: 0px 0px 5px rgb(21, 22, 24, 0.15), -0px -0px 5px rgba(21, 22, 24, 0.5);
-        background: #25282c;
+        box-shadow: -2px -2px 5px #00091b, 2px 2px 5px #00091b;
+        background: #00091b;
         font-size: 15px;
         text-decoration: none;
         border-radius: 0;
@@ -651,7 +651,7 @@
     }
 
     body.dark .portfolio_item {
-        box-shadow: 3px 3px 5px rgb(21, 22, 24, 0.15), -3px -3px 5px rgba(21, 22, 24, 0.5);
+        box-shadow: -2px -2px 5px #00091b, 2px 2px 5px #00091b;
     }
 
     body.light .design_card {
@@ -659,7 +659,7 @@
     }
 
     body.dark .design_card {
-        box-shadow: 3px 3px 5px rgb(21, 22, 24, 0.15), -3px -3px 5px rgba(21, 22, 24, 0.5);
+        box-shadow: -2px -2px 5px #00091b, 2px 2px 5px #00091b;
     }
 
 
