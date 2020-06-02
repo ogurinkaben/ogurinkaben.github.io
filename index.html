@@ -71,6 +71,10 @@
 			</div>
 			<div class="stay_here">
 				<div id="app">
+					<div class="g-cursor">
+						<div :style="`transform: translateX(${xParent}px) translateY(${yParent}px) translateZ(0) translate3d(0, 0, 0);`" class="g-cursor__circle"></div>
+						<div class="g-cursor__point" ref="point" :style="`transform: translateX(${xChild - 3}px) translateY(${yChild - 3}px) translateZ(0) translate3d(0, 0, 0);`"></div>
+					</div>
 					<div class="nav">
 						<router-link :to="{ name: 'Code' }" class="pagination"> Code</router-link>
 						<span onclick="toggleTheme()" class="fas fa-moon toggleIcon" id="toggle"></span>

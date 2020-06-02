@@ -45,6 +45,55 @@
         border-left-color: var(--color_default);
     }
 
+    .g-cursor {
+        transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+    }
+
+    .g-cursor_hide {
+        opacity: 0;
+        width: 60px;
+        height: 60px;
+        transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+    }
+
+    .g-cursor__circle {
+        pointer-events: none;
+        user-select: none;
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #fff;
+        border-radius: 100%;
+        z-index: 5555;
+        backface-visibility: hidden;
+        transition: opacity 0.6s ease;
+    }
+
+    .g-cursor__point {
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 4px;
+        height: 4px;
+        pointer-events: none;
+        user-select: none;
+        border-radius: 100%;
+        background: #fff;
+        z-index: 55555555;
+        backface-visibility: hidden;
+        will-change: transform;
+    }
+
+    .g-cursor_hover .g-cursor__circle {
+        opacity: 0;
+        width: 60px;
+        height: 60px;
+        transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+    }
+
+
     .nav {
         margin: 0;
         position: fixed;
