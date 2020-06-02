@@ -352,6 +352,23 @@
         text-align: center;
     }
 
+    .footer-sponsors {
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-sponsors a,
+    .footer-sponsors a:hover {
+        text-decoration: none;
+    }
+
+    .footer-sponsors a img {
+        max-width: 120px;
+        object-fit: contain;
+    }
+
     .portfolio_item {
         position: relative;
         border-radius: 20px !important;
