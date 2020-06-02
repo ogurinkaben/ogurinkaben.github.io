@@ -367,6 +367,24 @@
         justify-content: center;
     }
 
+    .footer-sponsors .codeit {
+        background: url(./assets/img/core/codeit-logo-white.png);
+        height: 85px;
+        width: 200px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    body.light .footer-sponsors .codeit {
+        background: url(./assets/img/core/codeit-logo-dark.png);
+        height: 85px;
+        width: 200px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
     .footer-sponsors a,
     .footer-sponsors a:hover {
         text-decoration: none;
