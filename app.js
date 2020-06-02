@@ -24,6 +24,14 @@ function loadTheme() {
     theme.className = currentTheme;
   }
 }
+window.onscroll = function() { showScrollStaus() };
+
+function showScrollStaus() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
 window.onload = loadTheme;
 //Vue.js
 const Code = {
