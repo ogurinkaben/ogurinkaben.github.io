@@ -465,6 +465,7 @@
 
     .design_card:hover {
         box-shadow: 0 10px 50px rgba(0, 0, 0, 0.13);
+        box-shadow: 0 0 0 5px rgb(23, 191, 99, 0.9) !important;
     }
 
     .design_card .img img {
