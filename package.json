@@ -1,8 +1,8 @@
 {
   "name": "simplytammy.github.io",
-  "version": "1.0.0",
-  "description": "This is my personal website containing information about me, my current and future projects",
-  "main": "assets/js/script.js",
+  "version": "3.0.0",
+  "description": "This is my personal portfolio page",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/simplytammy/simplytammy.github.io.git"
   },
+  "keywords": [
+    "Web",
+    "Portfolio",
+    "Ogurinka",
+    "Benjamin",
+    "simplytammy",
+    "tammy.dev"
+  ],
   "author": "Ogurinka Benjamin",
   "license": "MIT",
   "bugs": {

@@ -1,3 +1,5 @@
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
+
     :root {
         --bg_default: #00091b;
         --color_default: rgb(23, 191, 99) !important;
@@ -306,10 +308,14 @@
         border-radius: 20px !important;
         margin: 10px auto;
         min-height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
         padding: 2rem 0;
         width: 100%;
         transition: 0.5s ease-in-out;
+        box-shadow: 0 0 0 5px rgb(23, 191, 99, 0.2) !important;
     }
 
     .portfolio_item:hover {
@@ -417,17 +423,24 @@
 
     .top_nav {
         display: block;
-        padding: 1em 0;
+        padding: 2em 0;
         text-align: center;
+
     }
 
     .top_nav .brand {
         margin-bottom: 1rem;
         text-align: center;
+
+    }
+
+    .top_nav .brand a {
+        font-family: 'Ubuntu Mono', monospace;
     }
 
     .top_nav .brand span {
         display: inline;
+
     }
 
     .menu-overlay {
