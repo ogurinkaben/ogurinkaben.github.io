@@ -548,7 +548,7 @@
     }
 
     .progress-bar {
-        height: 8px;
+        height: 3px;
         background: var(--color_default);
         width: 0%;
     }
