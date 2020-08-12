@@ -24,53 +24,7 @@ function loadTheme() {
     theme.className = currentTheme;
   }
 }
-window.onscroll = function() { showScrollStaus() };
-
-function showScrollStaus() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
 window.onload = loadTheme;
-//Vue.js
-const Code = {
-  template: "#code"
-};
-const Design = {
-  template: "#design"
-};
-const NotFound = {
-  template: "#page-not-found"
-};
-const routes = [{
-    name: "Code",
-    path: "/",
-    component: Code
-  },
-  {
-    name: "Design",
-    path: "/design",
-    component: Design
-  },
-  {
-    name: "NotFound",
-    path: "*",
-    component: NotFound
-  }
-];
-const router = new VueRouter({
-  routes: routes
-});
-router.beforeResolve((to, from, next) => {
-  if (to.name) {
-    NProgress.start();
-  }
-  next();
-});
-router.afterEach((to, from) => {
-  NProgress.done();
-});
 const app = new Vue({
   data: {
     loading: false,
@@ -102,6 +56,5 @@ const app = new Vue({
       this.hideCursor = true;
     });
   },
-  router,
   el: "#app"
 }).$mount("#app");

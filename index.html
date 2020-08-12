@@ -8,7 +8,7 @@
 	<meta name="description" content="You've reached my portfolio, look around and get back to me if you find something cool <br>
         😎  😎">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Ogurinka :: Portfolio</title>
+	<title>Open-source Tammy</title>
 	<!-- open graph tags -->
 	<meta property="og:title" content="Ogurinka Benjamin :. Portfolio" />
 	<meta property="og:description" content="You've reached my portfolio, look around and get back to me if you find something cool <br>
@@ -52,25 +52,11 @@
 
 <body id="body">
 	<div class="grid-bg "></div>
-	<div class="progress-container">
-		<div class="progress-bar" id="myBar"></div>
-	</div>
-	<div class=" portfolio_nav">
-		<div class="top_nav">
-			<div class="brand">
-				<a href="https://tammy.dev" class="link">$ cd ~/tammy.dev <span class="blink"> |</span>
-				</a>
-
-			</div>
-			<a class="github-button" href="https://github.com/simplytammy" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Follow @simplytammy on GitHub">Follow @simplytammy</a>
-		</div>
-	</div>
 	<div class="og_container">
 		<div class="wrapper">
 			<div class="intro">
-				<h3>Hi, I'm Tammy</h3>
-				<p>Welcome to my Portfolio</p>
-				<p>Look around and get back to me if you find something cool </p>
+				<h3>Open-source Tammy</h3>
+				<a class="github-button" href="https://github.com/simplytammy" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Follow @simplytammy on GitHub">Follow @simplytammy</a>
 			</div>
 			<div class="stay_here">
 				<div id="app">
@@ -79,417 +65,26 @@
 						<div class="g-cursor__point" ref="point" :style="`transform: translateX(${xChild - 3}px) translateY(${yChild - 3}px) translateZ(0) translate3d(0, 0, 0);`"></div>
 					</div>
 					<div class="nav">
-						<router-link :to="{ name: 'Code' }" class="pagination"> Code</router-link>
 						<span onclick="toggleTheme()" class="fas fa-moon toggleIcon" id="toggle"></span>
-						<router-link :to="{ name: 'Design' }" class="pagination"> Design </router-link>
-					</div>
-					<transition name="fade" appear>
-						<router-view keep-alive></router-view>
-					</transition>
-				</div>
-			</div>
-			<template id="page-not-found">
-				<div class="not-found">
-					<div>
-						<svg width="280px" height="300px" viewBox="0 0 837 1045" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-								<path d="M353,9 L626.664028,170 L626.664028,487 L353,642 L79.3359724,487 L79.3359724,170 L353,9 Z" id="Polygon-1" stroke="#007FB2" stroke-width="6" sketch:type="MSShapeGroup"></path>
-								<path d="M78.5,529 L147,569.186414 L147,648.311216 L78.5,687 L10,648.311216 L10,569.186414 L78.5,529 Z" id="Polygon-2" stroke="#EF4A5B" stroke-width="6" sketch:type="MSShapeGroup"></path>
-								<path d="M773,186 L827,217.538705 L827,279.636651 L773,310 L719,279.636651 L719,217.538705 L773,186 Z" id="Polygon-3" stroke="#795D9C" stroke-width="6" sketch:type="MSShapeGroup"></path>
-								<path d="M639,529 L773,607.846761 L773,763.091627 L639,839 L505,763.091627 L505,607.846761 L639,529 Z" id="Polygon-4" stroke="#F2773F" stroke-width="6" sketch:type="MSShapeGroup"></path>
-								<path d="M281,801 L383,861.025276 L383,979.21169 L281,1037 L179,979.21169 L179,861.025276 L281,801 Z" id="Polygon-5" stroke="#36B455" stroke-width="6" sketch:type="MSShapeGroup"></path>
-							</g>
-						</svg>
-						<div class="message-box">
-							<h1>Oops! the page you are looking for is not here. That's all I know</h1>
-						</div>
-					</div>
-				</div>
-			</template>
-			<template id="code">
-				<div class="portfolio_area">
-					<div class='row'>
-						<div class='column'>
-							<a href="https://everylink.space" target="_blank" class="">
-								<div class="portfolio_item">
-									<div class="portfolio_item_desc">
-										<h1 class="title">Everylink</h1>
-										<span class="tag"> # Nodejs</span>
-										<span class="tag"> # Expressjs</span>
-										<span class="tag"> # MongoDB</span>
-										<p class="desc">Everylink is a super simple URL shortener specially designed and developed for event organizers and social media enthusiasts to give them a fast way to easily share clean content URLs</p>
-									</div>
-
-								</div>
-							</a>
-						</div>
-						<div class='column'>
-							<a href="http://studihubacademy.com" target="_blank">
-								<div class="portfolio_item">
-									<div class="portfolio_item_desc">
-										<h1 class="title">Studihub Academy API</h1>
-										<span class="tag"> # Nodejs</span>
-										<span class="tag"> # Expressjs</span>
-										<span class="tag"> # MongoDB</span>
-										<p class="desc">
-											A registrations API for Studihub academy to collect registrations for their bootcamps and masterclasses among other things.
-										</p>
-									</div>
-
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class='row'>
-						<div class='column'>
-							<a href="http://dsc.codeclubph.tech/" target="_blank" class="">
-								<div class="portfolio_item">
-									<div class="portfolio_item_desc">
-										<h1 class="title">DSC, Uniport</h1>
-										<span class="tag"> #pwa</span>
-										<span class="tag"> #bootstrap</span>
-										<span class="tag"> #Template</span>
-										<p class="desc">Official website for the Google Developer Student Clubs, University of Port Harcourt.</p>
-									</div>
-
-								</div>
-							</a>
-						</div>
-						<div class='column'>
-							<a href="http://cscplayground.xyz" target="_blank">
-								<div class="portfolio_item">
-									<div class="portfolio_item_desc">
-										<h1 class="title">Playground</h1>
-										<span class="tag"> # Nodejs</span>
-										<span class="tag"> # Expressjs</span>
-										<span class="tag"> # MongoDB</span>
-
-										<p class="desc">Mini social media for my school department. Built as part of a practice project to get acquainted with Backend Basics</p>
-									</div>
-
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class='row'>
-
-						<div class='column'>
-							<a href="http://www.theinvisiblegym.org/" target="_blank" class="">
-								<div class="portfolio_item">
-									<div class="portfolio_item_desc">
-										<h1 class="title">The Invisible Gym</h1>
-										<span class="tag"> # wordpress</span>
-										<p class="desc">Let’s talk about the Bible, Its Chapters and Verses For they hold all the different energy we need to keep our mind fit.</p>
-									</div>
-
-							</a>
-
-						</div>
-					</div>
-					<div class='column'>
-						<a href="https://airpods-store.codeit.today" target="_blank">
-							<div class="portfolio_item">
-								<div class="portfolio_item_desc">
-									<h1 class="title">Airpods Store</h1>
-									<span class="tag"> # Vue.js</span>
-									<span class="tag"> # Firebase</span>
-									<span class="tag"> # Vuex</span>
-									<p class="desc">E-commerce template built as part of a training series for codeit</p>
-								</div>
-
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class='row'>
-					<div class='column'>
-						<a href="https://portfolio.tammy.dev/wedding-bells/" target="_blank" class="">
-							<div class="portfolio_item">
-								<div class="portfolio_item_desc">
-									<h1 class="title">Wedding Bells</h1>
-									<span class="tag"> #jquery</span>
-									<span class="tag"> #lightbox</span>
-									<p class="desc"> Fancy wedding landing page website template built just for the fun of it</p>
-								</div>
-						</a>
-
-					</div>
-				</div>
-				<div class='column'>
-					<a href="https://terin.xyz" target="_blank" class="">
-						<div class="portfolio_item">
-							<div class="portfolio_item_desc">
-								<h1 class="title">Terin</h1>
-								<span class="tag"> #Vuejs</span>
-								<span class="tag"> # Nodejs</span>
-								<span class="tag"> # Expressjs</span>
-								<p class="desc">Official website for Terin, a tech start-up focused on technological growth and innovative products</p>
-							</div>
-					</a>
-
-				</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class='column'>
-			<a href="https://callthepolice.netlify.app/" target="_blank" class="">
-				<div class="portfolio_item">
-					<div class="portfolio_item_desc">
-						<h1 class="title">Call the Police</h1>
-						<span class="tag"> #pwa</span>
-						<span class="tag"> #jquery</span>
-						<p class="desc"> Simple Progressive Web App that aids citizens reach out to the Nigerian Police HQs in their region</p>
-					</div>
-			</a>
-		</div>
-	</div>
-	<div class='column'>
-		<div class="portfolio_item">
-			<div class="portfolio_item_desc">
-				<a href="https://loopedreality.xyz/" target="_blank" class="">
-					<h1 class="title">Looped Reality</h1>
-					<span class="tag"> #vuejs</span>
-					<p class="desc">Official website for Looped Reality, A creative agency and community</p>
-			</div>
-			</a>
-
-		</div>
-	</div>
-	</div>
-	<div class="row">
-		<div class='column'>
-			<a href="https://cgpacalculator.netlify.app/" target="_blank" class="">
-				<div class="portfolio_item">
-					<div class="portfolio_item_desc">
-						<h1 class="title">GPA Calculator</h1>
-						<span class="tag"> # pwa</span>
-						<span class="tag"> # 2019</span>
-						<p class="desc"> Simple lightweight Progressive Web App that serves as a GPA Calculator for students in higher institutions in Nigeria</p>
-					</div>
-
-				</div>
-			</a>
-		</div>
-		<div class='column'>
-			<a href="https://github.com/simplytammy/simple-audio-player" target="_blank" class="">
-				<div class="portfolio_item">
-					<div class="portfolio_item_desc">
-						<h1 class="title">Audio Player</h1>
-						<span class="tag"> #jquery</span>
-						<span class="tag"> # wordpress</span>
-						<p class="desc">Audio Player UI component for a wordpress plugin that converts text to audio</p>
-					</div>
-
-				</div>
-			</a>
-		</div>
-
-		<div class="row">
-			<div class='column'>
-				<a href="https://github.com/simplytammy/easyhttp.js" target="_blank" class="">
-					<div class="portfolio_item">
-						<div class="portfolio_item_desc">
-							<h1 class="title">easyhttp.js</h1>
-							<span class="tag"> #vanillajs</span>
-
-							<p class="desc">A lightweight http library that helps you handle GET, POST, PUT and DELETE requests. This was built as part of a javascript refresher course project </p>
-						</div>
-				</a>
-
-			</div>
-		</div>
-		<div class='column'>
-			<a href="https://cracgroup.org/" target="_blank" class="">
-				<div class="portfolio_item">
-					<div class="portfolio_item_desc">
-						<h1 class="title">CRAC</h1>
-						<span class="tag"> #bootstrap</span>
-						<span class="tag"> #jQuery </span>
-						<p class="desc">CRAC is a non-profit initiative formed by a number of concerned NGOs and Private Institutions focused on providing a platform for quick response and resilience-building during disaster and crisis in Nigeria </p>
-					</div>
-			</a>
-
-		</div>
-	</div>
-	<div class="row">
-		<div class='column'>
-			<a href="https://portfolio.tammy.dev/find-github-users/" target="_blank" class="">
-				<div class="portfolio_item">
-					<div class="portfolio_item_desc">
-						<h1 class="title">GitHub Finder</h1>
-						<span class="tag"> #vanillajs</span>
-						<span class="tag"> #githubAPI</span>
-						<p class="desc">A simple Javascript app that allows you find GitHub users and their profile info using the GitHub API </p>
-					</div>
-
-				</div>
-			</a>
-		</div>
-		<div class='column'>
-			<a href="https://github.com/simplytammy/chrome-desktop" target="_blank">
-				<div class="portfolio_item">
-					<div class="portfolio_item_desc">
-						<h1 class="title">Chrome Desktop</h1>
-						<span class="tag"> # extension</span>
-						<span class="tag"> # 2019</span>
-						<p class="desc"> A custom chrome extension that changes the look and feel of your chrome start screen.</p>
-					</div>
-
-				</div>
-			</a>
-		</div>
-	</div>
-	</div>
-	</div>
-	</div>
-	</template>
-	<template id="design">
-		<div class="portfolio_area">
-			<div class="row">
-				<div class="column">
-					<div class="design_card">
-						<div class="wrapper">
-							<div class="img">
-								<img src="./assets/img/design/taskAppUI.png" alt=" Fortune Ikechi Portfolio UI">
-							</div>
-							<div class="content">
-								<h1>Task App UI</h1>
-								<p>Simple UI for a task progress tracker app</p>
-							</div>
-							<div class="link">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column">
-					<div class="design_card">
-						<div class="wrapper">
-							<div class="img">
-								<img src="./assets/img/design/dyces_mobile.png" alt="Dyces Mobile">
-							</div>
-							<div class="content">
-								<h1>Dyces</h1>
-								<p>UI Design for a fintech mobile app</p>
-							</div>
-							<div class="link">
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-			<div class="row">
-				<div class="column">
-					<div class="design_card">
-						<div class="wrapper">
-							<div class="img">
-								<img src="./assets/img/design/food_app_ui.png" alt="Food App UI">
-							</div>
-							<div class="content">
-								<h1>Food App UI</h1>
-								<p>UI For Food Recipe Sharing platform</p>
-							</div>
-							<div class="link">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column">
-					<div class="design_card">
-						<div class="wrapper">
-							<div class="img">
-								<img src="./assets/img/design/profile_card.png" alt="Profile Card Design">
-							</div>
-							<div class="content">
-								<h1>Profile Card</h1>
-								<p>A Profile Card UI designed for a music streaming service</p>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="column">
-					<div class="design_card">
-						<div class="wrapper">
-							<div class="img">
-								<img src="./assets/img/design/rev_mediaUI.png" alt="Rev Media">
-							</div>
-							<div class="content">
-								<h1>Rev Media</h1>
-								<p>Website UI Design For Rev Media, a Fictional Creative Agency</p>
-							</div>
-							<div class="link">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column">
-					<div class="design_card">
-						<div class="wrapper">
-							<div class="img">
-								<img src="./assets/img/design/double.png" alt="Double">
-							</div>
-							<div class="content">
-								<h1>Double</h1>
-								<p>UI For a mobile app website</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="column">
-					<div class="design_card">
-						<div class="wrapper">
-							<div class="img">
-								<img src="./assets/img/design/edubud.png" alt="Profile Card Design">
-							</div>
-							<div class="content">
-								<h1>Edubud UI</h1>
-								<p>UI Design template for an educational NGO</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column">
-					<div class="design_card">
-						<div class="wrapper">
-							<div class="img">
-								<img src="./assets/img/design/nike_shop.png" alt="Nike Shop">
-							</div>
-							<div class="content">
-								<h1>The Nike Shop</h1>
-								<p>Landing page design for a Nike wears Shop</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+
+			<footer class="og-quick-contact-holder">
+				<a href="https://www.github.com/simplytammy" class=" og-quick-contact-link" target="_blank">
+					<i class="fab  fa-fw fa-github-alt"></i></a>
+				<a href="https://codepen.io/simplytammy/" class=" og-quick-contact-link" target="_blank">
+					<i class="fab  fa-fw fa-codepen"></i></a>
+				<a href="https://dev.to/simplytammy/" class=" og-quick-contact-link" target="_blank">
+					<i class="fab  fa-fw fa-dev"></i></a>
+				<a href="https://www.linkedin.com/in/benjamin-ogurinka-woruka-4b4093182" class=" og-quick-contact-link" target="_blank">
+					<i class="fab  fa-fw fa- fa-linkedin"></i></a>
+				<a href="https://dribbble.com/simplytammy" class=" og-quick-contact-link" target="_blank">
+					<i class="fab  fa-fw fa- fa-dribbble"></i></a>
+				<a href="https://tammy.dev" class=" og-quick-contact-link" target="_blank">
+					<i class="fa  fa-fw fa- fa-globe"></i></a>
+			</footer>
 		</div>
-	</template>
-	<footer class="og-quick-contact-holder">
-		<div class="footer-sponsors">
-			<a href="#!">
-				<div class="codeit"></div>
-			</a>
-		</div>
-		<a href="https://www.github.com/simplytammy" class=" og-quick-contact-link" target="_blank">
-			<i class="fab  fa-fw fa-github-alt"></i></a>
-		<a href="https://codepen.io/simplytammy/" class=" og-quick-contact-link" target="_blank">
-			<i class="fab  fa-fw fa-codepen"></i></a>
-		<a href="https://dev.to/simplytammy/" class=" og-quick-contact-link" target="_blank">
-			<i class="fab  fa-fw fa-dev"></i></a>
-		<a href="https://www.linkedin.com/in/benjamin-ogurinka-woruka-4b4093182" class=" og-quick-contact-link" target="_blank">
-			<i class="fab  fa-fw fa- fa-linkedin"></i></a>
-		<a href="https://dribbble.com/simplytammy" class=" og-quick-contact-link" target="_blank">
-			<i class="fab  fa-fw fa- fa-dribbble"></i></a>
-		<br>
-		<div class="copyright">
-			<p>Made with <i class="fa fa-heart redColor"></i> and <i class="fa fa-code purpleColor"></i> by ME!</p>
-		</div>
-	</footer>
-	</div>
 	</div>
 	<!--Vue.js cdn-->
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
