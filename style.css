@@ -1,309 +1,48 @@
-    @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+body {
+    min-height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
 
-    :root {
-        --bg_default: #00091b;
-        --color_default: rgb(23, 191, 99) !important;
+body .content {
+    padding: 1rem;
+    max-width: 20vw;
+}
+
+body .content h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+body .content p {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+body .content p a {
+    color: #5F4B8B;
+    font-weight: bold;
+}
+
+body .content .img-holder {
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+
+body .content .img-holder img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+    body .content {
+
+        max-width: 100%;
     }
 
-    * {
-        background: transparent;
-        font-family: 'New Rocker', cursive;
-    }
-
-    html,
-    body {
-        -o-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        font-family: 'New Rocker', cursive !important;
-        color: #fff;
-        background: var(--bg_default);
-        cursor: default;
-        padding: 0;
-        margin: 0;
-        transition: 0.9s ease-in-out;
-        min-height: 100%;
-    }
-
-    body.dark .grid-bg {
-        position: fixed;
-        background-color: transparent;
-        background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
-        min-height: 100%;
-        background-size: 50px 50px;
-        width: 100%;
-        z-index: 0;
-    }
-
-    body.light .grid-bg {
-        position: fixed;
-        background-color: transparent;
-        background-image: linear-gradient(0deg, transparent 24%, rgba(0, 0, 0, .05) 25%, rgba(0, 0, 0, .05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, .05) 75%, rgba(0, 0, 0, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(0, 0, 0, .05) 25%, rgba(0, 0, 0, .05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, .05) 75%, rgba(0, 0, 0, .05) 76%, transparent 77%, transparent);
-        min-height: 100%;
-        background-size: 50px 50px;
-        width: 100%;
-        z-index: 0;
-    }
-
-
-    .g-cursor {
-        transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
-    }
-
-    .g-cursor_hide {
-        opacity: 0;
-        width: 60px;
-        height: 60px;
-        transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
-    }
-
-    .g-cursor__circle {
-        pointer-events: none;
-        user-select: none;
-        top: 0;
-        left: 0;
-        position: fixed;
-        width: 30px;
-        height: 30px;
-        border: 1px solid #fff;
-        border-radius: 100%;
-        z-index: 55555555;
-        backface-visibility: hidden;
-        transition: opacity 0.6s ease;
-    }
-
-    .g-cursor__point {
-        top: 0;
-        left: 0;
-        position: fixed;
-        width: 4px;
-        height: 4px;
-        pointer-events: none;
-        user-select: none;
-        border-radius: 100%;
-        background: #fff;
-        z-index: 55555555;
-        backface-visibility: hidden;
-        will-change: transform;
-    }
-
-    body.light .g-cursor__point {
-        background: #000 !important;
-    }
-
-    body.light .g-cursor__circle {
-        border-color: #000 !important
-    }
-
-    .g-cursor_hover .g-cursor__circle {
-        opacity: 0;
-        width: 60px;
-        height: 60px;
-        transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
-    }
-
-
-    .nav {
-        margin: 0;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: #00091b;
-        opacity: 1;
-        z-index: 10000;
-        padding: 1rem 0;
-    }
-
-
-    a {
-        color: var(--color_default);
-        text-decoration: none;
-    }
-
-    a:focus {
-        outline: none;
-    }
-
-    #toggle {
-        transition: 0.8s ease-in-out;
-        cursor: pointer;
-        height: 50px;
-        width: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #000;
-        border-radius: 50%;
-        margin: 0 auto;
-    }
-
-    body.dark #toggle {
-        color: #f9d71c !important;
-    }
-
-    body.light #toggle {
-        color: #ddd !important;
-    }
-
-
-
-    @media (max-width:744px) {
-
-        html,
-        body {
-            height: auto;
-        }
-    }
-
-    .redColor {
-        color: #ad1a30;
-    }
-
-    .purpleColor {
-        color: #c72cc9;
-    }
-
-    .fa-sun {
-        color: #FDB813;
-    }
-
-    .fa-moon {
-        color: #555;
-    }
-
-    .intro {
-        width: 50%;
-        margin: 0 auto;
-    }
-
-    .intro a {
-        font-size: 16px;
-    }
-
-
-    .og_container {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1em;
-        position: relative;
-        z-index: 10000;
-    }
-
-    .og_container .wrapper {
-        width: 60%;
-        text-align: center;
-    }
-
-    .og_container .wrapper .home i {
-        color: #fff !important;
-        z-index: 999;
-    }
-
-    .portfolio_area {
-        padding: 2em 0;
-    }
-
-
-    .og_container .wrapper h1 {
-        font-size: 36px;
-        color: var(--color_default);
-    }
-
-    .og_container .wrapper p {
-        font-size: 18px;
-    }
-
-    .og-quick-contact-holder {
-        padding: 2em 0;
-        margin: 1em auto;
-        text-align: center;
-    }
-
-
-    .footer-sponsors a,
-    .footer-sponsors a:hover {
-        text-decoration: none;
-    }
-
-    .footer-sponsors a img {
-        max-width: 120px;
-        object-fit: contain;
-    }
-
-
-    .og-quick-contact-link {
-        font-size: 18px;
-        z-index: 99999;
-        padding: 10px 12px;
-        margin: 1rem auto;
-        border-radius: 50%;
-        margin-bottom: 30px;
-        text-align: center;
-        color: inherit;
-    }
-
-    .og-quick-contact-link:hover {
-        color: var(--color_default);
-        -webkit-transition: .6s;
-        transition: .6s;
-    }
-
-    body.dark .nav {
-        background: #00091b !important;
-        color: #dfdfdf !important;
-    }
-
-    body.dark .nav .pagination {
-        color: #dfdfdf !important;
-    }
-
-    body.light .nav {
-        background: #f1f1f1 !important;
-        color: #00091b !important;
-
-    }
-
-    body.light .nav .pagination {
-        color: #00091b !important;
-
-    }
-
-
-    body.dark {
-        background: #00091b !important;
-        color: #dfdfdf !important;
-    }
-
-    body.light {
-        background: #f1f1f1 !important;
-        color: #151618 !important;
-    }
-
-    body.light .portfolio_item {
-        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15), -3px -3px 5px rgba(255, 255, 255, 0.65);
-    }
-
-    body.dark .portfolio_item {
-        box-shadow: -2px -2px 5px #00091b, 2px 2px 5px #00091b;
-    }
-
-    body.light .design_card img {
-        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15), -3px -3px 5px rgba(255, 255, 255, 0.65);
-    }
-
-    body.dark .design_card img {
-        box-shadow: -2px -2px 5px #00091b, 2px 2px 5px #00091b;
-    }
-
-    body.light .portfolio_item .portfolio_item_desc .desc {
-        font-size: 16px;
-        color: #1c1c1c;
-    }
-
-    body.light .portfolio_item:hover .portfolio_item_desc .desc {
-        color: #00091b !important;
-    }
+}
