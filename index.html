@@ -80,21 +80,31 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
+    <script src="./app.js" defer></script>
   </head>
 
   <body>
     <main class="container">
       <!-- Logo -->
-      <header class="logo">
-        <img
-          src="./assets/img/logo.png"
-          alt="Ogurinka Benjamin"
-          class="logo-img"
-        />
-        <div class="logo-text">
-          <span style="font-size: 12px">Ogurinka "Tammy"</span>
-          <span>Benjamin</span>
+      <header class="header">
+        <div class="logo">
+          <img
+            src="./assets/img/logo.png"
+            alt="Ogurinka Benjamin"
+            class="logo-img"
+          />
+          <div class="logo-text">
+            <span style="font-size: 12px">Ogurinka "Tammy"</span>
+            <span>Benjamin</span>
+          </div>
         </div>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle theme"
+        >
+          🌙
+        </button>
       </header>
 
       <!-- Bio -->
@@ -194,60 +204,5 @@
         <p>© <span id="year"></span>. Built with 💚 and HTML</p>
       </footer>
     </main>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-
-      const fetchDevToPosts = async () => {
-        const container = document.getElementById("blog-posts");
-
-        try {
-          const res = await fetch(
-            "https://dev.to/api/articles?username=ogurinkaben&per_page=5",
-          );
-
-          const posts = await res.json();
-
-          if (!Array.isArray(posts) || posts.length === 0) {
-            container.innerHTML = "<p class='muted'>No posts found.</p>";
-            return;
-          }
-
-          container.innerHTML = posts
-            .map((post) => {
-              const image = post.cover_image;
-
-              return `
-            <a class="blog-card" href="${post.url}" target="_blank" rel="noreferrer">
-              
-              ${
-                image
-                  ? `<div class="blog-image">
-                      <img src="${image}" alt="${post.title}" loading="lazy" />
-                    </div>`
-                  : ""
-              }
-
-              <div class="blog-content">
-                <div class="blog-title">${post.title}</div>
-
-                <div class="blog-meta">
-                  ${new Date(post.published_at).toDateString()} · ${
-                    post.reading_time_minutes
-                  } min read
-                </div>
-              </div>
-            </a>
-          `;
-            })
-            .join("");
-        } catch (err) {
-          container.innerHTML =
-            "<p class='muted'>Unable to load posts right now.</p>";
-        }
-      };
-
-      fetchDevToPosts();
-    </script>
   </body>
 </html>
