@@ -1,48 +1,225 @@
+:root {
+  --bg: #0b0f14;
+  --text: #e6e6e6;
+  --muted: #9aa4b2;
+  --accent: #19bb69;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-    min-height: 100vh;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
 
-body .content {
-    padding: 1rem;
-    max-width: 20vw;
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 24px;
 }
 
-body .content h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-
+/* Logo */
+.logo {
+  margin-bottom: 64px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.logo .logo-img {
+  max-width: 45px;
+}
+.logo-text {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text);
+  position: relative;
 }
 
-body .content p {
-    font-size: 1rem;
-    font-weight: normal;
+.logo-text::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--accent);
+  margin-top: 8px;
+  border-radius: 2px;
 }
 
-body .content p a {
-    color: #5F4B8B;
-    font-weight: bold;
+/* Sections */
+.section {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
 }
 
-body .content .img-holder {
-    margin-top: 2rem;
-    padding-top: 1rem;
+.section:last-of-type {
+  border-bottom: none;
 }
 
-body .content .img-holder img {
-    max-width: 100%;
+h2 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--muted);
+  margin-bottom: 16px;
+  font-weight: 500;
 }
 
-@media screen and (max-width: 768px) {
+p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text);
+}
 
-    body .content {
+.muted {
+  color: var(--muted);
+  margin-bottom: 12px;
+}
 
-        max-width: 100%;
-    }
+/* Experience chips */
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
 
+.list span {
+  font-size: 13px;
+  color: var(--text);
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.list span:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.testimonial {
+  padding: 16px 0;
+  border-left: 2px solid var(--accent);
+  padding-left: 16px;
+}
+
+.testimonial p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.blog-card {
+  display: flex;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.2s ease;
+}
+
+.blog-card:last-child {
+  border-bottom: none;
+}
+
+.blog-card:hover {
+  border-color: var(--accent);
+}
+
+.blog-image {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.9);
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.blog-meta {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Contact */
+.contact p {
+  margin-bottom: 8px;
+}
+
+.label {
+  color: var(--muted);
+  display: inline-block;
+  width: 110px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 64px;
+  color: var(--muted);
+}
+.footer p {
+  font-size: 12px;
+}
+
+/* Subtle selection style */
+::selection {
+  background: rgba(25, 187, 105, 0.25);
 }
