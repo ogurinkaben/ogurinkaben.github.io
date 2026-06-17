@@ -1,5 +1,5 @@
 :root {
-  --bg: #0b0f14;
+  --bg: #00091b;
   --text: #e6e6e6;
   --muted: #9aa4b2;
   --accent: #19bb69;
@@ -13,7 +13,7 @@
 body {
   margin: 0;
   font-family:
-    "Inter",
+    "Space Mono",
     system-ui,
     -apple-system,
     Segoe UI,
@@ -22,12 +22,17 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  padding: 0 8px 0 8px;
 }
 
 .container {
   max-width: 720px;
   margin: 0 auto;
   padding: 80px 24px;
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 2px solid var(--border);
+  border-right: 2px solid var(--border);
 }
 
 /* Logo */
@@ -38,7 +43,7 @@ body {
   gap: 11px;
 }
 .logo .logo-img {
-  max-width: 45px;
+  max-width: 55px;
 }
 .logo-text {
   font-size: 16px;
@@ -46,6 +51,8 @@ body {
   letter-spacing: 0.5px;
   color: var(--text);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo-text::after {
@@ -63,6 +70,12 @@ body {
   margin-bottom: 48px;
   padding-bottom: 32px;
   border-bottom: 1px solid var(--border);
+}
+.section .section-img {
+  max-width: 100%;
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
 }
 
 .section:last-of-type {
